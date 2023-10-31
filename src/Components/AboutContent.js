@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import React from 'react';
 import "./AboutContentStyles.css";
+// import React1 from "../assets/BackImg.jpg";
 import React1 from "../assets/MicAb2.jpg";
 import React2 from "../assets/ab1.jpg";
 
