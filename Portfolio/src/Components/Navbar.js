@@ -39,11 +39,9 @@ const Navbar = () => {
                 <li>
                     <Link to="/Gallery">Gallery</Link>
                 </li>
-                <li>
                     <a href={require("../Routes/CvPic/my-cv.pdf")} download>
                         <button className="btn">Download CV</button>
                     </a>
-                </li>
             </ul>
 
             <div className="hamburger" onClick={handleclick}>

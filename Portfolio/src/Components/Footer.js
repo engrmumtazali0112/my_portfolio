@@ -1,6 +1,6 @@
 import "./FooterStyles.css";
 import React from 'react';
-import { FaAmazon, FaFacebook, FaGithub, FaHome, FaInstagram, FaLinkedin, FaMailBulk, FaPhone, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaHome, FaInstagram, FaLinkedin, FaMailBulk, FaPhone, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -35,20 +35,20 @@ const Footer = () => {
 
         <div className="right">
           <h4>About me</h4>
-          <p>This is Abuzar Khan, CEO & Founder of VRF (Virtual Reality Fitness).</p>
+          <p>This is Abuzar Khan, Software Engineering Student and Web developer for more...   <a href="https://www.linkedin.com/in/abuzarkhan-pakistan/">(Click Me!)</a>.</p>
           <div className="our-social"><p>See Our Social's:</p></div>
           <div className="social">
             <a href="https://www.facebook.com/AbuzarKhan9900?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
               <FaFacebook size={30} style={{ color: "#1877F2", marginRight: "0.5rem" }} />
             </a>
-            <a href="https://twitter.com/JohnLewis9900" target="_blank" rel="noopener noreferrer">
+            <a href="https://twitter.c`om/JohnLewis9900" target="_blank" rel="noopener noreferrer">
               <FaTwitter size={30} style={{ color: "#1DA1F2", marginRight: "0.5rem" }} />
             </a>
             <a href="https://www.instagram.com/abuzarkhanse/?igshid=OGQ5ZDc2ODk2ZA==" target="_blank" rel="noopener noreferrer">
               <FaInstagram size={30} style={{ color: "#E4405F", marginRight: "0.5rem" }} />
             </a>
             <a href="https://youtube.com/@Abuzar_Khan370?si=HCQygnejNCDaARLD" target="_blank" rel="noopener noreferrer">
-              <FaYoutube size={30} style={{ color: "#FF0000", marginRight: "0.5rem" }} />
+              <FaYoutube size={30} style={{ color: "#``FF0000", marginRight: "0.5rem" }} />
             </a>
             <a href="https://www.linkedin.com/in/abuzar-khan-pakistan" target="_blank" rel="noopener noreferrer">
               <FaLinkedin size={30} style={{ color: "#0077B5", marginRight: "0.5rem" }} />
@@ -61,7 +61,7 @@ const Footer = () => {
       </div>
       {/* Copyright Notice */}
       <div className="copyright">
-        <p>&copy; 2023 All rights reserved. Designed with ❤️ by Abuzar Khan</p>
+        <p>2024 All rights reserved. Designed & Developed by Abuzar Khan</p>
       </div>
     </div>
   )

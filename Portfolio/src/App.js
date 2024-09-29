@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 
-
 import './index.css';
 import './Components/Navbar'
 import Home from "./Routes/Home.js"

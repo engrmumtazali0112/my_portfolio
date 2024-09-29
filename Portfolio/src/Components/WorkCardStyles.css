@@ -12,12 +12,15 @@
     padding-bottom: 5rem;
 }
 
-
 .project-card{
     background: #1a1919;
     padding: 1.2rem 1rem;
+    border-radius: 10px;
 }
 
+.project-card:hover {
+    border: solid 0.5px rgb(189, 139, 139);
+}
 
 .project-card img{
     width: 100%;

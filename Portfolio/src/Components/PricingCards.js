@@ -11,11 +11,10 @@ const PricingCards = () => {
                 <h3>- Basic -</h3>
                 <span className="bar"></span>
                 <p className="btc">$ 100</p>
-                <p>- 3 Days -</p>
+                <p>- 7 Business Days -</p>
                 <p>- 3 pages -</p>
                 <p>- Featured -</p>
                 <p>- Responsive Design -</p>
-                <p>--Currently Not Available--</p>
                 <Link to="/contact" className="btn">
                     PURCHASE NOW
                 </Link>
@@ -24,12 +23,11 @@ const PricingCards = () => {
             <div className="card">
                 <h3>- Standard -</h3>
                 <span className="bar"></span>
-                <p className="btc">$ 200</p>
-                <p>- 4 Days -</p>
-                <p>- 4 pages -</p>
+                <p className="btc">$ 150</p>
+                <p>- 10 Business Days -</p>
+                <p>- 5 pages -</p>
                 <p>- Featured -</p>
                 <p>- Responsive Design -</p>
-                <p>--Currently Not Available--</p>
                 <Link to="/contact" className="btn">
                     PURCHASE NOW
                 </Link>
@@ -38,12 +36,12 @@ const PricingCards = () => {
             <div className="card">
                 <h3>- Premium -</h3>
                 <span className="bar"></span>
-                <p className="btc">$ 300</p>
-                <p>- 6 Days -</p>
-                <p>-  pages -</p>
+                <p className="btc">$ Custom</p>
+                <p>- 12 Business Days -</p>
+                <p>- Pages: Base on your requirements -</p>
                 <p>- Featured -</p>
                 <p>- Responsive Design -</p>
-                <p>--Currently Not Available--</p>
+                <p>- SEO Optimized -</p>
                 <Link to="/contact" className="btn">
                     PURCHASE NOW
                 </Link>
