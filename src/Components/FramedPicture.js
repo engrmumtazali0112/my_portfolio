@@ -9,10 +9,10 @@ const FramedPicture = () => {
   return (
     <div className="framed-picture-container">
       <div className="picture-frame">
-        <img src={profilePic} alt="My Image" className="profile-image" />
+        <img src={profilePic} alt="My Img" className="profile-image" />
       </div>
       <div className="picture-frame">
-        <img src={profilePic2} alt="My Image" className="profile-image" />
+        <img src={profilePic2} alt="My Img" className="profile-image" />
       </div>
       <Link to="/home"><h3>Go back to Home</h3></Link>
       
