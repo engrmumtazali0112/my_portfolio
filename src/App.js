@@ -1,26 +1,26 @@
-import React, {} from "react"; // There was useState i remove by recomendation of github space npm start command to run
-
+import React from "react";
 import './index.css';
-import './Components/Navbar.js'
-import Home from "./Routes/Home.js"
-import About from "./Routes/About.js"
-import Project from "./Routes/Project.js"
-import Contact from "./Routes/Contact.js"
-import Gallery from "./Routes/Gallery.js"
-import DownloadCv from "./Routes/DownloadCv.js"
+import Home from "./Routes/Home";
+import About from "./Routes/About";
+import Project from "./Routes/Project";
+import Contact from "./Routes/Contact";
+import Gallery from "./Routes/Gallery";
+import DownloadCv from "./Routes/DownloadCv";
+// import NotFound from "./Routes/NotFound"; // New NotFound component
 import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/Home" element={<Home />}/>
-        <Route path="/Project" element={<Project />}/>
-        <Route path="/About" element={<About />}/>
-        <Route path="/Contact" element={<Contact />}/>
-        <Route path="/Gallery" element={<Gallery />}/>
-        <Route path="/DownloadCv" element={<DownloadCv />}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/project" element={<Project />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/downloadcv" element={<DownloadCv />} />
+        {/* <Route path="*" element={<NotFound />} /> Fallback route */}
       </Routes>
     </>
   );
