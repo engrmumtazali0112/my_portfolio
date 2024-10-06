@@ -48,10 +48,9 @@ const Navbar = () => {
           <Link to="/gallery">Gallery</Link>
         </li>
 
-          {/* Using relative path for CV in the public folder */}
-          <a href="/Routes/CvPic/my-cv.pdf" download>
+        <a href="/CvPic/my-cv.pdf" download>
             <button className="btn">Download CV</button>
-          </a>
+        </a>
 
       </ul>
 
