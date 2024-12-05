@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/my_portfolio/static/css/main.3749f4b2.chunk.css",
+    "main.js": "/my_portfolio/static/js/main.8b919bbb.chunk.js",
+    "main.js.map": "/my_portfolio/static/js/main.8b919bbb.chunk.js.map",
+    "runtime-main.js": "/my_portfolio/static/js/runtime-main.97552d04.js",
+    "runtime-main.js.map": "/my_portfolio/static/js/runtime-main.97552d04.js.map",
+    "static/js/2.8ccc977f.chunk.js": "/my_portfolio/static/js/2.8ccc977f.chunk.js",
+    "static/js/2.8ccc977f.chunk.js.map": "/my_portfolio/static/js/2.8ccc977f.chunk.js.map",
+    "index.html": "/my_portfolio/index.html",
+    "static/css/main.3749f4b2.chunk.css.map": "/my_portfolio/static/css/main.3749f4b2.chunk.css.map",
+    "static/js/2.8ccc977f.chunk.js.LICENSE.txt": "/my_portfolio/static/js/2.8ccc977f.chunk.js.LICENSE.txt",
+    "static/media/FB_IMG_1661066670483.7d382f1a.jpg": "/my_portfolio/static/media/FB_IMG_1661066670483.7d382f1a.jpg",
+    "static/media/IMG-20240310-WA0081.25d325d5.jpg": "/my_portfolio/static/media/IMG-20240310-WA0081.25d325d5.jpg",
+    "static/media/IMG_E5300.70bf39a0.JPG": "/my_portfolio/static/media/IMG_E5300.70bf39a0.JPG",
+    "static/media/Mumtaz1.797ffc2b.jpeg": "/my_portfolio/static/media/Mumtaz1.797ffc2b.jpeg",
+    "static/media/Mumtaz2.5865dea8.jpg": "/my_portfolio/static/media/Mumtaz2.5865dea8.jpg",
+    "static/media/Mumtaz3.ebc7757f.jpg": "/my_portfolio/static/media/Mumtaz3.ebc7757f.jpg",
+    "static/media/Mumtaz4.ca78a6f8.jpg": "/my_portfolio/static/media/Mumtaz4.ca78a6f8.jpg",
+    "static/media/MyPic (2).4fcfbf4b.jpg": "/my_portfolio/static/media/MyPic (2).4fcfbf4b.jpg",
+    "static/media/UniPic.a536fbe6.png": "/my_portfolio/static/media/UniPic.a536fbe6.png",
+    "static/media/p10TitanicDatasetAnalysisReportimages.8db4e894.jpg": "/my_portfolio/static/media/p10TitanicDatasetAnalysisReportimages.8db4e894.jpg",
+    "static/media/p11ModernMusicPlayer.a672b33a.PNG": "/my_portfolio/static/media/p11ModernMusicPlayer.a672b33a.PNG",
+    "static/media/p12DocumentPlagiarismDetector.9c3f43db.gif": "/my_portfolio/static/media/p12DocumentPlagiarismDetector.9c3f43db.gif",
+    "static/media/p13VoiceAssistan.2e30c0cb.PNG": "/my_portfolio/static/media/p13VoiceAssistan.2e30c0cb.PNG",
+    "static/media/p1blogwebsite.cc231670.PNG": "/my_portfolio/static/media/p1blogwebsite.cc231670.PNG",
+    "static/media/p2ecommerce.fc19943d.png": "/my_portfolio/static/media/p2ecommerce.fc19943d.png",
+    "static/media/p3studyhub.febded1a.PNG": "/my_portfolio/static/media/p3studyhub.febded1a.PNG",
+    "static/media/p4handgesture.f02adbdd.PNG": "/my_portfolio/static/media/p4handgesture.f02adbdd.PNG",
+    "static/media/p5objdetection.92a2be0e.PNG": "/my_portfolio/static/media/p5objdetection.92a2be0e.PNG",
+    "static/media/p6PersonalityPredictionSystem.ac16c9d4.PNG": "/my_portfolio/static/media/p6PersonalityPredictionSystem.ac16c9d4.PNG",
+    "static/media/p7Robust-Multiple-Choice-Quiz-Game.a2dd20a7.mp4": "/my_portfolio/static/media/p7Robust-Multiple-Choice-Quiz-Game.a2dd20a7.mp4",
+    "static/media/p8HangmanAdventureDjango.0fce104b.PNG": "/my_portfolio/static/media/p8HangmanAdventureDjango.0fce104b.PNG",
+    "static/media/p9WorldBankPopulationData.450667f1.JPG": "/my_portfolio/static/media/p9WorldBankPopulationData.450667f1.JPG",
+    "static/media/profile.jpg.7cd3ed33.png": "/my_portfolio/static/media/profile.jpg.7cd3ed33.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.97552d04.js",
+    "static/js/2.8ccc977f.chunk.js",
+    "static/css/main.3749f4b2.chunk.css",
+    "static/js/main.8b919bbb.chunk.js"
+  ]
+}
