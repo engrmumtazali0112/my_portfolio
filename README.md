@@ -5,7 +5,7 @@ Welcome to my portfolio project! This project showcases my personal portfolio, h
 
 ## 🚀 Demo
 
-You can check out the live version of this portfolio at [Insert live link here if available].
+You can check out the live version of this portfolio at [https://myportfolio-kzap97bwq-engrmumtazali0112s-projects.vercel.app/].
 
 ## 🛠️ Technologies Used
 
@@ -42,7 +42,7 @@ To get a copy of this project up and running on your local machine, follow these
 ### 1. Clone the repository:
 
 ```
-git clone https://github.com/[your-username]/portfolio.git
+https://github.com/engrmumtazali0112/my_portfolio.git
 ```
 
 ### 2. Install dependencies:
