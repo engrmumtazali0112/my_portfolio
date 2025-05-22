@@ -5,6 +5,7 @@ import About from "./Routes/About";
 import Project from "./Routes/Project";
 import Contact from "./Routes/Contact";
 import Gallery from "./Routes/Gallery";
+import Certificate from "./Routes/Certificate";
 import DownloadCv from "./Routes/DownloadCv";
 // import NotFound from "./Routes/NotFound"; // New NotFound component
 import { Route, Routes } from "react-router-dom";
@@ -20,6 +21,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/downloadcv" element={<DownloadCv />} />
+        <Route path="/certificate" element={<Certificate />} />
         {/* <Route path="*" element={<NotFound />} /> Fallback route */}
       </Routes>
     </>
