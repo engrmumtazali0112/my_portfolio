@@ -21,7 +21,7 @@ Welcome to my personal portfolio project! This modern, responsive React applicat
 
 ## 🌟 Live Demo
 
-You can explore the live version of my portfolio at: [Portfolio Website]([https://github.com/engrmumtazali0112/my_portfolio](https://portfolio-4i9tc9pa8-engrmumtazali0112s-projects.vercel.app))
+You can explore the live version of my portfolio at: [Portfolio Website]([https://github.com/engrmumtazali0112/my_portfolio](https://portfolio-4i9tc9pa8-engrmumtazali0112s-projects.vercel.app)
 
 ## 📸 Preview
 
