@@ -1,21 +1,51 @@
 .framed-picture-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
 
-  .picture-frame {
-    border: 2px solid #007bff;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    margin-top: 100px;
-  }
+.picture-frame {
+  width: 300px;
+  height: 300px;
+  border: 5px solid #bebebe;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
 
-  .profile-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
+.profile-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Button styles */
+.back-to-home-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4c5675; /* Green */
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.back-to-home-button:hover {
+  background-color: #1c3e52; /* Slightly darker green */
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.back-to-home-button h3 {
+  margin: 0;
+  font-size: inherit;
+}
+
+/* Optional: Add active state for when the button is clicked */
+.back-to-home-button:active {
+  transform: scale(1.05); /* Small effect when clicked */
+}
