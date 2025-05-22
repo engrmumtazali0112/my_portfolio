@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import React from 'react';
 import "./AboutContentStyles.css";
 // import React1 from "../assets/BackImg.jpg";
-import React1 from "../assets/MicAb2.jpg";
-import React2 from "../assets/ab1.jpg";
+import React1 from "../assets/profile.jpg.png";
+//import React2 from "../assets/ab1.jpg";
 
 const AboutContent = () => {
   return (
@@ -11,19 +11,20 @@ const AboutContent = () => {
       <div className="left">
   <h1>Who I am?</h1>
   <p>
-    I'm a passionate Software Engineering student, currently pursuing my degree at the renowned Pak-Austria Fachhochschule Institute of Applied Science and Technology.
+  I'm a Python Developer with experience in Django and FastAPI. I specialize in backend development, building efficient, scalable web applications and APIs.
   </p>
   <p>
-    My academic journey commenced with a strong foundation in programming, starting with a deep dive into the intricacies of C++ during my first semester. In my second semester, I further expanded my knowledge by mastering the principles of Object-Oriented Programming (OOP). In my third semester, I successfully completed Data Structures and Algorithms (DSA) in C++, further enhancing my programming proficiency.
+  My journey started with Python, expanding to frameworks like Django for web apps and FastAPI for fast, high-performance APIs. I’m skilled in database management (PostgreSQL, MySQL) and server-side integration.
   </p>
   <p>
-    My interest in web development led me to explore a variety of tools and languages, such as HTML, CSS, JavaScript, and React.js. I have successfully applied these skills in multiple web development projects during my internships.
+  I’ve worked on real-world projects, improving user experiences and optimizing performance. I'm committed to continuous learning and eager to contribute to innovative software solutions.
   </p>
   <p>
-    I kick-started my professional journey with an internship at Sabzland, followed by a remote web development internship at Oasis Infobyte. These experiences allowed me to develop hands-on skills in creating user-friendly, responsive websites. I further honed my skills during my recent internship at Entechin, where I contributed to both web and software development projects using HTML, CSS, JavaScript, and C++.
-  </p>
+  I kick-started my professional journey with internships focused on data analysis, Python development, and AI. During my internship with **Data-Analysis-Projects**, I showcased my skills in exploratory data analysis (EDA) and data visualization using Jupyter Notebooks. I also contributed to **Cardi-Good-Fitness-Case-Study**, analyzing customer profiles and purchase patterns for AdRight’s market research.
+</p>
+
   <p>
-    Beyond technical skills, I am committed to continuous learning and staying at the forefront of the ever-evolving software engineering landscape. I am excited to contribute to the tech industry, leveraging my expertise in web development and software solutions.
+    Beyond technical skills, I am committed to continuous learning and staying at the forefront of the ever-evolving software engineering landscape. I am excited to contribute to the tech industry, leveraging my expertise in Python Development  and AI  solutions.
   </p>
   <Link to="/contact">
     <button className="btn">Contact</button>
@@ -37,9 +38,9 @@ const AboutContent = () => {
             <img src={React1} className="img" alt="true" />
           </div>
 
-          <div className="img-stack bottom">
+          {/* <div className="img-stack bottom">
             <img src={React2} className="img" alt="true" />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
