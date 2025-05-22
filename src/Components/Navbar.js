@@ -28,8 +28,10 @@ const Navbar = () => {
 
   return (
     <div className={color ? "header header-bg" : "header"}>
-      <Link to="/">
-        <h1>Portfolio.</h1> {/* Updated Home route to "/" */}
+      <Link to="/" className="logo">
+        {/* Add logo image */}
+        <img src="/mylogo.png" alt="Logo" className="logo-img" />
+        <h1>Welcome</h1>
       </Link>
       <ul className={click ? "nav-menu active" : "nav-menu"}>
         <li>
@@ -42,14 +44,21 @@ const Navbar = () => {
           <Link to="/about">About</Link>
         </li>
         <li>
+          <Link to="/certificate">Certificate</Link>
+        </li>
+        <li>
           <Link to="/contact">Contact</Link>
         </li>
         <li>
           <Link to="/gallery">Gallery</Link>
         </li>
 
-        <a href="/CvPic/my-cv.pdf" download>
+        <a href="/CvPic/my-Resumi.pdf" download>
             <button className="btn">Download CV</button>
+        </a>
+
+        <a href="/CvPic/Transcript.pdf" download>
+            <button className="btn">Download Transcript</button>
         </a>
 
       </ul>

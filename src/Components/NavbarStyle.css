@@ -1,3 +1,46 @@
+
+/* Style for the Logo Container */
+.logo {
+  display: flex;
+  align-items: center;      /* Aligns the logo image and text vertically */
+  text-decoration: none;    /* Removes underline from the link */
+  color: white;             /* Text color for the "Welcome" text */
+  font-family: 'Poppins', sans-serif; /* Use Poppins or any desired font */
+}
+
+/* Logo Image Styling */
+.logo-img {
+  width: 50px;              /* Adjust the logo size */
+  height: auto;             /* Maintain aspect ratio */
+  margin-right: 10px;       /* Space between logo and text */
+  transition: transform 0.3s ease; /* Add transition for hover effects */
+}
+
+/* Hover Effect for the Logo Image */
+.logo-img:hover {
+  transform: scale(1.1);    /* Slightly scale up the logo when hovered */
+}
+
+/* Styling for the Text next to the Logo */
+.logo h1 {
+  font-size: 2rem;          /* Adjust font size for the "Welcome" text */
+  font-weight: 600;         /* Make the text bold */
+  letter-spacing: 1px;      /* Add spacing between letters */
+  margin: 0;                /* Remove default margin */
+  color: white;             /* Make sure the text is white */
+  text-transform: uppercase; /* Optional: Make the text uppercase */
+}
+
+/* Responsive Styling: Adjust Logo and Text for Small Screens */
+@media screen and (max-width: 768px) {
+  .logo {
+    font-size: 1.5rem;       /* Reduce font size on smaller screens */
+  }
+
+  .logo-img {
+    width: 40px;             /* Reduce logo size for smaller screens */
+  }
+}
 .header{
     display: flex;
     justify-content: space-between;
@@ -36,7 +79,7 @@
   right: 100px;
   width: 50%;
   height: 2px;
-  background-color: orange;
+  background-color: rgb(21, 255, 0);
   transform: scaleX(0);
   transform-origin: 0 0;
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
@@ -73,7 +116,7 @@ body{
 }
 
 h1, h4, p, a{
-  color: #fff;
+  color: #f3f3f3;
   text-decoration: none;
 }
 
