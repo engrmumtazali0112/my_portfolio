@@ -1,46 +1,41 @@
 import { Link } from "react-router-dom";
 import React from 'react';
 import "./AboutContentStyles.css";
-// import React1 from "../assets/BackImg.jpg";
 import React1 from "../assets/profile.jpg.png";
-//import React2 from "../assets/ab1.jpg";
 
 const AboutContent = () => {
   return (
     <div className="about">
       <div className="left">
-  <h1>Who I am?</h1>
-  <p>
-  I'm a Python Developer with experience in Django and FastAPI. I specialize in backend development, building efficient, scalable web applications and APIs.
-  </p>
-  <p>
-  My journey started with Python, expanding to frameworks like Django for web apps and FastAPI for fast, high-performance APIs. I’m skilled in database management (PostgreSQL, MySQL) and server-side integration.
-  </p>
-  <p>
-  I’ve worked on real-world projects, improving user experiences and optimizing performance. I'm committed to continuous learning and eager to contribute to innovative software solutions.
-  </p>
-  <p>
-  I kick-started my professional journey with internships focused on data analysis, Python development, and AI. During my internship with **Data-Analysis-Projects**, I showcased my skills in exploratory data analysis (EDA) and data visualization using Jupyter Notebooks. I also contributed to **Cardi-Good-Fitness-Case-Study**, analyzing customer profiles and purchase patterns for AdRight’s market research.
-</p>
-
-  <p>
-    Beyond technical skills, I am committed to continuous learning and staying at the forefront of the ever-evolving software engineering landscape. I am excited to contribute to the tech industry, leveraging my expertise in Python Development  and AI  solutions.
-  </p>
-  <Link to="/contact">
-    <button className="btn">Contact</button>
-  </Link>
-</div>
-
+        <h1>Who I am?</h1>
+        <p>
+          I'm <strong>Mumtaz Ali</strong>, a proficient Python Developer with <strong>2 years of professional experience</strong> at Digital Empowerment Network (DEN) of Pakistan. I specialize in full-stack web development, RESTful API design, and building scalable applications using Django, Flask, and FastAPI.
+        </p>
+        <p>
+          My technical expertise spans across <strong>Python, JavaScript, and SQL</strong>, with strong proficiency in frameworks like Django Rest Framework, React.js, and data manipulation tools including Pandas, NumPy, and Matplotlib. I excel in creating responsive front-end interfaces while managing robust database systems (PostgreSQL, MySQL, SQLite).
+        </p>
+        <p>
+          I'm experienced in modern development practices including <strong>Git/GitHub version control</strong>, pytest testing frameworks, and <strong>Docker containerization</strong>. I implement <strong>CI/CD pipelines on AWS</strong> for efficient deployment and maintain high code quality standards across all projects.
+        </p>
+        <p>
+          My portfolio includes diverse projects: a <strong>Full-Stack Hostel Management System</strong>, <strong>AI-Powered Hand Gesture Drawing System</strong> using OpenCV and Mediapipe, real-time object detection systems with TensorFlow, and dynamic e-commerce platforms. Each project demonstrates my commitment to creating efficient, user-friendly solutions.
+        </p>
+        <p>
+          I hold a <strong>BSc from the University of Engineering and Technology Mardan</strong> and have earned multiple certifications including PythonWebDevPro, Inter Universities Programming Challenge recognition, and completed intensive internships at EcodeCamp specializing in data analysis and backend programming.
+        </p>
+        <p>
+          Beyond technical skills, I am passionate about continuous learning and staying at the forefront of the ever-evolving software engineering landscape. I'm excited to contribute to innovative tech solutions, leveraging my expertise in full-stack development, AI integration, and cloud deployment.
+        </p>
+        <Link to="/contact">
+          <button className="btn">Contact</button>
+        </Link>
+      </div>
 
       <div className="right">
         <div className="img-container">
           <div className="img-stack top">
-            <img src={React1} className="img" alt="true" />
+            <img src={React1} className="img" alt="Mumtaz Ali - Python Developer" />
           </div>
-
-          {/* <div className="img-stack bottom">
-            <img src={React2} className="img" alt="true" />
-          </div> */}
         </div>
       </div>
     </div>

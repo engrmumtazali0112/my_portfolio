@@ -36,7 +36,7 @@ const Footer = () => {
 
         <div className="right">
           <h4>About me</h4>
-          <p>This is Mumtaz ali, Computer Science Student and Python developer for more...   <a href="https://www.linkedin.com/in/mumtazali12//">(Click Me!)</a>.</p>
+          <p>This is Mumtaz ali, Computer Science Student and Python Django Developer for more...   <a href="https://www.linkedin.com/in/mumtazali12//">(Click Me!)</a>.</p>
           <div className="our-social"><p>See Our Social's:</p></div>
           <div className="social">
             <a href="https://www.facebook.com/profile.php?id=100072570194916L" target="_blank" rel="noopener noreferrer">
