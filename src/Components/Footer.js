@@ -23,7 +23,7 @@ const Footer = () => {
             </h4>
             <h4>
               <FaPhone size={20} style={{ color: "green", marginRight: "1rem" }} /> 
-              +92-3195263849
+              +92-3370690080
             </h4>
           </div>
           <div className="email">
