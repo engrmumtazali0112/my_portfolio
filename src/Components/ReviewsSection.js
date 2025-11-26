@@ -2,37 +2,47 @@
 import React, { useState } from 'react';
 import './ReviewsSectionStyles.css';
 
+// Import client images
+import janeSmith from '../assets/Jane Smith.jpeg';
+import michaelJohnson from '../assets/Michael Johnson.jpeg';
+import emilyBrown from '../assets/Emily Brown.jpeg';
+import davidWilson from '../assets/David Wilson.jpeg';
+
 const ReviewsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const reviews = [
     {
       name: "Jane Smith",
-      role: "Business Owner",
-      rating: 4.8,
-      comment: "Highly skilled developers who understand the client's vision and execute perfectly.",
-      company: "Tech Solutions Inc."
+      role: "CEO & Founder",
+      rating: 4.9,
+      comment: "Working with this team has been transformative for our business. They delivered beyond expectations with exceptional attention to detail.",
+      company: "TechVision Solutions",
+      image: janeSmith
     },
     {
       name: "Michael Johnson",
-      role: "Project Coordinator",
-      rating: 4.6,
-      comment: "Great communication and excellent results. Our new site performs beautifully.",
-      company: "Digital Innovations"
+      role: "CTO",
+      rating: 4.8,
+      comment: "Impressive technical skills combined with great communication. The project was completed on time and exceeded our quality standards.",
+      company: "Digital Dynamics Corp",
+      image: michaelJohnson
     },
     {
       name: "Emily Brown",
-      role: "Creative Director",
+      role: "Product Manager",
       rating: 4.9,
-      comment: "Professional, efficient, and highly knowledgeable. Would definitely recommend",
-      company: "Creative Studios"
+      comment: "Outstanding professionalism and expertise. They understood our vision perfectly and brought it to life with remarkable precision.",
+      company: "Innovation Hub Inc",
+      image: emilyBrown
     },
     {
       name: "David Wilson",
-      role: "Tech Lead",
+      role: "Engineering Director",
       rating: 4.7,
-      comment: "Outstanding technical expertise and commitment to quality. A pleasure to work with.",
-      company: "Innovation Labs"
+      comment: "Exceptional development quality and collaborative approach. Their commitment to excellence made this project a complete success.",
+      company: "NextGen Technologies",
+      image: davidWilson
     }
   ];
 
@@ -86,7 +96,11 @@ const ReviewsSection = () => {
 
                 <div className="author-info">
                   <div className="author-avatar">
-                    {review.name.charAt(0)}
+                    {review.image ? (
+                      <img src={review.image} alt={review.name} />
+                    ) : (
+                      review.name.charAt(0)
+                    )}
                   </div>
                   <div className="author-details">
                     <h4>{review.name}</h4>

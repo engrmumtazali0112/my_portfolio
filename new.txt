@@ -1,0 +1,532 @@
+<div align="center">
+
+# 🚀 Mumtaz Ali - Full Stack Developer Portfolio 🚀
+
+![React](https://img.shields.io/badge/React-18+-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Django](https://img.shields.io/badge/Django-4.0+-092E20?style=for-the-badge&logo=django&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-Modern-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=2800&pause=2000&color=36BCF7&center=true&vCenter=true&width=600&lines=Full+Stack+Python+Developer;React.js+%2B+Django+Expert;AI+%26+ML+Engineer;Computer+Vision+Specialist" alt="Typing SVG" />
+</p>
+
+[![Portfolio](https://img.shields.io/badge/🌐_Live_Portfolio-Visit_Now-36BCF7?style=for-the-badge)](https://portfolio-4i9tc9pa8-engrmumtazali0112s-projects.vercel.app)
+[![GitHub Stars](https://img.shields.io/github/stars/engrmumtazali0112/my_portfolio?style=for-the-badge&logo=github)](https://github.com/engrmumtazali0112/my_portfolio)
+[![GitHub Forks](https://img.shields.io/github/forks/engrmumtazali0112/my_portfolio?style=for-the-badge&logo=github)](https://github.com/engrmumtazali0112/my_portfolio/fork)
+
+</div>
+
+<p align="center">
+  <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="400" alt="Portfolio Animation">
+</p>
+
+---
+
+## 📋 Table of Contents
+
+- [🌟 Overview](#-overview)
+- [🎯 Latest Updates](#-latest-updates-november-2025)
+- [✨ Features](#-features)
+- [🖼️ Project Gallery](#️-project-gallery)
+- [🛠️ Tech Stack](#️-tech-stack)
+- [📂 Project Structure](#-project-structure)
+- [🚀 Getting Started](#-getting-started)
+- [📱 Deployment](#-deployment)
+- [💼 Services](#-professional-services)
+- [⭐ Client Reviews](#-client-reviews)
+- [🏆 Certifications](#-certifications)
+- [📈 Performance](#-performance)
+- [🤝 Contributing](#-contributing)
+- [📞 Contact](#-contact)
+
+---
+
+## 🌟 Overview
+
+A **modern, responsive, and interactive** portfolio website built with **React.js** and **Python/Django**, showcasing my journey as a Full Stack Developer, AI/ML Engineer, and Computer Vision Specialist. This portfolio demonstrates expertise in web development, software engineering, artificial intelligence, and data analysis through **15+ real-world projects** and professional achievements.
+
+<div align="center">
+
+### 🎯 Portfolio Highlights
+
+| 🎨 Design | 📱 Responsive | ⚡ Performance | 🔒 Secure | 🌟 Modern |
+|-----------|---------------|----------------|-----------|-----------|
+| Modern UI/UX | Mobile-First | Optimized | Best Practices | 2025 Standards |
+
+</div>
+
+---
+
+## 🎯 Latest Updates (November 2025)
+
+<table>
+<tr>
+<td width="50%">
+
+### ✨ New Features
+
+- ✅ **Enhanced About Page**
+  - Modern profile section
+  - Animated statistics counter
+  - Interactive design elements
+  
+- ✅ **Skills Showcase**
+  - 4 skill categories with progress bars
+  - Frontend, Backend, AI/ML, Tools
+  - Animated percentage displays
+
+- ✅ **Professional Timeline**
+  - Work experience visualization
+  - Education history
+  - Interactive timeline design
+
+</td>
+<td width="50%">
+
+### 🚀 New Sections
+
+- ✅ **Services Page** 🛠️
+  - 6 comprehensive service offerings
+  - Professional service cards
+  - Detailed descriptions
+  
+- ✅ **Client Reviews** ⭐
+  - Interactive carousel
+  - 5+ client testimonials
+  - Star rating system
+
+- ✅ **Responsive Design**
+  - Optimized for all devices
+  - Smooth animations
+  - Modern transitions
+
+</td>
+</tr>
+</table>
+
+---
+
+## ✨ Features
+
+<table>
+<tr>
+<td width="50%">
+
+### 🎨 **Design & UI**
+- ✅ Modern dark theme with gradient accents
+- ✅ Smooth animations & transitions
+- ✅ Interactive hover effects with icons
+- ✅ Professional color scheme (#f7f7f7, #dc052d)
+- ✅ Intuitive navigation with React Router
+- ✅ Accessibility compliant (WCAG 2.1)
+- ✅ Beautiful iconography (Font Awesome, Lucide)
+
+</td>
+<td width="50%">
+
+### 📱 **Responsive & Performance**
+- ✅ Mobile-first responsive design
+- ✅ Cross-browser compatible (Chrome, Firefox, Safari)
+- ✅ Fast loading times (<3s)
+- ✅ Optimized images (WebP, lazy loading)
+- ✅ Progressive Web App (PWA) ready
+- ✅ SEO optimized with meta tags
+- ✅ Lighthouse score: 95+
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 💼 **Professional Sections**
+- ✅ **Services Page** - 6 service offerings
+- ✅ **Reviews Section** - Client testimonials
+- ✅ **Skills Display** - Progress bar visualization
+- ✅ **Experience Timeline** - Career history
+- ✅ **Education Section** - Academic background
+- ✅ **Statistics Counter** - Animated numbers
+
+</td>
+<td width="50%">
+
+### 🎯 **Interactive Features**
+- ✅ Dynamic routing with React Router
+- ✅ Animated statistics on About page
+- ✅ Interactive project cards with hover effects
+- ✅ Responsive contact form with validation
+- ✅ Image gallery with lightbox
+- ✅ Certificate showcase with modals
+- ✅ One-click CV download
+
+</td>
+</tr>
+</table>
+
+### 🧭 **Multi-Page Navigation Structure**
+
+```
+🏠 Home          → Hero section with animated introduction & CTA
+👤 About         → Profile, Skills (4 categories), Experience, Education, Stats
+💼 Services      → 6 Professional services with icons & descriptions
+⭐ Reviews       → Client testimonials with carousel & ratings
+💻 Projects      → 15+ Portfolio projects with live demos & GitHub links
+🎓 Certificates  → Professional certifications with verification links
+🖼️ Gallery       → Visual showcase of work & achievements
+📧 Contact       → Contact form with social media links
+📄 Download CV   → Direct resume download (PDF format)
+```
+
+---
+
+## 🖼️ Project Gallery
+
+<div align="center">
+
+### 🌟 Featured Projects Showcase (15+ Projects)
+
+</div>
+
+<table>
+<tr>
+<td width="33%">
+
+### 📝 Blog Website
+![Blog Website](https://raw.githubusercontent.com/engrmumtazali0112/my_portfolio/main/src/assets/p1blogwebsite.PNG)
+
+**Tech:** React, Node.js, MongoDB  
+**Features:** 
+- User authentication & authorization
+- CRUD operations for posts
+- Comment system
+- Rich text editor
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=flat-square)](https://your-demo-link.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-black?style=flat-square&logo=github)](https://github.com/engrmumtazali0112)
+
+</td>
+<td width="33%">
+
+### 🛒 E-Commerce Platform
+![E-Commerce](https://raw.githubusercontent.com/engrmumtazali0112/my_portfolio/main/src/assets/p2ecommerce.png)
+
+**Tech:** React, Django, PostgreSQL  
+**Features:**
+- Shopping cart functionality
+- Stripe payment integration
+- Admin dashboard
+- Order tracking
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=flat-square)](https://your-demo-link.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-black?style=flat-square&logo=github)](https://github.com/engrmumtazali0112)
+
+</td>
+<td width="33%">
+
+### 📚 Study Hub LMS
+![Study Hub](https://raw.githubusercontent.com/engrmumtazali0112/my_portfolio/main/src/assets/p3studyhub.PNG)
+
+**Tech:** React, Firebase, Material-UI  
+**Features:**
+- Learning management system
+- Resource library
+- Progress tracking
+- Quiz system
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=flat-square)](https://your-demo-link.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-black?style=flat-square&logo=github)](https://github.com/engrmumtazali0112)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+### 👋 Hand Gesture Recognition
+![Hand Gesture](https://raw.githubusercontent.com/engrmumtazali0112/my_portfolio/main/src/assets/p4handgesture.PNG)
+
+**Tech:** Python, OpenCV, Mediapipe  
+**Features:**
+- Real-time gesture detection
+- Custom gesture training
+- Multiple gesture support
+- Virtual mouse control
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=flat-square)](https://your-demo-link.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-black?style=flat-square&logo=github)](https://github.com/engrmumtazali0112)
+
+</td>
+<td width="33%">
+
+### 🎯 Object Detection System
+![Object Detection](https://raw.githubusercontent.com/engrmumtazali0112/my_portfolio/main/src/assets/p5objdetection.PNG)
+
+**Tech:** Python, YOLO v8, TensorFlow  
+**Features:**
+- Real-time object detection
+- Multiple object classes
+- Bounding box visualization
+- 95%+ accuracy
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=flat-square)](https://your-demo-link.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-black?style=flat-square&logo=github)](https://github.com/engrmumtazali0112)
+
+</td>
+<td width="33%">
+
+### 🧠 Personality Prediction
+![Personality Prediction](https://raw.githubusercontent.com/engrmumtazali0112/my_portfolio/main/src/assets/p6PersonalityPredictionSystem.PNG)
+
+**Tech:** Python, Scikit-learn, Flask  
+**Features:**
+- ML-based personality assessment
+- Big Five personality traits
+- Data visualization
+- Interactive dashboard
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=flat-square)](https://your-demo-link.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-black?style=flat-square&logo=github)](https://github.com/engrmumtazali0112)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+### 🎮 Interactive Quiz Game
+![Quiz Game](https://raw.githubusercontent.com/engrmumtazali0112/my_portfolio/main/src/assets/p7RubustMultipleChoisequiz.gif)
+
+**Tech:** JavaScript, HTML5, CSS3  
+**Features:**
+- Multiple categories
+- Timed questions
+- Score tracking
+- Leaderboard system
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=flat-square)](https://your-demo-link.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-black?style=flat-square&logo=github)](https://github.com/engrmumtazali0112)
+
+</td>
+<td width="33%">
+
+### 🎲 Hangman Adventure
+![Hangman](https://raw.githubusercontent.com/engrmumtazali0112/my_portfolio/main/src/assets/p8HangmanAdventureDjango.PNG)
+
+**Tech:** Django, Python, Bootstrap  
+**Features:**
+- Word guessing game
+- Multiple difficulty levels
+- Hint system
+- Score persistence
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=flat-square)](https://your-demo-link.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-black?style=flat-square&logo=github)](https://github.com/engrmumtazali0112)
+
+</td>
+<td width="33%">
+
+### 📊 World Bank Data Analysis
+![Data Analysis](https://raw.githubusercontent.com/engrmumtazali0112/my_portfolio/main/src/assets/p9WorldBankPopulationData.JPG)
+
+**Tech:** Python, Pandas, Matplotlib  
+**Features:**
+- Population data analysis
+- Interactive visualizations
+- Statistical insights
+- Trend predictions
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=flat-square)](https://your-demo-link.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-black?style=flat-square&logo=github)](https://github.com/engrmumtazali0112)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+### 🚢 Titanic Dataset Analysis
+![Titanic Analysis](https://raw.githubusercontent.com/engrmumtazali0112/my_portfolio/main/src/assets/p10TitanicDatasetAnalysisReportimages.jpg)
+
+**Tech:** Python, Pandas, Seaborn  
+**Features:**
+- Exploratory data analysis
+- Survival prediction model
+- Data cleaning & preprocessing
+- Interactive plots
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=flat-square)](https://your-demo-link.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-black?style=flat-square&logo=github)](https://github.com/engrmumtazali0112)
+
+</td>
+<td width="33%">
+
+### 🎵 Modern Music Player
+![Music Player](https://raw.githubusercontent.com/engrmumtazali0112/my_portfolio/main/src/assets/p11ModernMusicPlayer.PNG)
+
+**Tech:** React, Web Audio API, CSS3  
+**Features:**
+- Playlist management
+- Audio visualizer
+- Custom controls
+- Theme customization
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=flat-square)](https://your-demo-link.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-black?style=flat-square&logo=github)](https://github.com/engrmumtazali0112)
+
+</td>
+<td width="33%">
+
+### 📄 Plagiarism Detector
+![Plagiarism Detector](https://raw.githubusercontent.com/engrmumtazali0112/my_portfolio/main/src/assets/p12DocumentPlagiarismDetector.gif)
+
+**Tech:** Python, NLP, Flask  
+**Features:**
+- Document comparison
+- Similarity percentage
+- Highlighted matches
+- PDF report generation
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=flat-square)](https://your-demo-link.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-black?style=flat-square&logo=github)](https://github.com/engrmumtazali0112)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+### 🎤 AI Voice Assistant
+![Voice Assistant](https://raw.githubusercontent.com/engrmumtazali0112/my_portfolio/main/src/assets/p13VoiceAssistan.PNG)
+
+**Tech:** Python, Speech Recognition  
+**Features:**
+- Voice command recognition
+- Task automation
+- Weather updates
+- News briefing
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=flat-square)](https://your-demo-link.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-black?style=flat-square&logo=github)](https://github.com/engrmumtazali0112)
+
+</td>
+<td width="33%">
+
+### 💎 Jewelry Shop E-Store
+![Jewelry Shop](https://raw.githubusercontent.com/engrmumtazali0112/my_portfolio/main/src/assets/p14JewelryShopStore.gif)
+
+**Tech:** React, Node.js, MongoDB  
+**Features:**
+- Product catalog
+- Shopping cart
+- Wishlist
+- Order management
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=flat-square)](https://your-demo-link.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-black?style=flat-square&logo=github)](https://github.com/engrmumtazali0112)
+
+</td>
+<td width="33%">
+
+### 🔍 Amazon Web Scraper
+![Amazon Scraper](https://raw.githubusercontent.com/engrmumtazali0112/my_portfolio/main/src/assets/p14python_scripting_amazon_scraping.gif)
+
+**Tech:** Python, BeautifulSoup, Selenium  
+**Features:**
+- Product data extraction
+- Price tracking
+- Automated alerts
+- CSV export
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=flat-square)](https://your-demo-link.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-black?style=flat-square&logo=github)](https://github.com/engrmumtazali0112)
+
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+### 🏨 Hostel Management System
+![Hostel Management](https://raw.githubusercontent.com/engrmumtazali0112/my_portfolio/main/src/assets/HostelManagementSystem.JPG)
+
+**Tech:** Django, PostgreSQL, Bootstrap  
+**Features:**
+- Room allocation
+- Student records
+- Fee management
+- Complaint system
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=flat-square)](https://your-demo-link.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-black?style=flat-square&logo=github)](https://github.com/engrmumtazali0112)
+
+</td>
+<td width="33%">
+
+### 📚 Cloud Book Store
+![Cloud Book Store](https://raw.githubusercontent.com/engrmumtazali0112/my_portfolio/main/src/assets/CloudBookStore4.JPG)
+
+**Tech:** React, Firebase, Stripe  
+**Features:**
+- E-book library
+- Secure payments
+- Reading progress
+- Recommendations
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=flat-square)](https://your-demo-link.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-black?style=flat-square&logo=github)](https://github.com/engrmumtazali0112)
+
+</td>
+<td width="33%">
+
+### 🔄 Flask CI/CD Pipeline
+![Flask CI/CD](https://raw.githubusercontent.com/engrmumtazali0112/my_portfolio/main/src/assets/FlaskCICDDemo.JPG)
+
+**Tech:** Flask, Docker, GitHub Actions  
+**Features:**
+- Automated testing
+- Continuous deployment
+- Docker containerization
+- Pipeline monitoring
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=flat-square)](https://your-demo-link.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-black?style=flat-square&logo=github)](https://github.com/engrmumtazali0112)
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🛠️ Tech Stack
+
+<div align="center">
+
+### 💻 Frontend Technologies
+
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+### 🔧 Backend Technologies
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
+
+### 🗄️ Databases
+
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+
+### 🤖 AI/ML & Data Science
+
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![scikit-learn](https://img.shields.io/bad

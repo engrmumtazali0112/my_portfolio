@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
 import "./NavbarStyle.css";
 import React, { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaHome, FaUser, FaCog, FaProjectDiagram, FaCertificate, FaStar, FaImages, FaEnvelope, FaDownload, FaFileAlt } from "react-icons/fa";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
-  const handleClick = () => setClick(!click);
-
   const [color, setColor] = useState(false);
 
-  // Add useEffect to handle scroll listener and cleanup
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
+
   useEffect(() => {
     const changeColor = () => {
       if (window.scrollY >= 100) {
@@ -26,56 +26,72 @@ const Navbar = () => {
     };
   }, []);
 
+  const navItems = [
+    { path: "/", label: "Home", icon: <FaHome /> },
+    { path: "/about", label: "About", icon: <FaUser /> },
+    { path: "/service", label: "Service", icon: <FaCog /> },
+    { path: "/project", label: "Project", icon: <FaProjectDiagram /> },
+    { path: "/certificate", label: "Certificate", icon: <FaCertificate /> },
+    { path: "/review", label: "Review", icon: <FaStar /> },
+    { path: "/gallery", label: "Gallery", icon: <FaImages /> },
+    { path: "/contact", label: "Contact", icon: <FaEnvelope /> },
+  ];
+
   return (
     <div className={color ? "header header-bg" : "header"}>
-      <Link to="/" className="logo">
-        {/* Add logo image */}
-        <img src="/mylogo.png" alt="Logo" className="logo-img" />
-        <h1>Welcome</h1>
+      <Link to="/" className="logo" onClick={closeMobileMenu}>
+        <div className="logo-container">
+          <img src="/mylogo.png" alt="Logo" className="logo-img" />
+          <div className="logo-text">
+            <h1>Mumtaz Ali</h1>
+            <span className="logo-subtitle">Full Stack Developer</span>
+          </div>
+        </div>
       </Link>
+
       <ul className={click ? "nav-menu active" : "nav-menu"}>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/service">Service</Link>
-        </li>
-        <li>
-          <Link to="/project">Project</Link>
-        </li>
-        <li>
-          <Link to="/certificate">Certificate</Link>
-        </li>
-        <li>
-          <Link to="/review">Review</Link>
-        </li>
-        <li>
-          <Link to="/gallery">Gallery</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
-        </li>
+        {navItems.map((item, index) => (
+          <li key={index} onClick={closeMobileMenu}>
+            <Link to={item.path} className="nav-link">
+              <span className="nav-icon">{item.icon}</span>
+              <span className="nav-label">{item.label}</span>
+            </Link>
+          </li>
+        ))}
 
-        <a href="/CvPic/my-Resumi.pdf" download>
-            <button className="btn">Download CV</button>
-        </a>
-
-        <a href="/CvPic/Transcript.pdf" download>
-            <button className="btn">Download Transcript</button>
-        </a>
-
+        <li className="nav-buttons">
+          <a href="/CvPic/my-Resumi.pdf" download className="download-btn">
+            <FaDownload className="btn-icon" />
+            <span>CV</span>
+          </a>
+          <a href="/CvPic/Transcript.pdf" download className="download-btn transcript-btn">
+            <FaFileAlt className="btn-icon" />
+            <span>Transcript</span>
+          </a>
+        </li>
       </ul>
 
-      <div className="hamburger" onClick={handleClick}>
-        {click ? (
-          <FaTimes size={20} style={{ color: "white" }} />
-        ) : (
-          <FaBars size={20} style={{ color: "white" }} />
-        )}
+      {/* Animated Navigation Cursor Indicator */}
+      <div className="nav-cursor-track">
+        <div className="nav-cursor-line"></div>
+        <div className="nav-cursor"></div>
       </div>
+
+      <div className="hamburger" onClick={handleClick}>
+        <div className={click ? "hamburger-icon active" : "hamburger-icon"}>
+          {click ? (
+            <FaTimes size={24} />
+          ) : (
+            <FaBars size={24} />
+          )}
+        </div>
+      </div>
+
+      {/* Overlay for mobile menu */}
+      <div 
+        className={click ? "menu-overlay active" : "menu-overlay"} 
+        onClick={closeMobileMenu}
+      ></div>
     </div>
   );
 };

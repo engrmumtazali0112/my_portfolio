@@ -1,18 +1,27 @@
-import React from 'react'
+import React from 'react';
 import Navbar from '../Components/Navbar';
 import Heroimg from '../Components/Heroimg';
+
+import Work from '../Components/Work';
+import ServicesSection from '../Components/ServicesSection';
+import ReviewsSection from '../Components/ReviewsSection';
 import Footer from '../Components/Footer';
-import Work from "../Components/Work";
+import AboutContent from '../Components/AboutContent';
+import PricingCards from '../Components/PricingCards';
 
 const Home = () => {
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <Heroimg />
-      <Work/>
+      <Work />
+      <ServicesSection />
+      <PricingCards />
+      <ReviewsSection />
+      <AboutContent />
       <Footer />
     </div>
   );
 };
 
-export default Home; 
+export default Home;
