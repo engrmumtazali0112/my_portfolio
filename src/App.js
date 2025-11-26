@@ -7,7 +7,8 @@ import Contact from "./Routes/Contact";
 import Gallery from "./Routes/Gallery";
 import Certificate from "./Routes/Certificate";
 import DownloadCv from "./Routes/DownloadCv";
-// import NotFound from "./Routes/NotFound"; // New NotFound component
+import Service from "./Routes/Service";
+import Review from "./Routes/Review";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -22,7 +23,8 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/downloadcv" element={<DownloadCv />} />
         <Route path="/certificate" element={<Certificate />} />
-        {/* <Route path="*" element={<NotFound />} /> Fallback route */}
+        <Route path="/service" element={<Service />} />
+        <Route path="/review" element={<Review />} />
       </Routes>
     </>
   );

@@ -35,22 +35,28 @@ const Navbar = () => {
       </Link>
       <ul className={click ? "nav-menu active" : "nav-menu"}>
         <li>
-          <Link to="/">Home</Link> {/* Updated Home route to "/" */}
-        </li>
-        <li>
-          <Link to="/project">Project</Link> {/* Lowercase paths */}
+          <Link to="/">Home</Link>
         </li>
         <li>
           <Link to="/about">About</Link>
         </li>
         <li>
+          <Link to="/service">Service</Link>
+        </li>
+        <li>
+          <Link to="/project">Project</Link>
+        </li>
+        <li>
           <Link to="/certificate">Certificate</Link>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <Link to="/review">Review</Link>
         </li>
         <li>
           <Link to="/gallery">Gallery</Link>
+        </li>
+        <li>
+          <Link to="/contact">Contact</Link>
         </li>
 
         <a href="/CvPic/my-Resumi.pdf" download>
