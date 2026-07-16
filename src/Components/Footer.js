@@ -1,6 +1,11 @@
+// src/Components/Footer.js
 import "./FooterStyles.css";
 import React from 'react';
-import { FaFacebook, FaGithub, FaHome, FaInstagram, FaLinkedin, FaMailBulk, FaPhone, FaTwitter, FaYoutube, FaDiscord, FaMapMarkerAlt, FaEnvelope, FaHeart, FaCode, FaRocket } from "react-icons/fa";
+import { 
+  FaFacebook, FaGithub, FaInstagram, FaLinkedin, 
+  FaPhone, FaTwitter, FaYoutube, FaDiscord, 
+  FaMapMarkerAlt, FaEnvelope, FaHeart, FaCode, FaRocket 
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -117,7 +122,6 @@ const Footer = () => {
       </div>
     </div>
   );
-  
 };
 
 export default Footer;
