@@ -1,3 +1,4 @@
+// src/Components/Form.js
 import React, { useState } from "react";
 import "./FormStyles.css";
 import axios from "axios";
@@ -13,20 +14,10 @@ const Form = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validate all fields
     if (!name || !email || !phonenumber || !subject || !message) {
       setSubmissionStatus("All fields are required.");
       return;
     }
-
-    // Prepare data for EmailJS and Sheet.best
-    const emailParams = {
-      name,
-      email,
-      phone: phonenumber,
-      subject,
-      message,
-    };
 
     const sheetData = {
       "Your Full Name:": name,
@@ -37,23 +28,13 @@ const Form = () => {
     };
 
     try {
-      // Send email via EmailJS
-      await window.emailjs.send(
-        "21dmbcs124", // Replace with your EmailJS Service ID
-        "template_9pkkqa9", // Replace with your EmailJS Template ID
-        emailParams,
-        "gP5gF9RPdQC3gvB-c" // Replace with your EmailJS Public Key
-      );
-      console.log("Email sent successfully!");
-
       // Store data in Google Sheets via Sheet.best
       const response = await axios.post(
-        "https://api.sheetbest.com/sheets/582e089c-7b2c-497c-b10c-7ca821fd6cba", // Your Sheet.best Connection URL
+        "https://api.sheetbest.com/sheets/582e089c-7b2c-497c-b10c-7ca821fd6cba",
         sheetData
       );
       console.log("Data successfully sent to Google Sheets:", response.data);
 
-      // Clear form fields and update submission status
       setName("");
       setEmail("");
       setPhonenumber("");
@@ -82,7 +63,7 @@ const Form = () => {
         <label>Email:</label>
         <input
           type="email"
-          placeholder="Enter your email (e.g., abc@example.com)"
+          placeholder="Enter your email"
           required
           className="form-control"
           onChange={(e) => setEmail(e.target.value)}
