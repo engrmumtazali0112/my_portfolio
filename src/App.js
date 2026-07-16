@@ -4,7 +4,7 @@ import Home from "./Routes/Home";
 import About from "./Routes/About";
 import Project from "./Routes/Project";
 import Contact from "./Routes/Contact";
-import Gallery from "./Routes/Gallery";
+
 import Certificate from "./Routes/Certificate";
 import DownloadCv from "./Routes/DownloadCv";
 import Service from "./Routes/Service";
@@ -20,7 +20,6 @@ function App() {
         <Route path="/project" element={<Project />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/gallery" element={<Gallery />} />
         <Route path="/downloadcv" element={<DownloadCv />} />
         <Route path="/certificate" element={<Certificate />} />
         <Route path="/service" element={<Service />} />

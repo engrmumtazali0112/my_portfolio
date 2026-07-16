@@ -33,7 +33,7 @@ const Navbar = () => {
     { path: "/project", label: "Project", icon: <FaProjectDiagram /> },
     { path: "/certificate", label: "Certificate", icon: <FaCertificate /> },
     { path: "/review", label: "Review", icon: <FaStar /> },
-    { path: "/gallery", label: "Gallery", icon: <FaImages /> },
+
     { path: "/contact", label: "Contact", icon: <FaEnvelope /> },
   ];
 

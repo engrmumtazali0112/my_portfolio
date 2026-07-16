@@ -1,16 +1,22 @@
-import p1blogwebsite from "../assets/p1blogwebsite.PNG";
+
 import p4handgesture from "../assets/p4handgesture.gif";
 import p5objdetection from "../assets/p5objdetection.gif";
 
-import HostelManagementSystem from "../assets/HostelManagementSystem.JPG";
+import UniversityAddministrationManagmentSystem from "../assets/HostelManagementSystem.JPG";
 import QuizGame from "../assets/QuizGame.JPG";
 import FlaskCICDDemo from "../assets/FlaskCICDDemo.JPG";
 import FingerprintAttendance from "../assets/FingerprintAttendance.JPG";
 import CloudBookStore from "../assets/CloudBookStore4.JPG";
 
+import studentComplaint from "../assets/StudentComplaintManagement.PNG";
+import axonForge from "../assets/AxonForge.PNG";
+
+import financeAI from "../assets/financeAI-overview.png";
+import aiVisibility from "../assets/ai-visibility-dashboard.png";
+
 import p6PersonalityPredictionSystem from "../assets/p6PersonalityPredictionSystem.gif";
 import p7RubustMultipleChoisequiz from "../assets/p7RubustMultipleChoisequiz.gif";
-import p11ModernMusicPlayer from "../assets/p11ModernMusicPlayer.gif";
+
 import p12DocumentPlagiarismDetector from "../assets/p12DocumentPlagiarismDetector.gif";
 import p8HangmanAdventureDjango from "../assets/p8HangmanAdventureDjango.gif";
 import p9WorldBankPopulationData from "../assets/p9WorldBankPopulationData.JPG";
@@ -29,6 +35,14 @@ const ProjectCardData = [
         view: "https://github.com/engrmumtazali0112/Jewelry-Shop---Django-E-commerce",
         source: "https://github.com/engrmumtazali0112/Jewelry-Shop---Django-E-commerce"
     },
+
+    {
+    imgsrc: axonForge,
+    title: "Axon Forge — Agency Platform",
+    text: "A full-stack SaaS-style platform for a remote-first software development agency, showcasing service offerings, project portfolio, and client engagement workflows with a FastAPI backend and a React + Vite frontend.",
+    view: "https://axon-forge.vercel.app/",
+    source: "https://github.com/engrmumtazali0112/next-tech-solutions"
+},
     {
         imgsrc: CloudBookStore,
         title: "Cloud BookStore with AWS",
@@ -43,12 +57,37 @@ const ProjectCardData = [
         view: "https://github.com/engrmumtazali0112/Robust-Multiple-Choice-Quiz-Game",
         source: "https://github.com/engrmumtazali0112/Robust-Multiple-Choice-Quiz-Game"
     },
+
+    {
+    imgsrc: studentComplaint,
+    title: "Student Complaint Management System",
+    text: "A production-ready, multi-portal complaint platform for universities with 10 role-based portals (Student, Admin, Super Admin, Warden, Examination, Treasury, Security, Transport, Library, Sports, IT), real-time status tracking, automatic escalation, and a 5-star admin rating system.",
+    view: "https://github.com/engrmumtazali0112/Student-Complaint-Management-System",
+    source: "https://github.com/engrmumtazali0112/Student-Complaint-Management-System"
+},
+
+
     {
         imgsrc: p14python_scripting_amazon_scraping,
         title: "Amazon Scraper",
         text: "A Python project that scrapes Amazon product data such as titles, prices, reviews, and images. Utilizes Flask for backend and BeautifulSoup for scraping.",
         view: "https://amazon-scraper-m2h2defbh-engrmumtazali0112s-projects.vercel.app",
         source: "https://github.com/engrmumtazali0112/python-script-amazon-scraper"
+    },
+
+    {
+    imgsrc: financeAI,
+    title: "FinanceAI — AI-Powered Personal Finance Assistant",
+    text: "A multi-user financial companion with natural-language Q&A over spending data, receipt OCR via vision models, intent-based routing between Claude Haiku and Sonnet for cost efficiency, anomaly detection, budget tracking, and Supabase row-level security for multi-tenancy.",
+    view: "https://your-financeai-demo-link.com",
+    source: "https://github.com/engrmumtazali0112/finance-assistant"
+    },
+    {
+        imgsrc: aiVisibility,
+        title: "AI Visibility & Search Intelligence Platform",
+        text: "A Flask + React platform that tracks whether a business is mentioned when buyers ask ChatGPT, Claude, or Perplexity directly. Uses a 3-agent Claude pipeline (discovery, scoring, content recommendation) with a documented multi-factor opportunity score and 14/14 passing unit tests.",
+        view: "https://your-ai-visibility-demo-link.com",
+        source: "https://github.com/engrmumtazali0112/AI-Visibility-Search-Intelligence-Platform"
     },
     {
         imgsrc: FlaskCICDDemo,
@@ -86,19 +125,13 @@ const ProjectCardData = [
         source: "https://github.com/engrmumtazali0112/Code_Clause_Internship_Artificial_Intelligence/tree/main/Personality-Prediction-System-via-CV-Analysis"
     },
     {
-        imgsrc: HostelManagementSystem,
+        imgsrc: UniversityAddministrationManagmentSystem,
         title: "Smart Hostel Management System",
         text: "A full-stack system for hostel management, covering room allocation, payments, complaints, biometric attendance, and more, built using Django and Bootstrap.",
         view: "https://github.com/engrmumtazali0112/SmartHostelManagmentSystem_FYP",
         source: "https://github.com/engrmumtazali0112/SmartHostelManagmentSystem_FYP"
     },
-    {
-        imgsrc: p1blogwebsite,
-        title: "Modern Blog Website",
-        text: "A dynamic blog website built with Node.js, Express, and MongoDB. Features include user authentication, CRUD operations, image upload, and an admin dashboard.",
-        view: "https://github.com/engrmumtazali0112/Digital_Empowerment_Pakistan_Internships/tree/main/blog-website-node.js-express-mongodb",
-        source: "https://github.com/engrmumtazali0112/Digital_Empowerment_Pakistan_Internships/tree/main/blog-website-node.js-express-mongodb"
-    },
+    
     {
         imgsrc: p7RubustMultipleChoisequiz, 
         title: "Robust Multiple-Choice Quiz Game",
@@ -141,13 +174,7 @@ const ProjectCardData = [
         view: "https://github.com/engrmumtazali0112/Digital_Empowerment_Pakistan_Internships/tree/main/real-time-chat",
         source: "https://github.com/engrmumtazali0112/Digital_Empowerment_Pakistan_Internships/tree/main/real-time-chat"
     },
-    {
-        imgsrc: p11ModernMusicPlayer,
-        title: "Modern Music Player",
-        text: "A modern music player built with Python and Tkinter for managing and enjoying your music collection with essential playback features.",
-        view: "https://github.com/engrmumtazali0112/Codex-Cue_Internship/tree/main/Python-music-app",
-        source: "https://github.com/engrmumtazali0112/Codex-Cue_Internship/tree/main/Python-music-app"
-    },
+    
     {
         imgsrc: p12DocumentPlagiarismDetector,
         title: "Document Plagiarism Detector",
