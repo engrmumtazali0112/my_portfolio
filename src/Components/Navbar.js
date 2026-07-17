@@ -2,11 +2,9 @@
 import { Link, useLocation } from "react-router-dom";
 import "./NavbarStyle.css";
 import React, { useState, useEffect } from "react";
-import { 
-  FaBars, FaTimes, FaHome, FaUser, FaCog, 
-  FaProjectDiagram, FaCertificate, FaStar, FaEnvelope,
-  FaDownload, FaFileAlt 
-} from "react-icons/fa";
+
+// After — remove FaImages since Gallery nav item was deleted
+import { FaBars, FaTimes, FaHome, FaUser, FaCog, FaProjectDiagram, FaCertificate, FaStar, FaEnvelope, FaDownload, FaFileAlt } from "react-icons/fa";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
