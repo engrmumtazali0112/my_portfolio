@@ -1,22 +1,22 @@
-// src/Routes/Services.js
+// src/Routes/Education.js
 import React from 'react';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import Heroimg2 from '../Components/Heroimg2';
-import ServicesSection from '../Components/ServicesSection';
+import Education from '../Components/Education';
 
-const Services = () => {
+const EducationPage = () => {
   return (
     <div>
       <Navbar />
       <Heroimg2 
-        heading="SERVICES" 
-        text="Professional Development Solutions" 
+        heading="EDUCATION" 
+        text="Academic Background & Professional Certifications"
       />
-      <ServicesSection />
+      <Education />
       <Footer />
     </div>
   );
 };
 
-export default Services;
+export default EducationPage;

@@ -3,8 +3,10 @@ import { Link, useLocation } from "react-router-dom";
 import "./NavbarStyle.css";
 import React, { useState, useEffect } from "react";
 
-// After — remove FaImages since Gallery nav item was deleted
-import { FaBars, FaTimes, FaHome, FaUser, FaCog, FaProjectDiagram, FaCertificate, FaStar, FaEnvelope, FaDownload, FaFileAlt } from "react-icons/fa";
+import { 
+  FaBars, FaTimes, FaHome, FaUser, FaCog, FaProjectDiagram, 
+  FaCertificate, FaStar, FaEnvelope, FaGraduationCap 
+} from "react-icons/fa";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -33,6 +35,7 @@ const Navbar = () => {
     { path: "/services", label: "Services", icon: <FaCog /> },
     { path: "/project", label: "Projects", icon: <FaProjectDiagram /> },
     { path: "/certificate", label: "Certificates", icon: <FaCertificate /> },
+    { path: "/education", label: "Education", icon: <FaGraduationCap /> }, // ✅ Added Education
     { path: "/review", label: "Reviews", icon: <FaStar /> },
     { path: "/contact", label: "Contact", icon: <FaEnvelope /> },
   ];
@@ -68,13 +71,8 @@ const Navbar = () => {
             </Link>
           </li>
         ))}
-
-        <li className="nav-buttons">
-          <a href="/CvPic/my-Resumi.pdf" download className="download-btn">
-            <FaDownload className="btn-icon" />
-            <span>CV</span>
-          </a>
-        </li>
+        
+        {/* ✅ Removed CV Download button */}
       </ul>
 
       <div className="hamburger" onClick={handleClick}>
