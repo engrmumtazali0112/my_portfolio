@@ -1,0 +1,186 @@
+{
+  "info": {
+    "_postman_id": "82bfeb09-915f-4d51-a4a2-9e3dce2a0920",
+    "name": "E-Commerce API Testing",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "55832188",
+    "_collection_link": "https://go.postman.co/collection/55832188-82bfeb09-915f-4d51-a4a2-9e3dce2a0920?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Login  R",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });",
+              "const loginData = pm.response.json();",
+              "pm.test(\"accessToken received\", function () { pm.expect(loginData).to.have.property(\"accessToken\"); });",
+              "pm.environment.set(\"token\", loginData.accessToken);",
+              "pm.environment.set(\"user_id\", loginData.id);"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"username\": \"emilys\",\r\n  \"password\": \"emilyspass\"\r\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": {
+          "raw": "{{base_url}}/auth/login",
+          "host": ["{{base_url}}"],
+          "path": ["auth", "login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Products",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\nconst res = pm.response.json();\r\n\r\npm.test(\"Products array is not empty\", function () {\r\n    pm.expect(res.products.length).to.be.above(0);\r\n});\r\n\r\npm.environment.set(\"product_id\", res.products[0].id);"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/products?limit=5",
+          "host": ["{{base_url}}"],
+          "path": ["products"],
+          "query": [{ "key": "limit", "value": "5" }]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add to Cart",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 201\", function () {\n    pm.response.to.have.status(201);\n});\n\nconst res = pm.response.json();\n\npm.test(\"Cart total is above zero\", function () {\n    pm.expect(res.total).to.be.above(0);\n});\n\npm.environment.set(\"cart_id\", res.id);"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"userId\": {{user_id}},\r\n  \"products\": [\r\n    { \"id\": {{product_id}}, \"quantity\": 2 }\r\n  ]\r\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": {
+          "raw": "{{base_url}}/carts/add",
+          "host": ["{{base_url}}"],
+          "path": ["carts", "add"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Existing Cart",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 200', function () { pm.response.to.have.status(200); });",
+              "const res = pm.response.json();",
+              "pm.test('Got a cart', function () { pm.expect(res.carts.length).to.be.above(0); });",
+              "pm.environment.set('cart_id', res.carts[0].id);"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/carts?limit=1",
+          "host": ["{{base_url}}"],
+          "path": ["carts"],
+          "query": [{ "key": "limit", "value": "1" }]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Validate Cart",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });",
+              "const res = pm.response.json();",
+              "pm.test(\"Cart has products\", function () { pm.expect(res).to.have.property(\"products\"); });"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/carts/{{cart_id}}",
+          "host": ["{{base_url}}"],
+          "path": ["carts", "{{cart_id}}"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Cart",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });",
+              "const res = pm.response.json();",
+              "pm.test(\"Cart updated\", function () { pm.expect(res).to.have.property(\"products\"); });"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"merge\": true,\r\n  \"products\": [\r\n    { \"id\": 2, \"quantity\": 1 }\r\n  ]\r\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": {
+          "raw": "{{base_url}}/carts/{{cart_id}}",
+          "host": ["{{base_url}}"],
+          "path": ["carts", "{{cart_id}}"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
