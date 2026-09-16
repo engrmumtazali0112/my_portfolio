@@ -7,7 +7,7 @@ export class TodoPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.input = page.getByPlaceholder('What needs to be done?');
+    this.input = page.getByPlaceholder('What needs to be done?');   // ← CORRECT
     this.todoList = page.locator('.todo-list');
   }
 

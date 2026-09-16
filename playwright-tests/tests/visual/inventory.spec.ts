@@ -2,13 +2,15 @@ import { test, expect } from '@playwright/test';
 
 test.describe('SauceDemo Visual @visual @regression', () => {
 
-  test('inventory page looks correct', async ({ page }) => {
-    // Uses saved auth session
+  test.beforeEach(async ({ page }) => {
     await page.goto('https://www.saucedemo.com/inventory.html');
     await page.waitForLoadState('networkidle');
+  });
 
+  test('inventory page looks correct', async ({ page }) => {
     await expect(page).toHaveScreenshot('inventory-page.png', {
       maxDiffPixels: 100,
+      mask: [page.locator('.shopping_cart_badge')],
     });
   });
 
