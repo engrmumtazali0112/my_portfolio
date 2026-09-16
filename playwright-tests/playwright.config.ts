@@ -22,7 +22,13 @@ export default defineConfig({
   // 2. API tests — no browser needed ← ADD THIS
   {
     name: 'api',
-    testMatch: /api\/.*\.spec\.ts/,
+    testMatch: /api\/jsonplaceholder\.spec\.ts/,   // ← specific file
+  },
+  {
+    name: 'mocking',
+    testMatch: /api\/mocking\.spec\.ts/,
+    use: { ...devices['Desktop Chrome'] },
+    dependencies: ['setup'],
   },
 
   // 3. TodoMVC — desktop Chromium
