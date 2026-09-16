@@ -10,21 +10,23 @@ export default defineConfig({
   use: {
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
-    channel: 'chrome',   // ← GLOBAL: use installed Chrome everywhere
   },
 
   projects: [
+    // 1. Auth setup — runs FIRST
     {
       name: 'setup',
       testMatch: /saucedemo\/auth\.setup\.ts/,
     },
+
+    // 2. TodoMVC — desktop Chromium
     {
       name: 'chromium',
       testMatch: /todomvc\/.*\.spec\.ts/,
-      use: {
-        ...devices['Desktop Chrome'],
-      },
+      use: { ...devices['Desktop Chrome'] },
     },
+
+    // 3. SauceDemo — auth session
     {
       name: 'saucedemo',
       testMatch: /saucedemo\/.*\.spec\.ts/,
@@ -34,12 +36,24 @@ export default defineConfig({
       },
       dependencies: ['setup'],
     },
+
+    // 4. TodoMVC — mobile
     {
       name: 'Mobile Chrome',
       testMatch: /todomvc\/.*\.spec\.ts/,
-      use: {
-        ...devices['Pixel 5'],
-      },
+      use: { ...devices['Pixel 5'] },
     },
+
+    // 5. OPTIONAL — add Firefox and WebKit now that downloads work
+    // {
+    //   name: 'firefox',
+    //   testMatch: /todomvc\/.*\.spec\.ts/,
+    //   use: { ...devices['Desktop Firefox'] },
+    // },
+    // {
+    //   name: 'webkit',
+    //   testMatch: /todomvc\/.*\.spec\.ts/,
+    //   use: { ...devices['Desktop Safari'] },
+    // },
   ],
 });
