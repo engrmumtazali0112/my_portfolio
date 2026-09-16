@@ -30,6 +30,12 @@ export default defineConfig({
     use: { ...devices['Desktop Chrome'] },
     dependencies: ['setup'],
   },
+   
+  {
+    name: 'fixtures',
+    testMatch: /.*with-fixture\.spec\.ts|.*data-driven\.spec\.ts/,
+    use: { ...devices['Desktop Chrome'] },
+  },
 
   // 3. TodoMVC — desktop Chromium
   {
