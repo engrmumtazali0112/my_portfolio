@@ -61,5 +61,14 @@ export default defineConfig({
     testMatch: /todomvc\/.*\.spec\.ts/,
     use: { ...devices['Pixel 5'] },
   },
+  {
+  name: 'visual',
+  testMatch: /visual\/.*\.spec\.ts/,
+  use: {
+    ...devices['Desktop Chrome'],
+    // Screenshots will use this viewport
+    viewport: { width: 1280, height: 720 },
+  },
+},
 ],
 });
