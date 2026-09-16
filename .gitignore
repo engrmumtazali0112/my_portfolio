@@ -8,3 +8,8 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+playwright-report/
+playwright-report/
+test-results/
+playwright-tests/test-results/
+playwright-tests/playwright-report/
