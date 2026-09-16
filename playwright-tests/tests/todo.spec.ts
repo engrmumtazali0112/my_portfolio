@@ -1,43 +1,39 @@
 import { test, expect } from '@playwright/test';
+import { TodoPage } from '../pages/TodoPage';
 
-const TODO_URL = 'https://demo.playwright.dev/todomvc/';
+test.describe('TodoMVC Tests @ui', () => {
+  let todoPage: TodoPage;
 
-test.beforeEach(async ({ page }) => {
-  await page.goto(TODO_URL);
-});
+  test.beforeEach(async ({ page }) => {
+    todoPage = new TodoPage(page);
+    await todoPage.goto();
+  });
 
-test('can add a new todo', async ({ page }) => {
-  const input = page.getByPlaceholder('What needs to be done?');
-  await input.fill('Buy groceries');
-  await input.press('Enter');
+  test('can add a new todo @smoke', async ({ page }) => {
+    await todoPage.addTodo('Buy groceries');
+    await expect(page.getByText('Buy groceries')).toBeVisible();
+  });
 
-  await expect(page.getByText('Buy groceries')).toBeVisible();
-});
+  test('can complete a todo @sanity', async ({ page }) => {
+    const todoText = 'Finish Playwright tutorial';
+    await todoPage.addTodo(todoText);
+    await todoPage.completeTodo(todoText);
+    await expect(todoPage.getTodoItem(todoText)).toHaveClass(/completed/);
+  });
 
-test('can complete a todo', async ({ page }) => {
-  const input = page.getByPlaceholder('What needs to be done?');
-  await input.fill('Finish Playwright tutorial');
-  await input.press('Enter');
+  test('can delete a todo @regression', async ({ page }) => {
+    const todoText = 'Delete me';
+    await todoPage.addTodo(todoText);
+    await todoPage.deleteTodo(todoText);
+    await expect(todoPage.getTodoItem(todoText)).not.toBeVisible();
+  });
 
-  const todoItem = page.locator('li', { hasText: 'Finish Playwright tutorial' });
-  await expect(todoItem).toBeVisible();
-
-  const checkbox = todoItem.locator('input.toggle');
-  await checkbox.check();
-
-  await expect(todoItem).toHaveClass(/completed/);
-});
-
-test('can delete a todo', async ({ page }) => {
-  const input = page.getByPlaceholder('What needs to be done?');
-  await input.fill('Delete me');
-  await input.press('Enter');
-
-  const todoItem = page.locator('li', { hasText: 'Delete me' });
-  await expect(todoItem).toBeVisible();
-
-  await todoItem.hover();
-  await todoItem.locator('button.destroy').click();
-
-  await expect(todoItem).not.toBeVisible();
+  test('can filter completed todos @regression', async ({ page }) => {
+    await todoPage.addTodo('Task 1');
+    await todoPage.addTodo('Task 2');
+    await todoPage.completeTodo('Task 1');
+    await todoPage.filterBy('Completed');
+    await expect(page.getByText('Task 1')).toBeVisible();
+    await expect(page.getByText('Task 2')).not.toBeVisible();
+  });
 });
