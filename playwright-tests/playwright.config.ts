@@ -13,47 +13,41 @@ export default defineConfig({
   },
 
   projects: [
-    // 1. Auth setup — runs FIRST
-    {
-      name: 'setup',
-      testMatch: /saucedemo\/auth\.setup\.ts/,
-    },
+  // 1. Auth setup — runs FIRST
+  {
+    name: 'setup',
+    testMatch: /saucedemo\/auth\.setup\.ts/,
+  },
 
-    // 2. TodoMVC — desktop Chromium
-    {
-      name: 'chromium',
-      testMatch: /todomvc\/.*\.spec\.ts/,
-      use: { ...devices['Desktop Chrome'] },
-    },
+  // 2. API tests — no browser needed ← ADD THIS
+  {
+    name: 'api',
+    testMatch: /api\/.*\.spec\.ts/,
+  },
 
-    // 3. SauceDemo — auth session
-    {
-      name: 'saucedemo',
-      testMatch: /saucedemo\/.*\.spec\.ts/,
-      use: {
-        ...devices['Desktop Chrome'],
-        storageState: 'auth.json',
-      },
-      dependencies: ['setup'],
-    },
+  // 3. TodoMVC — desktop Chromium
+  {
+    name: 'chromium',
+    testMatch: /todomvc\/.*\.spec\.ts/,
+    use: { ...devices['Desktop Chrome'] },
+  },
 
-    // 4. TodoMVC — mobile
-    {
-      name: 'Mobile Chrome',
-      testMatch: /todomvc\/.*\.spec\.ts/,
-      use: { ...devices['Pixel 5'] },
+  // 4. SauceDemo — auth session
+  {
+    name: 'saucedemo',
+    testMatch: /saucedemo\/.*\.spec\.ts/,
+    use: {
+      ...devices['Desktop Chrome'],
+      storageState: 'auth.json',
     },
+    dependencies: ['setup'],
+  },
 
-    // 5. OPTIONAL — add Firefox and WebKit now that downloads work
-    // {
-    //   name: 'firefox',
-    //   testMatch: /todomvc\/.*\.spec\.ts/,
-    //   use: { ...devices['Desktop Firefox'] },
-    // },
-    // {
-    //   name: 'webkit',
-    //   testMatch: /todomvc\/.*\.spec\.ts/,
-    //   use: { ...devices['Desktop Safari'] },
-    // },
-  ],
+  // 5. Mobile
+  {
+    name: 'Mobile Chrome',
+    testMatch: /todomvc\/.*\.spec\.ts/,
+    use: { ...devices['Pixel 5'] },
+  },
+],
 });
