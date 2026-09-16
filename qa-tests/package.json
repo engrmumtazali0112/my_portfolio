@@ -13,5 +13,13 @@
   "devDependencies": {
     "newman": "^6.2.2",
     "newman-reporter-htmlextra": "^1.23.1"
+  },
+    "scripts": {
+    "test": "playwright test",
+    "test:api": "playwright test --project=api",
+    "test:ui": "playwright test tests/todomvc",
+    "test:visual": "playwright test --project=visual",
+    "test:bdd": "bddgen && playwright test --config=playwright.bdd.config.ts",
+    "bdd:report": "playwright show-report"
   }
 }
