@@ -8,8 +8,11 @@ const bddTestDir = defineBddConfig({
   outputDir: '.features-gen',
 });
 
+// ── Skip visual tests in CI (Windows baselines vs Linux CI) ──
+const isCI = !!process.env.CI;
+
 export default defineConfig({
-  testDir: './tests',              // ← MUST be here (main tests)
+  testDir: './tests',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 1,
@@ -18,6 +21,7 @@ export default defineConfig({
   expect: { timeout: 10000 },
   reporter: 'html',
 
+  // ── Global defaults ─────────────────────────────
   use: {
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
@@ -26,14 +30,21 @@ export default defineConfig({
     actionTimeout: 15000,
   },
 
+  // ── Projects ────────────────────────────────────
   projects: [
-    // 1. AUTH SETUP
-    { name: 'setup', testMatch: /saucedemo\/auth\.setup\.ts/ },
+    // 1. AUTH SETUP — runs first
+    {
+      name: 'setup',
+      testMatch: /saucedemo\/auth\.setup\.ts/,
+    },
 
-    // 2. API
-    { name: 'api', testMatch: /api\/jsonplaceholder\.spec\.ts/ },
+    // 2. API TESTS — no browser
+    {
+      name: 'api',
+      testMatch: /api\/jsonplaceholder\.spec\.ts/,
+    },
 
-    // 3. MOCKING
+    // 3. NETWORK MOCKING
     {
       name: 'mocking',
       testMatch: /api\/mocking\.spec\.ts/,
@@ -41,21 +52,21 @@ export default defineConfig({
       dependencies: ['setup'],
     },
 
-    // 4. FIXTURES
+    // 4. FIXTURES + DATA-DRIVEN
     {
       name: 'fixtures',
       testMatch: /.*with-fixture\.spec\.ts|.*data-driven\.spec\.ts/,
       use: { ...devices['Desktop Chrome'] },
     },
 
-    // 5. CHROMIUM
+    // 5. TODOMVC — desktop
     {
       name: 'chromium',
       testMatch: /todomvc\/.*\.spec\.ts/,
       use: { ...devices['Desktop Chrome'] },
     },
 
-    // 6. SAUCEDEMO
+    // 6. SAUCEDEMO — authenticated
     {
       name: 'saucedemo',
       testMatch: /saucedemo\/.*\.spec\.ts/,
@@ -66,7 +77,7 @@ export default defineConfig({
       dependencies: ['setup'],
     },
 
-    // 7. MOBILE
+    // 7. MOBILE — Pixel 5
     {
       name: 'Mobile Chrome',
       testMatch: /todomvc\/.*\.spec\.ts/,
@@ -76,7 +87,7 @@ export default defineConfig({
       },
     },
 
-    // 8. VISUAL
+    // 8. VISUAL — desktop (SKIP on CI)
     {
       name: 'visual',
       testMatch: /visual\/.*\.spec\.ts/,
@@ -85,12 +96,14 @@ export default defineConfig({
         storageState: 'auth.json',
       },
       dependencies: ['setup'],
+      // ✅ Skip visual tests on CI (baselines are Windows-only)
+      ...(isCI ? { testIgnore: /.*/ } : {}),
     },
 
-    // 9. BDD ← This project has its OWN testDir
+    // 9. BDD — Cucumber/Gherkin
     {
       name: 'bdd',
-      testDir: bddTestDir,      // ← BDD uses its own generated dir
+      testDir: bddTestDir,
       use: { ...devices['Desktop Chrome'] },
     },
   ],

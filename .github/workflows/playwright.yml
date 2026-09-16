@@ -34,6 +34,16 @@ jobs:
         working-directory: playwright-tests
         run: npx playwright install --with-deps chromium
 
+      - name: Run auth setup
+        working-directory: playwright-tests
+        run: npx playwright test --project=setup
+        env:
+          CI: true
+
+      - name: Generate BDD tests
+        working-directory: playwright-tests
+        run: npx bddgen
+
       - name: Run Playwright tests (shard ${{ matrix.shardIndex }}/${{ matrix.shardTotal }})
         working-directory: playwright-tests
         run: npx playwright test --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
