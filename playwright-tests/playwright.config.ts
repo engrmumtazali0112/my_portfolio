@@ -10,12 +10,36 @@ export default defineConfig({
   use: {
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
+    channel: 'chrome',   // ← GLOBAL: use installed Chrome everywhere
   },
 
   projects: [
     {
+      name: 'setup',
+      testMatch: /saucedemo\/auth\.setup\.ts/,
+    },
+    {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'], channel: 'chrome' },
+      testMatch: /todomvc\/.*\.spec\.ts/,
+      use: {
+        ...devices['Desktop Chrome'],
+      },
+    },
+    {
+      name: 'saucedemo',
+      testMatch: /saucedemo\/.*\.spec\.ts/,
+      use: {
+        ...devices['Desktop Chrome'],
+        storageState: 'auth.json',
+      },
+      dependencies: ['setup'],
+    },
+    {
+      name: 'Mobile Chrome',
+      testMatch: /todomvc\/.*\.spec\.ts/,
+      use: {
+        ...devices['Pixel 5'],
+      },
     },
   ],
 });
