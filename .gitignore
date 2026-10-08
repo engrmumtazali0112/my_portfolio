@@ -5,7 +5,6 @@
 
 # Production build
 /build
-/dist
 
 # Environment
 .env
@@ -31,10 +30,16 @@ logs
 # Vercel
 .vercel/
 
-# Private contact data
+# Junk files (from your repo)
+#
+h origin main
+new.txt
 ContactEmail.csv
 ContactEmail.xlsx
 ContactEmail.xml
+Demo/
+playwright-tests/
+qa-tests/
 
 # Test coverage
 /coverage
