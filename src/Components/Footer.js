@@ -3,15 +3,22 @@ import "./FooterStyles.css";
 import React from "react";
 import { Link } from "react-router-dom";
 import {
-  FaFacebook, FaGithub, FaInstagram, FaLinkedin,
-  FaPhone, FaTwitter, FaYoutube, FaDiscord,
-  FaMapMarkerAlt, FaEnvelope, FaHeart
+  FaGithub,
+  FaTwitter,
+  FaLinkedin,
+  FaDiscord,
+  FaPhone,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaHeart,
+  FaArrowRight,
 } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
+        {/* ---------- TOP ---------- */}
         <div className="footer-top">
           <div className="footer-brand">
             <div className="brand-logo">
@@ -23,7 +30,11 @@ const Footer = () => {
               AI-powered systems for clients worldwide.
             </p>
             <p className="brand-location">
-              <FaMapMarkerAlt /> Lahore, Pakistan · Available worldwide (remote)
+              <FaMapMarkerAlt />
+              <span>
+                Islamabad &amp; Lahore, Pakistan · <strong>Onsite</strong> &amp;{" "}
+                <strong>Remote</strong>
+              </span>
             </p>
           </div>
 
@@ -50,39 +61,78 @@ const Footer = () => {
               </ul>
             </div>
 
+            
             <div className="footer-column contact-column">
-              <h3>Get in Touch</h3>
-              <a href="mailto:engrmumtazali01@gmail.com" className="contact-link-item">
-                <FaEnvelope /> engrmumtazali01@gmail.com
-              </a>
-              <a href="tel:+923370690080" className="contact-link-item">
-                <FaPhone /> +92 337 0690080
-              </a>
-              <span className="contact-link-item">
-                <FaMapMarkerAlt /> Lahore, Pakistan
-              </span>
-            </div>
+                <h3>Get in Touch</h3>
+                <a href="mailto:engrmumtazali01@gmail.com" className="contact-link-item">
+                  <FaEnvelope /> engrmumtazali01@gmail.com
+                </a>
+                <a href="tel:+923370690080" className="contact-link-item">
+                  <FaPhone /> +92 337 0690080
+                </a>
+                <a href="tel:+923476338292" className="contact-link-item">
+                  <FaPhone /> +92 347 6338292
+                </a>
+                <span className="contact-link-item">
+                  <FaMapMarkerAlt /> Islamabad · Lahore, Pakistan
+                </span>
+              </div>
           </div>
         </div>
 
+        {/* ---------- SOCIAL + CTA ---------- */}
         <div className="footer-social-section">
-          <span className="social-label">Connect</span>
           <div className="social-links">
-            <a href="https://github.com/engrmumtazali0112" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub /></a>
-            <a href="https://www.linkedin.com/in/mumtazali12/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
-            <a href="https://x.com/mumtazali1223" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><FaTwitter /></a>
-            <a href="https://www.instagram.com/its_maliyzi" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
-            <a href="https://www.facebook.com/profile.php?id=100072570194916L" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebook /></a>
-            <a href="http://www.youtube.com/@MumtazAli-nm6cz" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><FaYoutube /></a>
-            <a href="https://discord.gg/DZgwHzEb" target="_blank" rel="noopener noreferrer" aria-label="Discord"><FaDiscord /></a>
+            <a
+              href="https://github.com/engrmumtazali0112"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="social-icon"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="https://x.com/mumtazali1223"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter / X"
+              className="social-icon"
+            >
+              <FaTwitter />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/mumtazali12/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="social-icon"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://discord.gg/DZgwHzEb"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Discord"
+              className="social-icon"
+            >
+              <FaDiscord />
+            </a>
           </div>
+
+          <Link to="/contact" className="connect-cta">
+            <span>Let's Connect</span>
+            <FaArrowRight className="connect-arrow" />
+          </Link>
         </div>
 
+        {/* ---------- BOTTOM ---------- */}
         <div className="footer-bottom">
           <p className="copyright">
-            <FaHeart className="heart-icon" /> © {new Date().getFullYear()} Mumtaz Ali. All rights reserved.
+            <FaHeart className="heart-icon" /> © {new Date().getFullYear()} Mumtaz
+            Ali. All rights reserved.
           </p>
-          <span className="footer-badge">Available for freelance</span>
         </div>
       </div>
     </footer>

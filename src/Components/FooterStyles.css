@@ -1,11 +1,10 @@
 /* src/Components/FooterStyles.css */
 
 .footer {
-  background: #ffffff !important;
-  border-top: 1px solid #e5e7eb;
-  color: #0f172a;
+  background: var(--bg) !important;
+  border-top: 1px solid var(--border);
+  color: var(--text);
   margin-top: 0;
-  padding: 0;
 }
 
 .footer-container {
@@ -14,60 +13,79 @@
   padding: 70px 24px 30px;
 }
 
+/* ============ TOP ============ */
 .footer-top {
   display: grid;
   grid-template-columns: 1.4fr 2fr;
   gap: 60px;
   padding-bottom: 50px;
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 1px solid var(--border-soft);
 }
 
-.footer-brand { max-width: 420px; }
+.footer-brand { max-width: 460px; }
 
 .brand-logo {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .brand-mark {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
   background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
-  color: #fff;
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  font-size: 0.9rem;
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
 }
 
+/* FIX #1: Force strong visible color in both themes */
 .brand-logo h2 {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 700;
-  color: #0f172a;
   margin: 0;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
+  color: var(--text) !important;
+  -webkit-text-fill-color: var(--text);
 }
 
 .brand-tagline {
-  color: #64748b;
+  color: var(--text-body);
   line-height: 1.65;
   font-size: 0.95rem;
   margin: 0 0 16px;
 }
 
+/* FIX #2: Islamabad + Lahore + Onsite/Remote */
 .brand-location {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #94a3b8;
-  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-size: 0.88rem;
   margin: 0;
+  line-height: 1.5;
 }
 
+.brand-location svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.brand-location strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ============ LINKS ============ */
 .footer-links {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -77,7 +95,7 @@
 .footer-column h3 {
   font-size: 0.82rem;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--text);
   margin: 0 0 18px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -93,71 +111,120 @@
 }
 
 .footer-column ul li a {
-  color: #64748b;
+  color: var(--text-muted);
   font-size: 0.9rem;
   transition: color 0.2s ease;
 }
-.footer-column ul li a:hover { color: #4f46e5; }
+.footer-column ul li a:hover { color: var(--accent-blue); }
 
 .contact-link-item {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #64748b;
+  color: var(--text-muted);
   font-size: 0.88rem;
   margin-bottom: 10px;
   transition: color 0.2s ease;
   text-decoration: none;
 }
-.contact-link-item svg { color: #94a3b8; flex-shrink: 0; }
-.contact-link-item:hover { color: #4f46e5; }
-.contact-link-item:hover svg { color: #4f46e5; }
+.contact-link-item svg {
+  color: var(--text-soft);
+  flex-shrink: 0;
+}
+.contact-link-item:hover { color: var(--accent-blue); }
+.contact-link-item:hover svg { color: var(--accent-blue); }
 
+/* ============ SOCIAL + CTA ROW ============ */
 .footer-social-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 28px 0;
-  border-bottom: 1px solid #f1f5f9;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--border-soft);
   gap: 20px;
   flex-wrap: wrap;
 }
 
-.social-label {
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: #0f172a;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+.social-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-.social-links { display: flex; gap: 10px; flex-wrap: wrap; }
-
-.social-links a {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
+/* FIX #4: Only 4 icons, bigger, cleaner */
+.social-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #64748b;
-  background: #f8f9fb;
-  border: 1px solid #e5e7eb;
-  font-size: 1rem;
-  transition: all 0.2s ease;
+  color: var(--text-body);
+  background: var(--bg-muted);
+  border: 1px solid var(--border);
+  font-size: 1.15rem;
+  transition: all 0.25s ease;
 }
 
-.social-links a:hover {
+.social-icon:hover {
   color: #ffffff;
-  background: #0f172a;
-  border-color: #0f172a;
-  transform: translateY(-2px);
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(79, 70, 229, 0.3);
 }
 
+/* FIX #5: Professional "Let's Connect" CTA button */
+.connect-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 26px;
+  background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 10px 28px rgba(79, 70, 229, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.connect-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transition: left 0.6s ease;
+}
+
+.connect-cta:hover::before {
+  left: 100%;
+}
+
+.connect-cta:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 16px 36px rgba(79, 70, 229, 0.5);
+}
+
+.connect-arrow {
+  transition: transform 0.25s ease;
+}
+
+.connect-cta:hover .connect-arrow {
+  transform: translateX(4px);
+}
+
+/* ============ BOTTOM ============ */
 .footer-bottom {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding-top: 26px;
   gap: 16px;
   flex-wrap: wrap;
@@ -167,33 +234,22 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #94a3b8;
+  color: var(--text-soft);
   font-size: 0.85rem;
   margin: 0;
 }
 
-.heart-icon { color: #ef4444; }
-
-.footer-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  background: #eef2ff;
-  color: #4338ca;
-  border-radius: 999px;
-  font-size: 0.82rem;
-  font-weight: 600;
+.heart-icon {
+  color: #ef4444;
+  animation: footer-heartbeat 1.5s ease-in-out infinite;
 }
 
-.footer-badge::before {
-  content: "";
-  width: 7px;
-  height: 7px;
-  background: #22c55e;
-  border-radius: 50%;
+@keyframes footer-heartbeat {
+  0%, 100% { transform: scale(1); }
+  25%      { transform: scale(1.18); }
 }
 
+/* ============ RESPONSIVE ============ */
 @media screen and (max-width: 900px) {
   .footer-top { grid-template-columns: 1fr; gap: 40px; }
   .footer-links { grid-template-columns: repeat(2, 1fr); }
@@ -202,6 +258,10 @@
 @media screen and (max-width: 640px) {
   .footer-container { padding: 50px 20px 24px; }
   .footer-links { grid-template-columns: 1fr; gap: 28px; }
-  .footer-social-section { flex-direction: column; align-items: flex-start; }
-  .footer-bottom { flex-direction: column; align-items: flex-start; }
+  .footer-social-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .social-links { justify-content: center; }
+  .connect-cta { justify-content: center; width: 100%; }
 }

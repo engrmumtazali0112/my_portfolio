@@ -1,0 +1,109 @@
+/* src/theme.css
+   Theme tokens for light + dark modes.
+   Components read from these variables — no hardcoded colors.
+*/
+
+/* ============ LIGHT (default) ============ */
+:root {
+  /* Base */
+  --bg:             #ffffff;
+  --bg-soft:        #f8fafc;
+  --bg-muted:       #f1f5f9;
+
+  /* Surfaces */
+  --surface:        #ffffff;
+  --surface-hover:  #f8fafc;
+
+  /* Borders */
+  --border:         #e5e7eb;
+  --border-soft:    #f1f5f9;
+
+  /* Text */
+  --text:           #0f172a;
+  --text-body:      #475569;
+  --text-muted:     #64748b;
+  --text-soft:      #94a3b8;
+
+  /* Accents */
+  --accent:         #4f46e5;
+  --accent-hover:   #4338ca;
+  --accent-soft:    #eef2ff;
+  --accent-blue:    #2563eb;
+
+  /* Status */
+  --success:        #22c55e;
+  --danger:         #ef4444;
+  --warning:        #f59e0b;
+
+  /* Effects */
+  --shadow-sm:      0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md:      0 4px 16px rgba(15, 23, 42, 0.08);
+  --shadow-lg:      0 12px 32px rgba(15, 23, 42, 0.1);
+
+  /* Gradients */
+  --gradient-hero:  radial-gradient(circle, rgba(79, 70, 229, 0.08) 0%, transparent 70%);
+  --gradient-card:  linear-gradient(135deg, #eef2ff 0%, #ecfeff 100%);
+}
+
+/* ============ DARK ============ */
+[data-theme="dark"] {
+  /* Base */
+  --bg:             #0a0e1a;
+  --bg-soft:        #111827;
+  --bg-muted:       #1e293b;
+
+  /* Surfaces */
+  --surface:        #151b2b;
+  --surface-hover:  #1c2438;
+
+  /* Borders */
+  --border:         #262f45;
+  --border-soft:    #1e2638;
+
+  /* Text */
+  --text:           #f1f5f9;
+  --text-body:      #cbd5e1;
+  --text-muted:     #94a3b8;
+  --text-soft:      #64748b;
+
+  /* Accents */
+  --accent:         #6366f1;
+  --accent-hover:   #818cf8;
+  --accent-soft:    #1e1b4b;
+  --accent-blue:    #60a5fa;
+
+  /* Status */
+  --success:        #4ade80;
+  --danger:         #f87171;
+  --warning:        #fbbf24;
+
+  /* Effects */
+  --shadow-sm:      0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md:      0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg:      0 12px 32px rgba(0, 0, 0, 0.5);
+
+  /* Gradients */
+  --gradient-hero:  radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+  --gradient-card:  linear-gradient(135deg, #1e1b4b 0%, #0c4a6e 100%);
+}
+
+/* Smooth transitions across the app */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body,
+main,
+section,
+header,
+footer,
+div,
+button,
+input,
+textarea,
+a {
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.2s ease;
+}

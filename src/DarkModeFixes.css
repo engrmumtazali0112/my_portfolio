@@ -1,0 +1,124 @@
+/* src/DarkModeFixes.css
+   Adapts existing components when data-theme="dark". */
+
+html[data-theme="dark"],
+html[data-theme="dark"] body,
+html[data-theme="dark"] #root {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ===== HERO ===== */
+html[data-theme="dark"] .hero-section       { background: var(--bg); }
+html[data-theme="dark"] .hero-heading,
+html[data-theme="dark"] .hero-name,
+html[data-theme="dark"] .hero-highlight     { color: var(--text); }
+html[data-theme="dark"] .hero-subheading    { color: var(--text-body); }
+html[data-theme="dark"] .hero-image-frame   { background: var(--gradient-card); }
+html[data-theme="dark"] .hero-stat-card     { background: var(--surface); border-color: var(--border); }
+html[data-theme="dark"] .hero-stat-value    { color: var(--text); }
+html[data-theme="dark"] .hero-stat-label    { color: var(--text-muted); }
+html[data-theme="dark"] .hero-socials a     { background: var(--bg-muted); border-color: var(--border); color: var(--text-muted); }
+html[data-theme="dark"] .btn-secondary      { background: var(--surface); color: var(--text); border-color: var(--border); }
+html[data-theme="dark"] .btn-primary        { background: var(--accent); }
+
+/* ===== BIO ===== */
+html[data-theme="dark"] .bio-section        { background: var(--bg-soft); border-color: var(--border); }
+html[data-theme="dark"] .section-title,
+html[data-theme="dark"] .bio-text strong,
+html[data-theme="dark"] .bio-stat-value     { color: var(--text); }
+html[data-theme="dark"] .bio-text,
+html[data-theme="dark"] .bio-stat-label     { color: var(--text-body); }
+html[data-theme="dark"] .bio-stats          { border-top-color: var(--border); }
+
+/* ===== WORK / PROJECTS ===== */
+html[data-theme="dark"] .work-container        { background: var(--bg) !important; }
+html[data-theme="dark"] .project-heading       { color: var(--text) !important; }
+html[data-theme="dark"] .project-heading::after { color: var(--text-muted); }
+html[data-theme="dark"] .project-card          { background: var(--surface) !important; border-color: var(--border) !important; }
+html[data-theme="dark"] .project-title         { color: var(--text) !important; }
+html[data-theme="dark"] .pro-details p         { color: var(--text-body) !important; }
+html[data-theme="dark"] .pro-btns              { border-top-color: var(--border); }
+html[data-theme="dark"] .pro-btns .btn:first-child { background: var(--accent) !important; border-color: var(--accent); }
+html[data-theme="dark"] .pro-btns .btn:last-child  { background: var(--surface) !important; color: var(--text) !important; border-color: var(--border); }
+
+/* ===== SERVICES ===== */
+html[data-theme="dark"] .svc-section  { background: var(--bg); }
+html[data-theme="dark"] .svc-title,
+html[data-theme="dark"] .svc-name     { color: var(--text); }
+html[data-theme="dark"] .svc-sub,
+html[data-theme="dark"] .svc-desc     { color: var(--text-body); }
+html[data-theme="dark"] .svc-card     { background: var(--surface); border-color: var(--border); }
+html[data-theme="dark"] .svc-tag      { background: var(--bg-muted); color: var(--text-body); border-color: var(--border); }
+
+/* ===== PRICING ===== */
+html[data-theme="dark"] .pricing      { background: var(--bg); }
+html[data-theme="dark"] .pricing-title,
+html[data-theme="dark"] .card h3,
+html[data-theme="dark"] .btc          { color: var(--text); }
+html[data-theme="dark"] .card         { background: var(--surface); border-color: var(--border); }
+html[data-theme="dark"] .card p       { color: var(--text-body); }
+
+/* ===== REVIEWS ===== */
+html[data-theme="dark"] .reviews-section   { background: var(--bg-soft); }
+html[data-theme="dark"] .reviews-title-box { background: var(--surface); border-color: var(--border); }
+html[data-theme="dark"] .reviews-title-box h2,
+html[data-theme="dark"] .author-details h4 { color: var(--text); }
+html[data-theme="dark"] .reviews-subtitle,
+html[data-theme="dark"] .review-comment    { color: var(--text-body); }
+html[data-theme="dark"] .review-card       { background: var(--surface); border-color: var(--border); }
+html[data-theme="dark"] .review-divider    { background: var(--border); }
+html[data-theme="dark"] .carousel-btn      { background: var(--surface); color: var(--text); border-color: var(--border); }
+
+/* ===== ABOUT ===== */
+html[data-theme="dark"] .about-modern      { background: var(--bg); }
+html[data-theme="dark"] .profile-card,
+html[data-theme="dark"] .content-block,
+html[data-theme="dark"] .competencies      { background: var(--surface); border-color: var(--border); }
+html[data-theme="dark"] .profile-name,
+html[data-theme="dark"] .about-title,
+html[data-theme="dark"] .block-text h3,
+html[data-theme="dark"] .competencies-title { color: var(--text); }
+html[data-theme="dark"] .profile-subtitle,
+html[data-theme="dark"] .block-text p      { color: var(--text-body); }
+html[data-theme="dark"] .stat-item         { background: var(--bg-muted); border-color: var(--border); }
+
+/* ===== EDUCATION ===== */
+html[data-theme="dark"] .edu-section   { background: var(--bg); color: var(--text); }
+html[data-theme="dark"] .edu-title,
+html[data-theme="dark"] .commit-msg,
+html[data-theme="dark"] .cert-name     { color: var(--text); }
+html[data-theme="dark"] .edu-sub,
+html[data-theme="dark"] .commit-school,
+html[data-theme="dark"] .cert-note     { color: var(--text-body); }
+html[data-theme="dark"] .commit,
+html[data-theme="dark"] .cert-list     { background: var(--surface); border-color: var(--border); }
+
+/* ===== CONTACT FORM ===== */
+html[data-theme="dark"] .form-container    { background: var(--bg); }
+html[data-theme="dark"] .form-wrapper-simple { background: var(--surface); border-color: var(--border); }
+html[data-theme="dark"] .form-header h2    { color: var(--text); }
+html[data-theme="dark"] .form-header p,
+html[data-theme="dark"] .input-group label { color: var(--text-body); }
+html[data-theme="dark"] .input-group input,
+html[data-theme="dark"] .input-group textarea {
+  background-color: var(--bg-muted);
+  border-color: var(--border);
+  color: var(--text);
+}
+html[data-theme="dark"] .input-group input::placeholder,
+html[data-theme="dark"] .input-group textarea::placeholder { color: var(--text-soft); }
+html[data-theme="dark"] .success-card      { background: var(--surface); border-color: var(--border); }
+
+/* ===== FOOTER ===== */
+html[data-theme="dark"] .footer            { background: var(--bg) !important; border-top-color: var(--border); color: var(--text); }
+html[data-theme="dark"] .brand-logo h2,
+html[data-theme="dark"] .footer-column h3,
+html[data-theme="dark"] .social-label      { color: var(--text); }
+html[data-theme="dark"] .brand-tagline,
+html[data-theme="dark"] .footer-column ul li a,
+html[data-theme="dark"] .contact-link-item,
+html[data-theme="dark"] .copyright         { color: var(--text-body); }
+html[data-theme="dark"] .social-links a    { background: var(--bg-muted); border-color: var(--border); color: var(--text-muted); }
+html[data-theme="dark"] .footer-top,
+html[data-theme="dark"] .footer-social-section { border-color: var(--border); }

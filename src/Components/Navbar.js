@@ -3,8 +3,9 @@ import { Link, useLocation } from "react-router-dom";
 import "./NavbarStyle.css";
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import ThemeToggle from "./ThemeToggle";
+import useTheme from "../hooks/useTheme";
 
-// All top-level links, styled consistently.
 const navItems = [
   { path: "/",          label: "Home" },
   { path: "/about",     label: "About" },
@@ -18,14 +19,13 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const { theme, toggle } = useTheme();
 
   const toggleMenu = () => setOpen((v) => !v);
   const closeMenu = () => setOpen(false);
 
-  // Close mobile drawer whenever route changes
   useEffect(() => {
     closeMenu();
-    // Always scroll to top on route change (prevents landing mid-page)
     window.scrollTo({ top: 0, behavior: "instant" });
   }, [location.pathname]);
 
@@ -65,17 +65,23 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
+          <li className="nav-theme-mobile">
+            <ThemeToggle theme={theme} onToggle={toggle} />
+          </li>
         </ul>
       </nav>
 
-      <button
-        className="hamburger"
-        onClick={toggleMenu}
-        aria-label={open ? "Close menu" : "Open menu"}
-        aria-expanded={open}
-      >
-        {open ? <FaTimes size={20} /> : <FaBars size={20} />}
-      </button>
+      <div className="nav-right">
+        <ThemeToggle theme={theme} onToggle={toggle} />
+        <button
+          className="hamburger"
+          onClick={toggleMenu}
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+        >
+          {open ? <FaTimes size={20} /> : <FaBars size={20} />}
+        </button>
+      </div>
 
       <div
         className={open ? "menu-overlay active" : "menu-overlay"}
