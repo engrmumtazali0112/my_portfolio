@@ -16,8 +16,8 @@ const Bio = () => {
     <section className="bio-section">
       <div className="bio-container">
         <div className="bio-grid">
-          <div className="bio-left">
-            <span className="section-eyebrow">// About me</span>
+                    <div className="bio-left">
+            <span className="section-eyebrow">{"// About me"}</span>
             <h2 className="section-title">
               A short introduction to <span className="accent">who I am</span> and
               what I do.

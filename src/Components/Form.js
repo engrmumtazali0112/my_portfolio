@@ -96,7 +96,7 @@ const Form = () => {
     <div className="form-container">
       <div className="form-wrapper-simple">
         <div className="form-header">
-          <div className="form-eyebrow">// contact</div>
+          <div className="form-eyebrow">{"// contact"}</div>
           <h2>Get in touch.</h2>
           <p>Have a project in mind or want to collaborate? Let's talk.</p>
         </div>

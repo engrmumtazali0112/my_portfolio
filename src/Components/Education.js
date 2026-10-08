@@ -54,7 +54,7 @@ const Education = () => {
 
         {/* Degree — primary commit */}
         <div className="edu-panel">
-          <div className="edu-panel-label">// degree</div>
+          <div className="edu-panel-label">{"// degree"}</div>
           <div className="commit commit-primary">
             <div className="commit-row">
               <span className="commit-hash">{degree.hash}</span>
@@ -79,7 +79,7 @@ const Education = () => {
 
         {/* Prior education — commit log */}
         <div className="edu-panel">
-          <div className="edu-panel-label">// pre-university</div>
+          <div className="edu-panel-label">{"// pre-university"}</div>
           <div className="commit-log">
             {priorEducation.map((item) => (
               <div className="commit" key={item.hash}>
@@ -108,7 +108,7 @@ const Education = () => {
 
         {/* Certifications — file listing */}
         <div className="edu-panel">
-          <div className="edu-panel-label">// ls certifications/</div>
+          <div className="edu-panel-label">{"// ls certifications/"}</div>
           <div className="cert-list">
             {certifications.map((cert, i) => (
               <div className="cert-row" key={i}>
