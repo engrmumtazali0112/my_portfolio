@@ -2,90 +2,83 @@
 import { Link, useLocation } from "react-router-dom";
 import "./NavbarStyle.css";
 import React, { useState, useEffect } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
-import { 
-  FaBars, FaTimes, FaHome, FaUser, FaCog, FaProjectDiagram, 
-  FaCertificate, FaStar, FaEnvelope, FaGraduationCap 
-} from "react-icons/fa";
+// Core sections: Home, About, Projects, Experience / Resume, Contact.
+// Other pages (/services, /certificate, /review) still exist as routes.
+const navItems = [
+  { path: "/", label: "Home" },
+  { path: "/about", label: "About" },
+  { path: "/project", label: "Projects" },
+  { path: "/education", label: "Experience" },
+];
 
 const Navbar = () => {
-  const [click, setClick] = useState(false);
-  const [color, setColor] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+  const toggleMenu = () => setOpen((v) => !v);
+  const closeMenu = () => setOpen(false);
 
   useEffect(() => {
-    const changeColor = () => {
-      if (window.scrollY >= 100) {
-        setColor(true);
-      } else {
-        setColor(false);
-      }
-    };
-
-    window.addEventListener("scroll", changeColor);
-    return () => window.removeEventListener("scroll", changeColor);
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const navItems = [
-    { path: "/", label: "Home", icon: <FaHome /> },
-    { path: "/about", label: "About", icon: <FaUser /> },
-    { path: "/services", label: "Services", icon: <FaCog /> },
-    { path: "/project", label: "Projects", icon: <FaProjectDiagram /> },
-    { path: "/certificate", label: "Certificates", icon: <FaCertificate /> },
-    { path: "/education", label: "Education", icon: <FaGraduationCap /> }, // ✅ Added Education
-    { path: "/review", label: "Reviews", icon: <FaStar /> },
-    { path: "/contact", label: "Contact", icon: <FaEnvelope /> },
-  ];
-
-  const isActive = (path) => {
-    if (path === "/" && location.pathname === "/") return true;
-    if (path !== "/" && location.pathname.startsWith(path)) return true;
-    return false;
-  };
+  const isActive = (path) =>
+    path === "/"
+      ? location.pathname === "/" || location.pathname === "/home"
+      : location.pathname.startsWith(path);
 
   return (
-    <div className={color ? "header header-bg" : "header"}>
-      <Link to="/" className="logo" onClick={closeMobileMenu}>
-        <div className="logo-container">
-          <img src="/mylogo.png" alt="Logo" className="logo-img" />
-          <div className="logo-text">
-            <h1>Mumtaz Ali</h1>
-            <span className="logo-subtitle">Full Stack Developer</span>
-          </div>
-        </div>
+    <header className={scrolled ? "header header-scrolled" : "header"}>
+      <Link to="/" className="logo" onClick={closeMenu}>
+        <img src="/mylogo.png" alt="Mumtaz Ali logo" className="logo-img" />
+        <span className="logo-text">
+          <span className="logo-name">Mumtaz Ali</span>
+          <span className="logo-subtitle">Full Stack Developer</span>
+        </span>
       </Link>
 
-      <ul className={click ? "nav-menu active" : "nav-menu"}>
-        {navItems.map((item, index) => (
-          <li key={index} onClick={closeMobileMenu}>
-            <Link 
-              to={item.path} 
-              className={`nav-link ${isActive(item.path) ? 'active' : ''}`}
-            >
-              <span className="nav-icon">{item.icon}</span>
-              <span className="nav-label">{item.label}</span>
-              {isActive(item.path) && <span className="nav-indicator"></span>}
+      <nav>
+        <ul className={open ? "nav-menu active" : "nav-menu"}>
+          {navItems.map((item) => (
+            <li key={item.path}>
+              <Link
+                to={item.path}
+                onClick={closeMenu}
+                className={isActive(item.path) ? "nav-link active" : "nav-link"}
+                aria-current={isActive(item.path) ? "page" : undefined}
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
+          <li className="nav-cta-item">
+            <Link to="/contact" onClick={closeMenu} className="nav-cta">
+              Contact
             </Link>
           </li>
-        ))}
-        
-        {/* ✅ Removed CV Download button */}
-      </ul>
+        </ul>
+      </nav>
 
-      <div className="hamburger" onClick={handleClick}>
-        <div className={click ? "hamburger-icon active" : "hamburger-icon"}>
-          {click ? <FaTimes size={24} /> : <FaBars size={24} />}
-        </div>
-      </div>
+      <button
+        className="hamburger"
+        onClick={toggleMenu}
+        aria-label={open ? "Close menu" : "Open menu"}
+        aria-expanded={open}
+      >
+        {open ? <FaTimes size={20} /> : <FaBars size={20} />}
+      </button>
 
-      <div 
-        className={click ? "menu-overlay active" : "menu-overlay"} 
-        onClick={closeMobileMenu}
-      ></div>
-    </div>
+      <div
+        className={open ? "menu-overlay active" : "menu-overlay"}
+        onClick={closeMenu}
+      />
+    </header>
   );
 };
 

@@ -1,0 +1,107 @@
+/* src/Components/BioStyle.css */
+.bio-section {
+  background: #f8f9fb;
+  padding: 90px 24px;
+  border-top: 1px solid #eef1f5;
+  border-bottom: 1px solid #eef1f5;
+}
+
+.bio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bio-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 60px;
+  align-items: start;
+  margin-bottom: 60px;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.82rem;
+  color: #4f46e5;
+  background: #eef2ff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-bottom: 18px;
+}
+
+.section-title {
+  font-size: clamp(1.6rem, 2.6vw, 2.25rem);
+  line-height: 1.25;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.section-title .accent {
+  background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bio-right { display: flex; flex-direction: column; gap: 18px; }
+
+.bio-text {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: #475569;
+  margin: 0;
+}
+.bio-text strong { color: #0f172a; font-weight: 600; }
+
+.bio-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #4f46e5;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: 8px;
+  transition: gap 0.2s ease;
+}
+.bio-link:hover { gap: 14px; }
+
+.bio-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding-top: 40px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.bio-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bio-stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.bio-stat-label {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 900px) {
+  .bio-grid { grid-template-columns: 1fr; gap: 30px; }
+  .bio-stats { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media screen and (max-width: 480px) {
+  .bio-section { padding: 60px 18px; }
+  .bio-stat-value { font-size: 1.5rem; }
+}
