@@ -1,14 +1,9 @@
 /* src/Components/ServicesSectionStyles.css */
 
 .svc-section {
-  min-height: 100vh;
-  background: #0a0a0f;
-  background-image:
-    linear-gradient(rgba(255, 176, 51, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 176, 51, 0.025) 1px, transparent 1px);
-  background-size: 42px 42px;
-  padding: 90px 20px;
-  color: #e8e6e3;
+  background: #ffffff;
+  padding: 130px 24px 90px;
+  color: #0f172a;
 }
 
 .svc-wrap {
@@ -17,73 +12,74 @@
 }
 
 .svc-head {
-  margin-bottom: 48px;
+  margin-bottom: 44px;
 }
 
 .svc-eyebrow {
   display: inline-block;
   font-family: 'JetBrains Mono', 'Courier New', monospace;
-  font-size: 0.85rem;
-  color: #ffb033;
+  font-size: 0.82rem;
+  color: #2563eb;
+  background: #eff6ff;
+  padding: 6px 12px;
+  border-radius: 6px;
   letter-spacing: 0.5px;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .svc-title {
-  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
-  font-size: 2.4rem;
+  font-size: clamp(1.75rem, 3vw, 2.4rem);
   font-weight: 700;
   margin: 0 0 10px;
-  color: #f4f2ee;
-  letter-spacing: -0.5px;
+  color: #0f172a;
+  letter-spacing: -0.02em;
 }
 
 .svc-sub {
-  font-family: 'JetBrains Mono', 'Courier New', monospace;
-  font-size: 0.92rem;
-  color: #7d7d87;
+  font-size: 1rem;
+  color: #64748b;
   margin: 0;
 }
 
 .svc-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  gap: 20px;
 }
 
 .svc-card {
-  background: #121218;
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 8px;
-  padding: 26px 24px;
-  transition: border-color 0.25s ease, transform 0.25s ease, background 0.25s ease;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 24px 22px;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .svc-card:hover {
-  border-color: rgba(255, 176, 51, 0.4);
+  border-color: #c7d2fe;
   transform: translateY(-4px);
-  background: #15151c;
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.07);
 }
 
 .svc-card-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .svc-id {
   font-family: 'JetBrains Mono', 'Courier New', monospace;
-  font-size: 0.9rem;
-  color: #ffb033;
+  font-size: 0.85rem;
+  color: #2563eb;
   font-weight: 700;
 }
 
 .svc-run {
   font-family: 'JetBrains Mono', 'Courier New', monospace;
-  font-size: 0.72rem;
-  color: #4c4c56;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.68rem;
+  color: #94a3b8;
+  border: 1px solid #e5e7eb;
   padding: 2px 8px;
   border-radius: 4px;
   letter-spacing: 0.5px;
@@ -91,19 +87,18 @@
 }
 
 .svc-name {
-  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #f4f2ee;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
   margin: 0 0 10px;
+  letter-spacing: -0.01em;
 }
 
 .svc-desc {
-  font-family: 'JetBrains Mono', 'Courier New', monospace;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   line-height: 1.65;
-  color: #9b9ba3;
-  margin: 0 0 20px;
+  color: #64748b;
+  margin: 0 0 18px;
 }
 
 .svc-stack {
@@ -114,20 +109,21 @@
 
 .svc-tag {
   font-family: 'JetBrains Mono', 'Courier New', monospace;
-  font-size: 0.76rem;
-  color: #d8d6d1;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.74rem;
+  color: #475569;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
   padding: 4px 10px;
   border-radius: 5px;
+  transition: all 0.2s ease;
 }
 
 .svc-card:hover .svc-tag {
-  border-color: rgba(255, 176, 51, 0.25);
-  color: #ffb033;
+  border-color: #c7d2fe;
+  color: #2563eb;
+  background: #eff6ff;
 }
 
-/* Responsive */
 @media screen and (max-width: 1024px) {
   .svc-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -136,13 +132,8 @@
 
 @media screen and (max-width: 640px) {
   .svc-section {
-    padding: 60px 16px;
+    padding: 110px 18px 60px;
   }
-
-  .svc-title {
-    font-size: 1.8rem;
-  }
-
   .svc-grid {
     grid-template-columns: 1fr;
   }

@@ -1,6 +1,7 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
-/* ---------- Legacy globals (other pages still depend on these) ---------- */
+/* Reset only — no body background here, it's set in index.css */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,17 +9,13 @@
   font-family: "Outfit", sans-serif;
 }
 
-body {
-  background: #000;
-}
-
-h1, h4, p, a {
-  color: #f3f3f3;
-  text-decoration: none;
-}
-
 ul {
   list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* ---------- Light professional header ---------- */

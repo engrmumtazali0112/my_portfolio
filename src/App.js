@@ -6,6 +6,7 @@ import About from "./Routes/About";
 import Project from "./Routes/Project";
 import Contact from "./Routes/Contact";
 import Services from "./Routes/Service";
+import "./index.css";   
 import "./LightTheme.css"; 
 import Review from "./Routes/Review";
 import EducationPage from "./Routes/Education";
