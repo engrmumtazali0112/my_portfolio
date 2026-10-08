@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="hero-bg-accent" aria-hidden="true" />
 
       <div className="hero-container">
-        {/* Left — Text */}
+        {/* LEFT: Text */}
         <div className="hero-content">
           <div className="hero-badge">
             <span className="hero-badge-dot" />
@@ -21,16 +21,21 @@ const Hero = () => {
           <h1 className="hero-heading">
             Hi, I'm <span className="hero-name">Mumtaz Ali</span>.
             <br />
-            I build <span className="hero-highlight">AI-powered web apps</span>
-            <br />
-            that ship to production.
+            I help teams ship{" "}
+            <span className="hero-highlight">production software</span> — web
+            apps, APIs, and AI systems.
           </h1>
 
           <p className="hero-subheading">
-            Full-Stack AI/ML Developer based in Lahore, Pakistan. I specialize in
-            Python (Django, FastAPI), JavaScript (React, Next.js), and applied
-            machine learning — delivering scalable APIs and AI features for clients
-            in Pakistan, Italy, and beyond.
+            Based in <strong>Islamabad · Lahore</strong> and working with clients
+            across <strong>Pakistan, Italy, and the US</strong>. I specialize in{" "}
+            <strong>Python</strong> (Django, FastAPI),{" "}
+            <strong>JavaScript</strong> (React, Next.js, Node), and{" "}
+            <strong>applied ML</strong> (RAG, LLM integrations, computer vision) —
+            with a strong DevOps foundation (Docker, AWS, CI/CD). Currently
+            building at <strong>Wonder Crafts</strong> and shipping QA +
+            full-stack engineering for <strong>True Blue Bio</strong>, a B2B
+            lab-supply platform.
           </p>
 
           <div className="hero-actions">
@@ -42,11 +47,29 @@ const Hero = () => {
             </Link>
           </div>
 
+          <div className="hero-now">
+            <span className="hero-now-dot" />
+            <span>
+              Currently at <strong>Wonder Crafts</strong> · Building{" "}
+              <strong>True Blue Bio</strong> · Open to new projects
+            </span>
+          </div>
+
           <div className="hero-socials">
-            <a href="https://github.com/engrmumtazali0112" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a
+              href="https://github.com/engrmumtazali0112"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
               <FaGithub />
             </a>
-            <a href="https://linkedin.com/in/mumtazali12" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a
+              href="https://linkedin.com/in/mumtazali12"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
               <FaLinkedin />
             </a>
             <a href="mailto:engrmumtazali01@gmail.com" aria-label="Email">
@@ -55,7 +78,7 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Right — Profile image */}
+        {/* RIGHT: Visual */}
         <div className="hero-visual">
           <div className="hero-image-frame">
             <img src={profileImg} alt="Mumtaz Ali" className="hero-image" />
@@ -65,7 +88,7 @@ const Hero = () => {
             <span className="hero-stat-label">Years Experience</span>
           </div>
           <div className="hero-stat-card hero-stat-2">
-            <span className="hero-stat-value">20+</span>
+            <span className="hero-stat-value">22+</span>
             <span className="hero-stat-label">Projects Shipped</span>
           </div>
         </div>
