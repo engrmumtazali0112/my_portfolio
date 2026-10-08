@@ -1,221 +1,652 @@
 /* src/Components/EducationStyles.css */
+/* Professional Experience page — uses theme variables (light + dark). */
 
-.edu-section {
+.exp-page {
   min-height: 100vh;
-  background: #ffffff;
-  padding: 130px 24px 80px;
-  color: #0f172a;
+  background: var(--bg);
+  color: var(--text);
+  padding: 120px 24px 100px;
 }
 
-.edu-wrap {
-  max-width: 880px;
-  margin: 0 auto;
+/* ============================================================
+   HERO
+   ============================================================ */
+.exp-hero {
+  max-width: 1080px;
+  margin: 0 auto 80px;
 }
 
-.edu-head {
-  margin-bottom: 44px;
+.exp-hero-inner {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 40px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
 }
 
-.edu-eyebrow {
+.exp-hero-inner::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.08), transparent 70%);
+  pointer-events: none;
+}
+
+.exp-hero-photo {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  flex-shrink: 0;
+}
+
+.exp-hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 4px solid var(--bg);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.exp-hero-status {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 2;
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.4);
+  letter-spacing: 0.02em;
+}
+
+.exp-hero-dot {
+  width: 7px;
+  height: 7px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: exp-pulse 2s ease-in-out infinite;
+}
+
+@keyframes exp-pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.4; }
+}
+
+.exp-hero-text { position: relative; z-index: 1; }
+
+.exp-eyebrow {
   display: inline-block;
   font-family: 'JetBrains Mono', 'Courier New', monospace;
   font-size: 0.82rem;
-  color: #2563eb;
-  background: #eff6ff;
+  color: var(--accent);
+  background: var(--accent-soft);
   padding: 6px 12px;
   border-radius: 6px;
-  letter-spacing: 0.5px;
   margin-bottom: 16px;
 }
 
-.edu-title {
-  font-size: clamp(1.75rem, 3vw, 2.4rem);
+.exp-title {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
   font-weight: 700;
-  margin: 0 0 10px;
-  color: #0f172a;
   letter-spacing: -0.02em;
+  color: var(--text);
+  margin: 0 0 14px;
+  line-height: 1.2;
 }
 
-.edu-sub {
+.exp-subtitle {
   font-size: 1rem;
-  color: #64748b;
-  margin: 0;
+  line-height: 1.65;
+  color: var(--text-body);
+  margin: 0 0 22px;
+  max-width: 580px;
 }
 
-.edu-panel {
-  margin-bottom: 40px;
-}
-
-.edu-panel-label {
-  font-family: 'JetBrains Mono', 'Courier New', monospace;
-  font-size: 0.78rem;
-  color: #94a3b8;
-  letter-spacing: 0.5px;
-  margin-bottom: 14px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #f1f5f9;
-}
-
-.commit-log {
+.exp-hero-meta {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.commit {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-left: 3px solid #c7d2fe;
-  border-radius: 12px;
-  padding: 22px 24px;
-  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.commit:hover {
-  border-left-color: #2563eb;
-  transform: translateX(3px);
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
-}
-
-.commit-primary {
-  border-left-color: #2563eb;
-  background: #ffffff;
-}
-
-.commit-row {
-  display: flex;
+.exp-hero-meta span {
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-
-.commit-hash {
-  font-family: 'JetBrains Mono', 'Courier New', monospace;
-  font-size: 0.78rem;
-  color: #2563eb;
-  background: #eff6ff;
-  padding: 3px 9px;
-  border-radius: 5px;
+  gap: 7px;
+  padding: 7px 14px;
+  background: var(--bg-muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.82rem;
   font-weight: 500;
+  color: var(--text-body);
 }
 
-.commit-period {
-  font-family: 'JetBrains Mono', 'Courier New', monospace;
-  font-size: 0.78rem;
-  color: #94a3b8;
+.exp-hero-meta svg { color: var(--accent); font-size: 0.75rem; }
+
+/* Stats */
+.exp-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 24px;
 }
 
-.commit-msg {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #0f172a;
-  margin: 0 0 6px;
-  letter-spacing: -0.01em;
-}
-
-.commit-msg-sm {
-  font-size: 1.05rem;
-}
-
-.commit-school {
-  font-size: 0.9rem;
-  color: #64748b;
-  margin-bottom: 16px;
-}
-
-.commit-metric {
+.exp-stat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px 18px;
   display: flex;
   flex-direction: column;
   gap: 6px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
-.metric-row {
+.exp-stat:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.exp-stat-value {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.exp-stat-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ============================================================
+   SECTIONS
+   ============================================================ */
+.exp-section {
+  max-width: 1080px;
+  margin: 0 auto 80px;
+}
+
+.exp-section-head {
+  margin-bottom: 40px;
+}
+
+.exp-section-eyebrow {
+  display: inline-block;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 0.78rem;
+  color: var(--text-soft);
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+}
+
+.exp-section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 10px;
+  letter-spacing: -0.02em;
+}
+
+.exp-section-title svg {
+  color: var(--accent);
+  font-size: 1.3rem;
+}
+
+.exp-section-sub {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 0;
+  max-width: 620px;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   EXPERIENCE TIMELINE
+   ============================================================ */
+.exp-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.exp-card {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 24px;
+  position: relative;
+}
+
+.exp-card-rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 6px;
+}
+
+.exp-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--surface);
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.exp-card:hover .exp-card-icon {
+  background: var(--accent);
+  color: #fff;
+  transform: scale(1.06);
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+.exp-card-line {
+  flex: 1;
+  width: 2px;
+  background: var(--border);
+  margin-top: 6px;
+  min-height: 40px;
+}
+
+.exp-card-body {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px 30px;
+  margin-bottom: 32px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.exp-card:hover .exp-card-body {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+  transform: translateX(4px);
+}
+
+.exp-card-current .exp-card-body {
+  border-left: 4px solid var(--accent);
+}
+
+.exp-card-head {
   display: flex;
   justify-content: space-between;
-  font-size: 0.85rem;
-  color: #64748b;
-  font-weight: 500;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
 }
 
-.metric-value {
-  color: #0f172a;
+.exp-card-company {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.exp-card-company svg { font-size: 0.85rem; }
+
+.exp-badge-current {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: color-mix(in srgb, #22c55e 15%, transparent);
+  color: #16a34a;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-left: 6px;
+}
+
+[data-theme="dark"] .exp-badge-current {
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+}
+
+.exp-pulse-dot {
+  width: 6px;
+  height: 6px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: exp-pulse 2s ease-in-out infinite;
+}
+
+.exp-card-role {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.exp-card-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.exp-meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  padding: 5px 11px;
+  background: var(--bg-muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.exp-meta-pill svg { font-size: 0.7rem; color: var(--accent); }
+
+.exp-meta-type {
+  background: var(--accent-soft);
+  border-color: transparent;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.exp-card-summary {
+  color: var(--text-body);
+  line-height: 1.7;
+  margin: 0 0 20px;
+  font-size: 0.95rem;
+}
+
+/* Achievements */
+.exp-card-achievements {
+  background: var(--bg-soft);
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 20px;
+}
+
+.exp-card-achievements h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.exp-card-achievements h4 svg { color: var(--accent); }
+
+.exp-card-achievements ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.exp-card-achievements li {
+  display: flex;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+.exp-check {
+  color: #22c55e;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+/* Tech pills */
+.exp-card-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.exp-tech-pill {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-body);
+  background: var(--bg-muted);
+  border: 1px solid var(--border);
+  padding: 5px 11px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.exp-card:hover .exp-tech-pill {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ============================================================
+   EDUCATION
+   ============================================================ */
+.exp-edu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.exp-edu-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px 24px;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.exp-edu-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.exp-edu-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+}
+
+.exp-edu-card:hover::before { transform: scaleX(1); }
+
+.exp-edu-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--accent);
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.exp-edu-degree {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 8px;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.exp-edu-school {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0 0 16px;
+  line-height: 1.5;
+}
+
+.exp-edu-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-soft);
+  font-size: 0.82rem;
+  color: var(--text-soft);
+}
+
+.exp-edu-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.exp-edu-score {
+  color: var(--accent);
   font-weight: 700;
 }
 
-.metric-bar {
-  height: 6px;
-  width: 100%;
-  background: #f1f5f9;
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-.metric-fill {
-  height: 100%;
-  background: linear-gradient(90deg, #2563eb, #60a5fa);
-  border-radius: 3px;
-}
-
-.metric-fill-dim {
-  background: linear-gradient(90deg, #94a3b8, #cbd5e1);
-}
-
-.cert-list {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.cert-row {
+/* ============================================================
+   CERTIFICATIONS
+   ============================================================ */
+.exp-cert-grid {
   display: grid;
-  grid-template-columns: 20px 1fr auto;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+}
+
+.exp-cert-card {
+  display: flex;
   align-items: center;
   gap: 14px;
-  padding: 14px 22px;
-  border-bottom: 1px solid #f1f5f9;
-  transition: background 0.2s ease;
+  padding: 16px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  transition: all 0.25s ease;
 }
 
-.cert-row:last-child {
-  border-bottom: none;
+.exp-cert-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
 }
 
-.cert-row:hover {
-  background: #f8fafc;
+.exp-cert-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
 }
 
-.cert-icon {
-  color: #2563eb;
-  font-size: 0.75rem;
+.exp-cert-text { flex: 1; min-width: 0; }
+
+.exp-cert-text h4 {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 3px;
+  line-height: 1.3;
 }
 
-.cert-name {
-  font-family: 'JetBrains Mono', 'Courier New', monospace;
-  font-size: 0.88rem;
-  color: #0f172a;
-  font-weight: 500;
+.exp-cert-text p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin: 0;
 }
 
-.cert-note {
-  font-size: 0.8rem;
-  color: #94a3b8;
-  text-align: right;
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media screen and (max-width: 900px) {
+  .exp-page { padding: 110px 18px 60px; }
+
+  .exp-hero-inner {
+    grid-template-columns: 1fr;
+    padding: 30px 24px;
+    text-align: center;
+  }
+
+  .exp-hero-photo {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+  }
+
+  .exp-hero-meta { justify-content: center; }
+  .exp-subtitle { margin-left: auto; margin-right: auto; }
+
+  .exp-stats { grid-template-columns: repeat(2, 1fr); }
+  .exp-edu-grid { grid-template-columns: 1fr; }
 }
 
 @media screen and (max-width: 640px) {
-  .edu-section {
-    padding: 110px 18px 60px;
+  .exp-card { grid-template-columns: 1fr; gap: 16px; }
+  .exp-card-rail {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-top: 0;
   }
-  .commit {
-    padding: 18px;
-  }
-  .cert-row {
-    grid-template-columns: 16px 1fr;
-  }
-  .cert-note {
-    grid-column: 2;
-    text-align: left;
-    margin-top: 2px;
-  }
+  .exp-card-line { display: none; }
+  .exp-card-body { padding: 22px 20px; }
+  .exp-card-head { flex-direction: column; }
+  .exp-card-meta { align-items: flex-start; }
+  .exp-card-role { font-size: 1.15rem; }
+
+  .exp-cert-grid { grid-template-columns: 1fr; }
+  .exp-stat-value { font-size: 1.5rem; }
 }

@@ -30,10 +30,7 @@ const AboutContent = () => {
               <div className="profile-ring"></div>
               <div className="profile-ring-2"></div>
               <img src={profileImg} className="profile-img" alt="Mumtaz Ali - Full Stack Developer" />
-              <div className="status-badge">
-                <span className="status-dot"></span>
-                Employed at Wonder Crafts
-              </div>
+            
             </div>
             
             <div className="profile-info">
