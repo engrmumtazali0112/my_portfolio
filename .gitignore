@@ -5,6 +5,7 @@
 
 # Production build
 /build
+/dist
 
 # Environment
 .env
@@ -30,16 +31,14 @@ logs
 # Vercel
 .vercel/
 
-# Junk files (from your repo)
-#
-h origin main
-new.txt
+# Private contact data
 ContactEmail.csv
 ContactEmail.xlsx
 ContactEmail.xml
-Demo/
-playwright-tests/
-qa-tests/
 
 # Test coverage
 /coverage
+
+# Playwright reports (keep the tests, ignore the output)
+playwright-report/
+test-results/
