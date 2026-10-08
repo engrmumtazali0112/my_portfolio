@@ -4,14 +4,14 @@ import "./NavbarStyle.css";
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-// Core sections: Home, About, Services, Projects, Experience / Resume, Contact.
-// Other pages (/certificate, /review) still exist as routes.
+// All top-level links, styled consistently.
 const navItems = [
-  { path: "/", label: "Home" },
-  { path: "/about", label: "About" },
-  { path: "/services", label: "Services" },
-  { path: "/project", label: "Projects" },
+  { path: "/",          label: "Home" },
+  { path: "/about",     label: "About" },
+  { path: "/services",  label: "Services" },
+  { path: "/project",   label: "Projects" },
   { path: "/education", label: "Experience" },
+  { path: "/contact",   label: "Contact" },
 ];
 
 const Navbar = () => {
@@ -21,6 +21,13 @@ const Navbar = () => {
 
   const toggleMenu = () => setOpen((v) => !v);
   const closeMenu = () => setOpen(false);
+
+  // Close mobile drawer whenever route changes
+  useEffect(() => {
+    closeMenu();
+    // Always scroll to top on route change (prevents landing mid-page)
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [location.pathname]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -58,11 +65,6 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
-          <li className="nav-cta-item">
-            <Link to="/contact" onClick={closeMenu} className="nav-cta">
-              Contact
-            </Link>
-          </li>
         </ul>
       </nav>
 

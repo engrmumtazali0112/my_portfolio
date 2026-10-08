@@ -114,26 +114,8 @@ a {
   background: #2563eb;
 }
 
-.nav-cta-item {
-  margin-left: 0.75rem;
-}
 
-.header .nav-cta {
-  display: inline-block;
-  padding: 10px 22px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #ffffff;
-  background: #2563eb;
-  border-radius: 8px;
-  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-}
 
-.header .nav-cta:hover {
-  background: #1d4ed8;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
-}
 
 /* Hamburger (mobile) */
 .hamburger {
