@@ -1,89 +1,122 @@
-/* Pricing Cards Styles */
+/* src/Components/PricingCardsStyles.css */
+
 .pricing {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 50px 0;
-    padding: 0 20px;
-  }
-  
-  .pricing-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 60px 0;
+  padding: 0 24px;
+  background: #ffffff;
+}
+
+.pricing-title {
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: #0f172a;
+  text-align: center;
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+}
+
+.pricing-title::after {
+  content: "Transparent pricing for projects of any size.";
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #64748b;
+  margin-top: 12px;
+  letter-spacing: 0;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 32px 28px;
+  border-radius: 16px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #c7d2fe;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 12px;
+  letter-spacing: -0.01em;
+}
+
+.bar {
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, #4f46e5, #06b6d4);
+  margin: 0 0 20px;
+  border-radius: 2px;
+}
+
+.btc {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 20px;
+  letter-spacing: -0.02em;
+}
+
+.card p {
+  font-size: 0.92rem;
+  margin: 6px 0;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.card .btn {
+  display: block;
+  padding: 12px 20px;
+  background: #0f172a;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 999px;
+  margin-top: auto;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  border: 1px solid #0f172a;
+}
+
+.card .btn:hover {
+  background: #4f46e5;
+  border-color: #4f46e5;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.25);
+}
+
+@media (max-width: 768px) {
   .card-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
   }
-  
   .card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 30px;
-    border-radius: 10px;
-    width: 280px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 340px;
   }
-  
-  .card:hover {
-    transform: translateY(-10px);
-  }
-  
-  .card h3 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .bar {
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: #f57c00;
-    margin: 10px auto;
-  }
-  
-  .btc {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #f57c00;
-    margin-bottom: 15px;
-  }
-  
-  .card p {
-    font-size: 1rem;
-    margin: 10px 0;
-    color: #555;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #eceee7;
-    color: #000000;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn:hover {
-    background-color: #4c6292;
-  }
-  
-  @media (max-width: 768px) {
-    .card-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-  
+}

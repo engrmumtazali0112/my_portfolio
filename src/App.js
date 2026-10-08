@@ -6,6 +6,7 @@ import About from "./Routes/About";
 import Project from "./Routes/Project";
 import Contact from "./Routes/Contact";
 import Services from "./Routes/Service";
+import "./LightTheme.css"; 
 import Review from "./Routes/Review";
 import EducationPage from "./Routes/Education";
 import { Route, Routes } from "react-router-dom";

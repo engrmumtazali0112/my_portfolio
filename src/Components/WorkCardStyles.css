@@ -3,7 +3,7 @@
 .work-container {
   background: #ffffff !important;
   padding: 120px 24px 80px;
-  min-height: 100vh;
+  min-height: auto;   /* was 100vh — reduces black area */
 }
 
 .project-heading {
@@ -120,7 +120,6 @@
   background: #4f46e5 !important;
   border-color: #4f46e5;
   transform: translateY(-1px);
-  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.25);
 }
 
 .pro-btns .btn:last-child {
