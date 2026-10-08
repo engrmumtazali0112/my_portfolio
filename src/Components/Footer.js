@@ -1,6 +1,7 @@
 // src/Components/Footer.js
 import "./FooterStyles.css";
 import React from 'react';
+import { Link } from "react-router-dom";
 import { 
   FaFacebook, FaGithub, FaInstagram, FaLinkedin, 
   FaPhone, FaTwitter, FaYoutube, FaDiscord, 
@@ -28,8 +29,9 @@ const Footer = () => {
               Crafting Digital Excellence
             </p>
             <p className="brand-description">
-              Computer Science Student & Full Stack Developer specializing in Python, Django, 
-              and modern web technologies. Transforming ideas into innovative digital solutions.
+              Full-Stack AI/ML Developer specializing in Python, Django, FastAPI
+              and React. Building scalable web applications and AI-powered
+              solutions for clients worldwide.
             </p>
           </div>
 
@@ -37,20 +39,22 @@ const Footer = () => {
             <div className="footer-column">
               <h3>Quick Links</h3>
               <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/project">Projects</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/services">Services</Link></li>
+                <li><Link to="/project">Projects</Link></li>
+                <li><Link to="/education">Experience</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
               </ul>
             </div>
 
             <div className="footer-column">
               <h3>Services</h3>
               <ul>
-                <li><a href="#web-development">Web Development</a></li>
-                <li><a href="#app-development">App Development</a></li>
-                <li><a href="#ui-design">UI/UX Design</a></li>
-                <li><a href="#consulting">Consulting</a></li>
+                <li><Link to="/services">Web Applications</Link></li>
+                <li><Link to="/services">AI / ML Solutions</Link></li>
+                <li><Link to="/services">API Integration</Link></li>
+                <li><Link to="/services">Cloud Deployment</Link></li>
               </ul>
             </div>
 
@@ -113,7 +117,7 @@ const Footer = () => {
               <FaHeart className="heart-icon" />
               Made with passion by Mumtaz Ali
             </p>
-            <p className="copyright-year">© 2024 All rights reserved.</p>
+            <p className="copyright-year">© {new Date().getFullYear()} All rights reserved.</p>
           </div>
           <div className="footer-badge">
             <span className="badge-text">Available for Freelance</span>

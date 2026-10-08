@@ -1,61 +1,152 @@
-.project-heading{
-    text-align: center;
-    padding: 4rem 0 2rem 0;
+/* src/Components/WorkCardStyles.css */
+
+.work-container {
+  background: #ffffff !important;
+  padding: 120px 24px 80px;
+  min-height: 100vh;
+}
+
+.project-heading {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: #0f172a !important;
+  margin: 0 auto 12px;
+  letter-spacing: -0.02em;
+  padding: 0;
+}
+
+.project-heading::after {
+  content: "A selection of full-stack, AI, and data projects I've shipped.";
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #64748b;
+  margin-top: 14px;
+  letter-spacing: 0;
+  line-height: 1.6;
 }
 
 .project-container {
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 40px;
-    padding-bottom: 5rem;
+  max-width: 1200px;
+  margin: 50px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  padding-bottom: 5rem;
 }
 
-.project-card{
-    background: #1a1919;
-    padding: 1.2rem 1rem;
-    border-radius: 10px;
+.project-card {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  overflow: hidden;
+  color: #0f172a;
 }
 
 .project-card:hover {
-    border: solid 0.5px rgb(189, 139, 139);
+  transform: translateY(-6px);
+  border-color: #c7d2fe !important;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
 }
 
-.project-card img{
-    width: 100%;
+.project-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  background: #f8f9fb;
+  border: 1px solid #f1f5f9;
 }
 
-.project-title{
-    color: white;
-    padding: 1rem 0;
+.project-title {
+  color: #0f172a !important;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 10px;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
 }
 
-.pro-details p{
-    padding-bottom: 1rem;
-    font-size: 1.1rem;
-    text-align: justify;
+.pro-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-.pro-btns{
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem 0;
+.pro-details p {
+  color: #64748b !important;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin: 0 0 22px;
+  flex: 1;
+  text-align: left;
 }
 
-.pro-btns .btn{
-    padding: 0.5rem 1rem;
+.pro-btns {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 16px;
+  border-top: 1px solid #f1f5f9;
 }
 
+.pro-btns .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 18px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  flex: 1;
+  text-align: center;
+}
 
+.pro-btns .btn:first-child {
+  background: #0f172a !important;
+  color: #ffffff !important;
+  border: 1px solid #0f172a;
+}
+
+.pro-btns .btn:first-child:hover {
+  background: #4f46e5 !important;
+  border-color: #4f46e5;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.25);
+}
+
+.pro-btns .btn:last-child {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #e5e7eb;
+}
+
+.pro-btns .btn:last-child:hover {
+  border-color: #0f172a;
+  background: #f8f9fb !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .project-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 @media screen and (max-width: 740px) {
-    .project-container{
-        max-width: 90%;
-        margin: auto;
-        grid-template-columns: 1fr;
-    } 
+  .work-container {
+    padding: 100px 18px 60px;
+  }
+  .project-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 32px;
+  }
 }
-
-
-

@@ -1,0 +1,266 @@
+/* ==========================================================
+   src/LightTheme.css  —  white professional theme overrides
+   Palette: text #0f172a · muted #475569 · soft #64748b
+            border #e5e7eb · surface #f8fafc · accent #2563eb
+   Every rule is scoped to a page-section root class, so other
+   pages (Projects, Contact...) are not affected.
+   To revert: delete this file and its import in App.js.
+   ========================================================== */
+
+/* ---------------- ABOUT ---------------- */
+.about-modern { background: #ffffff; padding-top: 120px; }
+
+.about-modern .profile-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.08);
+}
+.about-modern .profile-card::before { display: none; }
+.about-modern .profile-ring   { border-color: #bfdbfe; }
+.about-modern .profile-ring-2 { border-color: #dbeafe; }
+.about-modern .profile-img {
+  border: 5px solid #ffffff;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
+}
+.about-modern .status-badge {
+  background: #2563eb;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+}
+.about-modern .profile-name {
+  background: none;
+  -webkit-text-fill-color: #0f172a;
+  color: #0f172a;
+}
+.about-modern .profile-title    { color: #2563eb; }
+.about-modern .profile-subtitle { color: #475569; }
+.about-modern .stat-item {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+.about-modern .stat-item:hover { background: #eff6ff; border-color: #2563eb; }
+.about-modern .stat-value { color: #0f172a; }
+.about-modern .stat-label { color: #64748b; }
+.about-modern .btn-modern {
+  background: #2563eb;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+.about-modern .btn-modern:hover { background: #1d4ed8; box-shadow: 0 12px 28px rgba(37, 99, 235, 0.35); }
+
+.about-modern .section-badge {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+.about-modern .badge-dot { background: #2563eb; }
+.about-modern .about-title { color: #0f172a; }
+.about-modern .gradient-text {
+  background: none;
+  -webkit-text-fill-color: #2563eb;
+  color: #2563eb;
+}
+.about-modern .content-block {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+.about-modern .content-block:hover {
+  background: #f8fafc;
+  border-color: #93c5fd;
+}
+.about-modern .block-icon { background: #eff6ff; box-shadow: none; }
+.about-modern .block-text h3 { color: #0f172a; }
+.about-modern .block-text p { color: #475569; }
+.about-modern .block-text strong { color: #0f172a; }
+.about-modern .highlight-tech { color: #2563eb; }
+.about-modern .competencies {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+.about-modern .competencies-title { color: #0f172a; }
+.about-modern .competency-tag {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+  box-shadow: none;
+}
+.about-modern .competency-tag:hover {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.25);
+}
+
+/* ---------------- EXPERIENCE ---------------- */
+.experience-section { background: #ffffff; padding-top: 120px; }
+
+.experience-section .section-badge-exp {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+.experience-section .badge-dot { background: #2563eb; }
+.experience-section .experience-title,
+.experience-section .section-title { color: #0f172a; }
+.experience-section .gradient-text {
+  background: none;
+  -webkit-text-fill-color: #2563eb;
+  color: #2563eb;
+}
+.experience-section .experience-subtitle { color: #64748b; }
+.experience-section .timeline-line {
+  background: linear-gradient(180deg, #bfdbfe, #e5e7eb);
+}
+.experience-section .marker-icon { box-shadow: 0 6px 16px rgba(15, 23, 42, 0.15); }
+.experience-section .experience-card,
+.experience-section .education-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+}
+.experience-section .experience-card::before { display: none; }
+.experience-section .experience-card:hover,
+.experience-section .education-card:hover {
+  border-color: #93c5fd;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
+}
+.experience-section .company-name,
+.experience-section .degree { color: #0f172a; }
+.experience-section .role-name,
+.experience-section .institution { color: #2563eb; }
+.experience-section .period-badge {
+  background: #2563eb;
+  color: #ffffff;
+}
+.experience-section .type-badge {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+.experience-section .location,
+.experience-section .edu-period,
+.experience-section .edu-location { color: #64748b; }
+.experience-section .description { color: #475569; }
+.experience-section .achievements h5 { color: #0f172a; }
+.experience-section .achievements li,
+.experience-section .highlights li { color: #475569; }
+.experience-section .achievements li::before { color: #16a34a; }
+.experience-section .highlights li::before { color: #2563eb; }
+
+/* ---------------- EDUCATION (terminal style -> clean light) ---------------- */
+.edu-section {
+  background: #ffffff;
+  background-image: none;
+  color: #0f172a;
+  padding-top: 130px;
+}
+.edu-section .edu-eyebrow { color: #2563eb; }
+.edu-section .edu-title { color: #0f172a; }
+.edu-section .edu-sub { color: #64748b; }
+.edu-section .edu-panel-label {
+  color: #64748b;
+  border-bottom: 1px solid #e5e7eb;
+}
+.edu-section .commit {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-left: 3px solid #bfdbfe;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+}
+.edu-section .commit:hover { border-left-color: #2563eb; }
+.edu-section .commit-primary {
+  background: #f8fafc;
+  border-left-color: #2563eb;
+}
+.edu-section .commit-hash {
+  color: #1d4ed8;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+}
+.edu-section .commit-period { color: #64748b; }
+.edu-section .commit-msg { color: #0f172a; }
+.edu-section .commit-school { color: #475569; }
+.edu-section .metric-row { color: #64748b; }
+.edu-section .metric-value { color: #0f172a; }
+.edu-section .metric-bar { background: #e2e8f0; }
+.edu-section .metric-fill { background: linear-gradient(90deg, #2563eb, #60a5fa); }
+.edu-section .metric-fill-dim { background: #94a3b8; }
+.edu-section .cert-list {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+.edu-section .cert-row { border-bottom: 1px solid #f1f5f9; }
+.edu-section .cert-row:hover { background: #f8fafc; }
+.edu-section .cert-icon { color: #2563eb; }
+.edu-section .cert-name { color: #0f172a; }
+.edu-section .cert-note { color: #64748b; }
+
+/* ---------------- SERVICES ---------------- */
+.svc-section {
+  background: #ffffff;
+  background-image: none;
+  color: #0f172a;
+  padding-top: 130px;
+}
+.svc-section .svc-eyebrow { color: #2563eb; }
+.svc-section .svc-title { color: #0f172a; }
+.svc-section .svc-sub { color: #64748b; }
+.svc-section .svc-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+}
+.svc-section .svc-card:hover {
+  background: #ffffff;
+  border-color: #93c5fd;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.1);
+}
+.svc-section .svc-id { color: #2563eb; }
+.svc-section .svc-run { color: #94a3b8; border: 1px solid #e2e8f0; }
+.svc-section .svc-name { color: #0f172a; }
+.svc-section .svc-desc { color: #475569; }
+.svc-section .svc-tag {
+  color: #334155;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+}
+.svc-section .svc-card:hover .svc-tag {
+  color: #1d4ed8;
+  border-color: #bfdbfe;
+}
+
+/* ---------------- FOOTER ---------------- */
+.footer {
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  color: #0f172a;
+}
+.footer .footer-wave { display: none; }
+.footer .footer-container { padding-top: 56px; }
+.footer .footer-top { border-bottom: 1px solid #e5e7eb; }
+.footer .logo-icon { color: #2563eb; animation: none; }
+.footer .brand-logo h2 {
+  background: none;
+  -webkit-text-fill-color: #0f172a;
+  color: #0f172a;
+}
+.footer .brand-tagline { color: #2563eb; }
+.footer .tagline-icon { animation: none; }
+.footer .brand-description { color: #475569; }
+.footer .footer-column h3 { color: #0f172a; }
+.footer .footer-column h3::after { background: #2563eb; }
+.footer .footer-column ul li a { color: #475569; }
+.footer .footer-column ul li a::before { color: #2563eb; }
+.footer .footer-column ul li a:hover { color: #2563eb; }
+.footer .contact-icon { color: #2563eb; }
+.footer .contact-details p,
+.footer .contact-details a { color: #475569; }
+.footer .contact-details a:hover { color: #2563eb; }
+.footer .footer-social-section {
+  border-bottom: 1px solid #e5e7eb;
+}
+.footer .footer-social-section h3 { color: #0f172a; }
+.footer .social-link { box-shadow: 0 2px 8px rgba(15, 23, 42, 0.12); }
+.footer .copyright p { color: #475569; }
+.footer .footer-badge {
+  background: #2563eb;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.25);
+}

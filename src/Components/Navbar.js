@@ -4,11 +4,12 @@ import "./NavbarStyle.css";
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-// Core sections: Home, About, Projects, Experience / Resume, Contact.
-// Other pages (/services, /certificate, /review) still exist as routes.
+// Core sections: Home, About, Services, Projects, Experience / Resume, Contact.
+// Other pages (/certificate, /review) still exist as routes.
 const navItems = [
   { path: "/", label: "Home" },
   { path: "/about", label: "About" },
+  { path: "/services", label: "Services" },
   { path: "/project", label: "Projects" },
   { path: "/education", label: "Experience" },
 ];
