@@ -1,0 +1,40 @@
+{
+	"id": "50c6f01d-0993-4972-800f-17fc90e04219",
+	"name": "DummyJSON Env",
+	"values": [
+		{
+			"key": "base_url",
+			"value": "https://dummyjson.com",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "user_id",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "product_id",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "cart_id",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "token",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"color": 240,
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2026-09-15T03:01:41.345Z",
+	"_postman_exported_using": "Postman/12.28.0"
+}

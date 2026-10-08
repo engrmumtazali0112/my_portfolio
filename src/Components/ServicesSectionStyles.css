@@ -1,0 +1,149 @@
+/* src/Components/ServicesSectionStyles.css */
+
+.svc-section {
+  min-height: 100vh;
+  background: #0a0a0f;
+  background-image:
+    linear-gradient(rgba(255, 176, 51, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 176, 51, 0.025) 1px, transparent 1px);
+  background-size: 42px 42px;
+  padding: 90px 20px;
+  color: #e8e6e3;
+}
+
+.svc-wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.svc-head {
+  margin-bottom: 48px;
+}
+
+.svc-eyebrow {
+  display: inline-block;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 0.85rem;
+  color: #ffb033;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+}
+
+.svc-title {
+  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: #f4f2ee;
+  letter-spacing: -0.5px;
+}
+
+.svc-sub {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 0.92rem;
+  color: #7d7d87;
+  margin: 0;
+}
+
+.svc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.svc-card {
+  background: #121218;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 8px;
+  padding: 26px 24px;
+  transition: border-color 0.25s ease, transform 0.25s ease, background 0.25s ease;
+}
+
+.svc-card:hover {
+  border-color: rgba(255, 176, 51, 0.4);
+  transform: translateY(-4px);
+  background: #15151c;
+}
+
+.svc-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.svc-id {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 0.9rem;
+  color: #ffb033;
+  font-weight: 700;
+}
+
+.svc-run {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 0.72rem;
+  color: #4c4c56;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.svc-name {
+  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #f4f2ee;
+  margin: 0 0 10px;
+}
+
+.svc-desc {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: #9b9ba3;
+  margin: 0 0 20px;
+}
+
+.svc-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.svc-tag {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 0.76rem;
+  color: #d8d6d1;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 4px 10px;
+  border-radius: 5px;
+}
+
+.svc-card:hover .svc-tag {
+  border-color: rgba(255, 176, 51, 0.25);
+  color: #ffb033;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .svc-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .svc-section {
+    padding: 60px 16px;
+  }
+
+  .svc-title {
+    font-size: 1.8rem;
+  }
+
+  .svc-grid {
+    grid-template-columns: 1fr;
+  }
+}

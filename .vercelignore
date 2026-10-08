@@ -1,0 +1,16 @@
+# Ignore node_modules
+node_modules
+
+# Ignore local environment variables
+.env
+
+# Ignore build artifacts
+build
+
+# Ignore large assets
+src/assets/large-images
+src/assets/videos
+
+# Ignore test files and directories
+tests
+*.test.js
