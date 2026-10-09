@@ -1,6 +1,7 @@
 // src/Components/Hero.js
 import React from "react";
 import { Link } from "react-router-dom";
+import BookConsultation from "./BookConsultation";
 import { FaArrowRight, FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import profileImg from "../assets/profile.jpg";
 import "./HeroStyle.css";
@@ -33,26 +34,24 @@ const Hero = () => {
             <strong>JavaScript</strong> (React, Next.js, Node), and{" "}
             <strong>applied ML</strong> (RAG, LLM integrations, computer vision) —
             with a strong DevOps foundation (Docker, AWS, CI/CD). Currently
-            building at <strong>Wonder Crafts</strong> and shipping QA +
-            full-stack engineering for <strong>True Blue Bio</strong>, a B2B
-            lab-supply platform.
+            working at <strong>True Blue Bio</strong> (Rawalpindi) and{" "}
+            <strong>Wonder Crafts</strong> (Lahore).
           </p>
 
           <div className="hero-actions">
             <Link to="/project" className="btn-primary">
               View Projects <FaArrowRight className="btn-arrow" />
             </Link>
-            <Link to="/contact" className="btn-secondary">
-              Get in Touch
-            </Link>
+            <BookConsultation variant="ghost" />
           </div>
 
-       <div className="hero-now">
-  <span className="hero-now-dot" />
-  <span>
-    Currently at <strong>True Blue Bio</strong> · Open to new projects
-  </span>
-</div>
+          <div className="hero-now">
+            <span className="hero-now-dot" />
+            <span>
+              Currently at <strong>True Blue Bio</strong> &amp;{" "}
+              <strong>Wonder Crafts</strong> · Open to new projects
+            </span>
+          </div>
 
           <div className="hero-socials">
             <a

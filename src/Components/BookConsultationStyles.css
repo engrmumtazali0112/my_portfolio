@@ -1,0 +1,60 @@
+/* src/Components/BookConsultationStyles.css */
+
+.book-consult-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 26px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.book-consult-primary {
+  background: var(--text, #0f172a);
+  color: var(--bg, #ffffff);
+}
+.book-consult-primary:hover {
+  background: var(--accent, #4f46e5);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(79, 70, 229, 0.35);
+}
+
+.book-consult-ghost {
+  background: transparent;
+  color: var(--text, #0f172a);
+  border-color: var(--border, #e5e7eb);
+}
+.book-consult-ghost:hover {
+  border-color: var(--accent, #4f46e5);
+  color: var(--accent, #4f46e5);
+  background: var(--accent-soft, #eef2ff);
+  transform: translateY(-2px);
+}
+
+.book-consult-icon {
+  font-size: 0.9rem;
+}
+
+.book-consult-arrow {
+  transition: transform 0.25s ease;
+}
+.book-consult-btn:hover .book-consult-arrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 480px) {
+  .book-consult-btn {
+    padding: 12px 20px;
+    font-size: 0.88rem;
+    width: 100%;
+    justify-content: center;
+  }
+}

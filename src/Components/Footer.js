@@ -12,7 +12,9 @@ import {
   FaMapMarkerAlt,
   FaHeart,
   FaArrowRight,
+  FaCalendarCheck,
 } from "react-icons/fa";
+import site from "../config/site";
 
 const Footer = () => {
   return (
@@ -26,8 +28,8 @@ const Footer = () => {
               <h2>Mumtaz Ali</h2>
             </div>
             <p className="brand-tagline">
-              Full-Stack AI/ML Developer — building production web apps, APIs, and
-              AI-powered systems for clients worldwide.
+              Full-Stack AI/ML Developer — building production web apps, APIs,
+              and AI-powered systems for clients worldwide.
             </p>
             <p className="brand-location">
               <FaMapMarkerAlt />
@@ -61,22 +63,32 @@ const Footer = () => {
               </ul>
             </div>
 
-            
             <div className="footer-column contact-column">
-                <h3>Get in Touch</h3>
-                <a href="mailto:engrmumtazali01@gmail.com" className="contact-link-item">
-                  <FaEnvelope /> engrmumtazali01@gmail.com
-                </a>
-                <a href="tel:+923370690080" className="contact-link-item">
-                  <FaPhone /> +92 337 0690080
-                </a>
-                <a href="tel:+923476338292" className="contact-link-item">
-                  <FaPhone /> +92 347 6338292
-                </a>
-                <span className="contact-link-item">
-                  <FaMapMarkerAlt /> Islamabad · Lahore, Pakistan
-                </span>
-              </div>
+              <h3>Get in Touch</h3>
+              <a
+                href={`mailto:${site.email}`}
+                className="contact-link-item"
+              >
+                <FaEnvelope /> {site.email}
+              </a>
+              <a href="tel:+923370690080" className="contact-link-item">
+                <FaPhone /> +92 337 0690080
+              </a>
+              <a href="tel:+923476338292" className="contact-link-item">
+                <FaPhone /> +92 347 6338292
+              </a>
+              <a
+                href={site.calendlyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-link-item"
+              >
+                <FaCalendarCheck /> Book a free call
+              </a>
+              <span className="contact-link-item">
+                <FaMapMarkerAlt /> Islamabad · Lahore, Pakistan
+              </span>
+            </div>
           </div>
         </div>
 
@@ -130,8 +142,8 @@ const Footer = () => {
         {/* ---------- BOTTOM ---------- */}
         <div className="footer-bottom">
           <p className="copyright">
-            <FaHeart className="heart-icon" /> © {new Date().getFullYear()} Mumtaz
-            Ali. All rights reserved.
+            <FaHeart className="heart-icon" /> © {new Date().getFullYear()}{" "}
+            Mumtaz Ali. All rights reserved.
           </p>
         </div>
       </div>

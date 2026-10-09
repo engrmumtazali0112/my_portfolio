@@ -12,6 +12,7 @@ import Review from "./Routes/Review";
 import EducationPage from "./Routes/Education";
 import CaseStudy from "./Components/CaseStudy/CaseStudyHero";
 import ScrollToTop from "./Components/ScrollToTop";
+import WhatsAppButton from "./Components/WhatsAppButton";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path="/education" element={<EducationPage />} />
         <Route path="/work/:slug" element={<CaseStudy />} />
       </Routes>
+      <WhatsAppButton />
     </>
   );
 }
