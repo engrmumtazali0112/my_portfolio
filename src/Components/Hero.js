@@ -47,13 +47,12 @@ const Hero = () => {
             </Link>
           </div>
 
-          <div className="hero-now">
-            <span className="hero-now-dot" />
-            <span>
-              Currently at <strong>Wonder Crafts</strong> · Building{" "}
-              <strong>True Blue Bio</strong> · Open to new projects
-            </span>
-          </div>
+       <div className="hero-now">
+  <span className="hero-now-dot" />
+  <span>
+    Currently at <strong>True Blue Bio</strong> · Open to new projects
+  </span>
+</div>
 
           <div className="hero-socials">
             <a
