@@ -10,6 +10,12 @@ import fingerprintCover from "../assets/projects/fingerprint-attendance-1-hero.p
 import financeaiCover from "../assets/projects/financeai-1-hero.png";
 import aiVisibilityCover from "../assets/projects/ai-visibility-1-hero.png";
 
+// ===== SUFRAH =====
+import sufrahHero from "../assets/projects/sufrah-1-hero.png";
+import sufrahLaptop from "../assets/projects/sufrah-2-laptop.png";
+import sufrahTablet from "../assets/projects/sufrah-3-ipad.png";
+import sufrahMobile from "../assets/projects/sufrah-4-iphone.png";
+
 // ===== EXISTING PROJECT IMAGES =====
 import p4handgesture from "../assets/p4handgesture.gif";
 import p5objdetection from "../assets/p5objdetection.gif";
@@ -54,6 +60,18 @@ const ProjectCardData = [
     duration: "8 Months",
     stack: ["React", "FastAPI", "PostgreSQL", "Tailwind CSS", "Vite", "Docker"],
   },
+  {
+  imgsrc: sufrahCover,
+  title: "Sufrah — Subscription Manager Pro",
+  text: "A 9-app restaurant & meal-subscription platform serving Islamabad & Rawalpindi — public site, customer portal, admin, floor, cashier, kitchen, rider, sales, and manager apps. Menu, orders, subscriptions, deliveries and payments all live in one system.",
+  view: "/work/sufrah",
+  source: "https://github.com/engrmumtazali0112/sufrah",
+  category: "Restaurant SaaS",
+  categories: ["web", "mobile"],
+  year: "2026",
+  duration: "7 Months",
+  stack: ["React", "Node.js", "MongoDB", "Stripe", "Expo"],
+},
   {
     imgsrc: complaintCover,
     title: "Student Complaint Management System",
