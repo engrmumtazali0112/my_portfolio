@@ -1,0 +1,218 @@
+/* src/Components/FeaturedCardStyles.css */
+
+.featured-card {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all 0.35s ease;
+}
+
+.featured-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.featured-image {
+  position: relative;
+  background: linear-gradient(135deg, var(--accent-soft), var(--bg-muted));
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.featured-image img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 14px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--border);
+  object-fit: cover;
+}
+
+.featured-badge {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.4);
+  z-index: 2;
+}
+
+.featured-content {
+  padding: 48px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featured-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.featured-category {
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.featured-year,
+.featured-duration {
+  position: relative;
+  padding-left: 14px;
+}
+
+.featured-year::before,
+.featured-duration::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  background: var(--text-soft);
+  border-radius: 50%;
+}
+
+.featured-title {
+  font-size: clamp(1.5rem, 2.4vw, 1.9rem);
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  margin: 0 0 14px;
+  line-height: 1.2;
+}
+
+.featured-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-body);
+  margin: 0 0 22px;
+}
+
+.featured-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.featured-pill {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-body);
+  background: var(--bg-muted);
+  border: 1px solid var(--border);
+  padding: 6px 14px;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+.featured-card:hover .featured-pill {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.featured-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.featured-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 26px;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.25);
+}
+
+.featured-cta:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(79, 70, 229, 0.4);
+}
+
+.featured-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 22px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.featured-cta-secondary:hover {
+  border-color: var(--text);
+  background: var(--bg-muted);
+}
+
+@media screen and (max-width: 900px) {
+  .featured-card {
+    grid-template-columns: 1fr;
+  }
+  .featured-image {
+    padding: 28px;
+  }
+  .featured-content {
+    padding: 32px 24px;
+  }
+  .featured-title {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .featured-image {
+    padding: 20px;
+  }
+  .featured-badge {
+    top: 16px;
+    left: 16px;
+    font-size: 0.65rem;
+  }
+  .featured-actions {
+    flex-direction: column;
+  }
+  .featured-cta,
+  .featured-cta-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}

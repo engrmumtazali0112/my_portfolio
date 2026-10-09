@@ -1,17 +1,35 @@
+// src/Components/CaseStudy/CaseStudyData.js
+
+// ===== TRUE BLUE BIO =====
 import tbbHome from "../../assets/projects/tbb-home.webp";
 import tbbProduct from "../../assets/projects/tbb-product.webp";
 import tbbAdmin from "../../assets/projects/tbb-admin.webp";
+
+// ===== LUXE JEWELRY =====
 import luxeHero from "../../assets/projects/luxe-hero.webp";
 import luxeOverview from "../../assets/projects/luxe-overview.webp";
 import luxeHome from "../../assets/projects/luxe-home.webp";
 import luxeProduct from "../../assets/projects/luxe-product.webp";
 import luxeAdmin from "../../assets/projects/luxe-admin.webp";
+
+// ===== UNIVERSITY ADMIN =====
 import hostelHero from "../../assets/projects/hostel-hero.webp";
 import hostelOverview from "../../assets/projects/hostel-overview.webp";
 import hostelDashboard from "../../assets/projects/hostel-dashboard.webp";
 import hostelAttendance from "../../assets/projects/hostel-attendance.webp";
 import hostelPayment from "../../assets/projects/hostel-payment.webp";
 
+// ===== AXON FORGE =====
+import axonHero from "../../assets/projects/axon-forge-1-hero.png";
+import axonLaptop from "../../assets/projects/axon-forge-2-laptop.png";
+import axonTablet from "../../assets/projects/axon-forge-3-tablet.png";
+import axonMobile from "../../assets/projects/axon-forge-4-mobile.png";
+
+// ===== STUDENT COMPLAINT =====
+import complaintHero from "../../assets/projects/student-complaint-1-hero.png";
+import complaintLaptop from "../../assets/projects/student-complaint-2-laptop.png";
+import complaintTablet from "../../assets/projects/student-complaint-3-tablet.png";
+import complaintMobile from "../../assets/projects/student-complaint-4-mobile.png";
 const caseStudies = [
   {
     slug: "true-blue-bio",
@@ -94,6 +112,58 @@ const caseStudies = [
       { name: "Mess and visitors", text: "Weekly menu, mess balance and visitor booking." },
       { name: "Complaints", text: "Category, priority and status tracking from open to resolved." },
       { name: "Biometric attendance", text: "Present, absent and leave counts with a per-student monthly grid fed by fingerprint devices.", img: hostelAttendance },
+    ],
+  },
+  {
+    slug: "axon-forge",
+    accent: "#1E88E5",
+    title: "Axon Forge — Agency Platform",
+    tagline: "A remote-first software agency site with services, portfolio, blog and quote workflow.",
+    cover: axonHero,
+    hero: axonHero,
+    role: "Full-stack developer",
+    stack: ["React", "Vite", "FastAPI", "PostgreSQL", "Tailwind CSS"],
+    overviewImg: axonLaptop,
+    overviewText:
+      "Axon Forge presents a remote-first development agency: services, portfolio, expertise, team and a blog, with a clear Get a quote path. A FastAPI backend serves the content and handles quote and contact requests.",
+    flow: [
+      "Visitor lands on the homepage and sees live projects",
+      "Browses services, expertise and the portfolio",
+      "Reads blog articles filtered by category",
+      "Checks the team and testimonials",
+      "Sends a quote request or books a free consultation",
+    ],
+    modules: [
+      { name: "Homepage and portfolio", text: "Product-first hero, featured case study cards with stack pills and links to full case studies.", img: axonLaptop },
+      { name: "Services", text: "Six service cards covering web apps, AI/ML, mobile, cloud and DevOps, database design and API integration, followed by a five-step delivery process.", img: axonTablet },
+      { name: "Blog", text: "Category tabs, search, and article cards with date and read time on a dark mobile layout.", img: axonMobile },
+      { name: "About and contact", text: "Company story, stats (projects, clients, hourly rate, reply time), core values and a quote form." },
+    ],
+  },
+  {
+    slug: "student-complaint-system",
+    accent: "#1a73e8",
+    title: "Student Complaint Management System",
+    tagline: "Multi-portal university complaints with status tracking, escalation and admin ratings.",
+    cover: complaintHero,
+    hero: complaintHero,
+    role: "Full-stack developer",
+    stack: ["Flutter", "Django", "PostgreSQL", "Django REST Framework"],
+    overviewImg: complaintLaptop,
+    overviewText:
+      "Students file complaints to the right department, admins resolve or reject them, and a super admin watches department stats, escalations and admin ratings. Students rate each resolution out of five stars.",
+    flow: [
+      "Student submits a complaint to a department",
+      "Admin reviews it and resolves or rejects with a reason",
+      "Student tracks status in real time",
+      "Student rates the admin on a resolved complaint",
+      "Super admin reviews escalations, departments and ratings",
+    ],
+    modules: [
+      { name: "Admin portal", text: "Totals for pending, resolved and rejected, a searchable complaint list and View Details, Resolve and Reject actions.", img: complaintLaptop },
+      { name: "Student portal", text: "Profile with live stats and a submit form with title, type, department, description and optional attachment.", img: complaintTablet },
+      { name: "Resolved and rating", text: "Resolved complaints with dates and a five-star Rate Admin Performance flow.", img: complaintMobile },
+      { name: "Super admin dashboard", text: "Department charts, escalated complaints and an Admin Ratings page with averages and department filter." },
     ],
   },
 ];

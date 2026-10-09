@@ -10,7 +10,7 @@ import Contact from "./Routes/Contact";
 import Services from "./Routes/Service";
 import Review from "./Routes/Review";
 import EducationPage from "./Routes/Education";
-import CaseStudy from "./Components/CaseStudy/CaseStudyHero";   // ✅ FIXED PATH
+import CaseStudy from "./Components/CaseStudy/CaseStudyHero";
 import ScrollToTop from "./Components/ScrollToTop";
 import { Route, Routes } from "react-router-dom";
 
