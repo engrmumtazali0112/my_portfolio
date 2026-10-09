@@ -32,15 +32,17 @@ import complaintTablet from "../../assets/projects/student-complaint-3-tablet.pn
 import complaintMobile from "../../assets/projects/student-complaint-4-mobile.png";
 const caseStudies = [
   {
-    slug: "true-blue-bio",
-    accent: "#2563eb",
-    title: "True Blue Bio",
-    tagline: "B2B laboratory supplies store with quotes, Net-30 invoicing and an operations admin.",
-    cover: tbbHome,
-    hero: tbbHome,
-    role: "Full-stack developer",
-    stack: ["React", "Node / Express", "MongoDB", "Stripe", "JWT auth"],
-    overviewText:
+  slug: "true-blue-bio",
+  accent: "#2563eb",
+  title: "True Blue Bio",
+  tagline: "B2B laboratory supplies store with quotes, Net-30 invoicing and an operations admin.",
+  liveUrl: "https://truebluebio.com/",               // ← ADD THIS
+  sourceUrl: "https://github.com/engrmumtazali0112/true-blue-bio",  // ← optional
+  cover: tbbHome,
+  hero: tbbHome,
+  role: "Full-stack developer",
+  stack: ["React", "Node / Express", "MongoDB", "Stripe", "JWT auth"],
+  overviewText:
       "True Blue Bio sells consumables, reagents and PPE to labs and clinics. Approved accounts see their own pricing and can pay by card or on Net-30 invoice, while large orders go through a bulk quote request instead of the cart.",
     overviewImg: tbbAdmin,
     flow: [
@@ -59,16 +61,18 @@ const caseStudies = [
     ],
   },
   {
-    slug: "luxe-jewelry-store",
-    accent: "#a98a3d",
-    title: "Luxe Jewelry — E-Commerce Store",
-    tagline: "A full e-commerce flow for fine jewelry, from collection pages to checkout and admin.",
-    cover: luxeHero,
-    hero: luxeHero,
-    role: "Full-stack developer",
-    stack: ["Django", "PostgreSQL", "Bootstrap", "Stripe", "Django admin"],
-    overviewImg: luxeOverview,
-    overviewText:
+  slug: "luxe-jewelry-store",
+  accent: "#a98a3d",
+  title: "Luxe Jewelry — E-Commerce Store",
+  tagline: "A full e-commerce flow for fine jewelry, from collection pages to checkout and admin.",
+  liveUrl: "https://luxejewelrydesign.store/",       // ← ADD THIS
+  sourceUrl: "https://github.com/engrmumtazali0112/Jewelry-Shop---Django-E-commerce",
+  cover: luxeHero,
+  hero: luxeHero,
+  role: "Full-stack developer",
+  stack: ["Django", "PostgreSQL", "Bootstrap", "Stripe", "Django admin"],
+  overviewImg: luxeOverview,
+  overviewText:
       "Luxe Jewelry covers the whole buying journey: a branded homepage, filterable collections, a detailed product page, a cart, a three-step checkout and an order confirmation, with a separate admin for the shop owner.",
     flow: [
       "Land on the homepage and open a collection",
@@ -115,16 +119,18 @@ const caseStudies = [
     ],
   },
   {
-    slug: "axon-forge",
-    accent: "#1E88E5",
-    title: "Axon Forge — Agency Platform",
-    tagline: "A remote-first software agency site with services, portfolio, blog and quote workflow.",
-    cover: axonHero,
-    hero: axonHero,
-    role: "Full-stack developer",
-    stack: ["React", "Vite", "FastAPI", "PostgreSQL", "Tailwind CSS"],
-    overviewImg: axonLaptop,
-    overviewText:
+  slug: "axon-forge",
+  accent: "#1E88E5",
+  title: "Axon Forge — Agency Platform",
+  tagline: "A remote-first software agency site with services, portfolio, blog and quote workflow.",
+  liveUrl: "https://axon-forge.vercel.app/",         // ← ADD THIS
+  sourceUrl: "https://github.com/engrmumtazali0112/next-tech-solutions",
+  cover: axonHero,
+  hero: axonHero,
+  role: "Full-stack developer",
+  stack: ["React", "Vite", "FastAPI", "PostgreSQL", "Tailwind CSS"],
+  overviewImg: axonLaptop,
+  overviewText:
       "Axon Forge presents a remote-first development agency: services, portfolio, expertise, team and a blog, with a clear Get a quote path. A FastAPI backend serves the content and handles quote and contact requests.",
     flow: [
       "Visitor lands on the homepage and sees live projects",

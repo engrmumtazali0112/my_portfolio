@@ -1,9 +1,70 @@
+
 /* src/Components/WorkCardStyles.css */
 
 .work-container {
   background: var(--bg) !important;
   padding: 120px 24px 80px;
   min-height: auto;
+}
+
+/* ===== LEFT-ALIGNED HEADER ===== */
+.work-header {
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+}
+
+.work-eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.project-heading {
+  text-align: left;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  line-height: 1.08;
+  font-weight: 800;
+  color: var(--text) !important;
+  margin: 0 0 16px;
+  letter-spacing: -0.03em;
+  padding: 0;
+  max-width: 900px;
+}
+
+.project-subheading {
+  max-width: 620px;
+  margin: 0;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+
+.work-container {
+  background: var(--bg) !important;
+  padding: 120px 24px 80px;
+  min-height: auto;
+}
+
+/* Add at the bottom of WorkCardStyles.css */
+
+.project-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 1rem;
+  color: var(--text-muted);
+  background: var(--bg-muted);
+  border-radius: 16px;
+  border: 1px dashed var(--border);
 }
 
 /* ===== HEADING ===== */
