@@ -43,6 +43,7 @@ const Navbar = () => {
 
   return (
     <header className={scrolled ? "header header-scrolled" : "header"}>
+      {/* LOGO — links to Home */}
       <Link to="/" className="logo" onClick={closeMenu}>
         <span className="logo-text">
           <span className="logo-name">Mumtaz Ali</span>
