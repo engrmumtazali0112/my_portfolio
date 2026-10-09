@@ -6,6 +6,9 @@ import luxeCover from "../assets/projects/luxe-hero.webp";
 import hostelCover from "../assets/projects/hostel-hero.webp";
 import axonCover from "../assets/projects/axon-forge-1-hero.png";
 import complaintCover from "../assets/projects/student-complaint-1-hero.png";
+import fingerprintCover from "../assets/projects/fingerprint-attendance-1-hero.png";
+import financeaiCover from "../assets/projects/financeai-1-hero.png";
+import aiVisibilityCover from "../assets/projects/ai-visibility-1-hero.png";
 
 // ===== EXISTING PROJECT IMAGES =====
 import p4handgesture from "../assets/p4handgesture.gif";
@@ -89,6 +92,43 @@ const ProjectCardData = [
     duration: "12 Months",
     stack: ["Django", "Bootstrap", "PostgreSQL", "Stripe", "Biometric API"],
   },
+
+{
+  imgsrc: fingerprintCover,
+  title: "Fingerprint Attendance System",
+  text: "A biometric attendance platform for universities with multi-finger enrollment, per-meal attendance (Breakfast/Lunch/Dinner), duplicate prevention, admin dashboards, and CSV/print-ready reporting.",
+  view: "/work/fingerprint-attendance-system",
+  source: "https://github.com/engrmumtazali0112/fingerprint_attendance_system",
+  category: "Biometric · University",
+  categories: ["web", "mobile"],
+  year: "2025",
+  duration: "2 Months",
+  stack: ["Django", "SQLite", "Bootstrap 5", "Digital Persona SDK"],
+},
+{
+  imgsrc: financeaiCover,
+  title: "FinanceAI — Personal Finance Assistant",
+  text: "An AI-driven, multi-user financial companion with natural-language Q&A over spending data, receipt OCR via Claude vision, intent-based routing between Haiku and Sonnet for 5× cost savings, and Supabase row-level security.",
+  view: "/work/financeai",
+  source: "https://github.com/engrmumtazali0112/finance-assistant",
+  category: "AI · Fintech",
+  categories: ["web", "ai-ml"],
+  year: "2025",
+  duration: "3 Months",
+  stack: ["Next.js 14", "TypeScript", "Supabase", "Claude API", "Recharts"],
+},
+{
+  imgsrc: aiVisibilityCover,
+  title: "AI Visibility & Search Intelligence",
+  text: "A platform that tracks whether a business is mentioned when buyers ask ChatGPT, Claude, or Perplexity. Uses a 3-agent Claude pipeline (discovery, scoring, recommendation) with a documented multi-factor opportunity score.",
+  view: "/work/ai-visibility",
+  source: "https://github.com/engrmumtazali0112/AI-Visibility-Search-Intelligence-Platform",
+  category: "AI SaaS Platform",
+  categories: ["web", "ai-ml", "data"],
+  year: "2025",
+  duration: "3 Months",
+  stack: ["Flask", "React", "Claude API", "PostgreSQL", "Vite"],
+},
   {
     imgsrc: QuizGame,
     title: "Interactive Quiz Game",
@@ -114,30 +154,6 @@ const ProjectCardData = [
     stack: ["Python", "Flask", "BeautifulSoup", "Scrapy"],
   },
   {
-    imgsrc: financeAI,
-    title: "FinanceAI — Personal Finance Assistant",
-    text: "A multi-user financial companion with natural-language Q&A over spending data, receipt OCR via vision models, and Supabase row-level security.",
-    view: "https://your-financeai-demo-link.com",
-    source: "https://github.com/engrmumtazali0112/finance-assistant",
-    category: "AI · Fintech",
-    categories: ["web", "ai-ml"],
-    year: "2025",
-    duration: "3 Months",
-    stack: ["Next.js", "TypeScript", "Supabase", "Claude API"],
-  },
-  {
-    imgsrc: aiVisibility,
-    title: "AI Visibility & Search Intelligence",
-    text: "A Flask + React platform that tracks whether a business is mentioned when buyers ask ChatGPT, Claude, or Perplexity. Uses a 3-agent Claude pipeline.",
-    view: "https://your-ai-visibility-demo-link.com",
-    source: "https://github.com/engrmumtazali0112/AI-Visibility-Search-Intelligence-Platform",
-    category: "AI SaaS Platform",
-    categories: ["web", "ai-ml"],
-    year: "2025",
-    duration: "3 Months",
-    stack: ["Flask", "React", "Claude API", "PostgreSQL"],
-  },
-  {
     imgsrc: FlaskCICDDemo,
     title: "Flask CI/CD Demo",
     text: "A production-ready Flask web app with CI/CD pipeline using GitHub Actions and Docker, showcasing automated testing and deployment.",
@@ -149,18 +165,7 @@ const ProjectCardData = [
     duration: "2 Weeks",
     stack: ["Flask", "Docker", "GitHub Actions", "pytest"],
   },
-  {
-    imgsrc: FingerprintAttendance,
-    title: "Fingerprint Attendance System",
-    text: "A secure biometric attendance system using Django, with multi-finger support, real-time tracking, and reporting features.",
-    view: "https://github.com/engrmumtazali0112/fingerprint_attendance_system",
-    source: "https://github.com/engrmumtazali0112/fingerprint_attendance_system",
-    category: "Biometric · University",
-    categories: ["web", "mobile"],
-    year: "2025",
-    duration: "2 Months",
-    stack: ["Django", "PostgreSQL", "Fingerprint SDK"],
-  },
+
   {
     imgsrc: p4handgesture,
     title: "Hand Gesture Recognition",

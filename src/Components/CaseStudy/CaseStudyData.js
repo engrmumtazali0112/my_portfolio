@@ -5,6 +5,24 @@ import tbbHome from "../../assets/projects/tbb-home.webp";
 import tbbProduct from "../../assets/projects/tbb-product.webp";
 import tbbAdmin from "../../assets/projects/tbb-admin.webp";
 
+// ===== FINGERPRINT ATTENDANCE =====
+import fingerprintHero from "../../assets/projects/fingerprint-attendance-1-hero.png";
+import fingerprintLaptop from "../../assets/projects/fingerprint-attendance-2-laptop.png";
+import fingerprintTablet from "../../assets/projects/fingerprint-attendance-3-ipad.png";
+import fingerprintMobile from "../../assets/projects/fingerprint-attendance-4-iphone.png";
+
+// ===== FINANCEAI =====
+import financeaiHero from "../../assets/projects/financeai-1-hero.png";
+import financeaiLaptop from "../../assets/projects/financeai-2-laptop.png";
+import financeaiTablet from "../../assets/projects/financeai-3-ipad.png";
+import financeaiMobile from "../../assets/projects/financeai-4-iphone.png";
+
+// ===== AI VISIBILITY =====
+import aiVisibilityHero from "../../assets/projects/ai-visibility-1-hero.png";
+import aiVisibilityLaptop from "../../assets/projects/ai-visibility-2-laptop.png";
+import aiVisibilityTablet from "../../assets/projects/ai-visibility-3-ipad.png";
+import aiVisibilityMobile from "../../assets/projects/ai-visibility-4-iphone.png";
+
 // ===== LUXE JEWELRY =====
 import luxeHero from "../../assets/projects/luxe-hero.webp";
 import luxeOverview from "../../assets/projects/luxe-overview.webp";
@@ -172,6 +190,107 @@ const caseStudies = [
       { name: "Super admin dashboard", text: "Department charts, escalated complaints and an Admin Ratings page with averages and department filter." },
     ],
   },
+  {
+  slug: "fingerprint-attendance-system",
+  accent: "#2563eb",
+  title: "Fingerprint Attendance System",
+  tagline: "A modern, secure, biometric attendance platform for university students and admins.",
+  liveUrl: "",
+  sourceUrl: "https://github.com/engrmumtazali0112/fingerprint_attendance_system",
+  category: "Biometric · University",
+  year: "2025",
+  duration: "2 Months",
+  cover: fingerprintHero,
+  hero: fingerprintHero,
+  role: "Full-stack developer",
+  stack: ["Django", "SQLite", "Bootstrap 5", "Digital Persona SDK"],
+  overviewImg: fingerprintLaptop,
+  overviewText:
+    "Fingerprint Attendance System replaces manual roll-calls with biometric identification. Students register up to 10 fingerprints; the system records attendance per meal (Breakfast, Lunch, Dinner), prevents duplicate entries, and exposes a full admin panel with CSV export and print-ready reports.",
+  flow: [
+    "Admin registers a new student with roll number and department",
+    "Student places finger on the scanner to enroll up to 10 fingerprints",
+    "System stores the encrypted template against the student record",
+    "During meals, the student scans a finger to check in",
+    "Attendance is recorded with a live timestamp — duplicates auto-rejected",
+    "Admin views the dashboard, filters by date/department/meal, and exports CSV",
+  ],
+  modules: [
+    { name: "Student directory", text: "Searchable, filterable list of all students with roll number, department, year, fingerprint count and per-student actions.", img: fingerprintLaptop },
+    { name: "Fingerprint registration", text: "Multi-finger enrollment flow with live scanning UI, progress feedback, and per-finger save confirmation.", img: fingerprintTablet },
+    { name: "Live attendance scanning", text: "Scanner-ready screen with real-time clock, meal selector, and instant success/failure feedback.", img: fingerprintMobile },
+    { name: "Student profile", text: "Complete student record: personal info, department, active status, registered fingerprints, and recent attendance history." },
+    { name: "Attendance reports", text: "Date-range filters, department/meal/student filters, CSV export and print-ready layouts." },
+    { name: "Admin dashboard", text: "Live statistics — total students, registrations today, meals served — plus quick actions." },
+  ],
+},
+{
+  slug: "financeai",
+  accent: "#6366f1",
+  title: "FinanceAI — Personal Finance Assistant",
+  tagline: "An AI-driven, multi-user financial companion with natural-language Q&A and receipt OCR.",
+  liveUrl: "",
+  sourceUrl: "https://github.com/engrmumtazali0112/finance-assistant",
+  category: "AI · Fintech",
+  year: "2025",
+  duration: "3 Months",
+  cover: financeaiHero,
+  hero: financeaiHero,
+  role: "Full-stack developer",
+  stack: ["Next.js 14", "TypeScript", "Supabase", "Claude API", "Recharts"],
+  overviewImg: financeaiLaptop,
+  overviewText:
+    "FinanceAI lets users talk to their money. Ask natural-language questions over your spending data, upload receipts for automatic OCR and categorisation, set budgets, detect anomalies, and get cut-back suggestions — all with strict per-user isolation via Supabase row-level security. The intent router sends 80%+ of queries to Claude Haiku and reserves Sonnet for vision and complex agent tasks — 5× cost savings at scale.",
+  flow: [
+    "User signs in with Clerk and gets isolated DB access",
+    "Imports transactions via CSV or uploads a receipt",
+    "Asks questions in natural language or picks a suggested chip",
+    "Intent router classifies: simple_query → Haiku, receipt/lookup → Sonnet",
+    "Pre-computed monthly aggregates feed a compact LLM context (~1,500 tokens)",
+    "Response renders with charts, alerts and inline action chips",
+  ],
+  modules: [
+    { name: "Overview dashboard", text: "Balance card, spending donut, recent transactions, and a one-tap 'Ask assistant' prompt.", img: financeaiHero },
+    { name: "AI assistant", text: "Chat UI with suggested questions, receipt upload, streaming-ready answers, and user memory.", img: financeaiLaptop },
+    { name: "Transaction list", text: "Paginated, colour-coded by category, with CSV import and deduplication.", img: financeaiMobile },
+    { name: "Budgets", text: "Set via chat or UI. Progress bars turn red when over budget. Alerts fire at 80% and 100%.", img: financeaiTablet },
+    { name: "Trends", text: "Stacked bar chart by category across 12 months, driven by pre-computed aggregates." },
+    { name: "Anomalies & subscriptions", text: "Z-score (2σ) anomaly detection vs 12-month history, plus recurring-payment pattern matching." },
+  ],
+},
+{
+  slug: "ai-visibility",
+  accent: "#8b5cf6",
+  title: "AI Visibility & Search Intelligence",
+  tagline: "Track whether your brand appears when buyers ask ChatGPT, Claude, or Perplexity.",
+  liveUrl: "",
+  sourceUrl: "https://github.com/engrmumtazali0112/AI-Visibility-Search-Intelligence-Platform",
+  category: "AI SaaS Platform",
+  year: "2025",
+  duration: "3 Months",
+  cover: aiVisibilityHero,
+  hero: aiVisibilityHero,
+  role: "Full-stack developer",
+  stack: ["Flask", "React", "Claude API", "PostgreSQL", "Vite"],
+  overviewImg: aiVisibilityLaptop,
+  overviewText:
+    "AI Visibility & Search Intelligence answers a modern marketing question: does your brand show up when buyers ask an AI search engine? Register a business profile, let the platform discover relevant queries, run a 3-agent Claude pipeline (discovery, visibility scoring, content recommendation), and track AI mentions, search volume, impressions, share-of-voice, and top opportunities over time.",
+  flow: [
+    "Register a business with domain, industry and competitors",
+    "Pipeline discovers the queries buyers actually ask AI engines",
+    "3-agent Claude pipeline scores visibility + opportunity per query",
+    "Dashboard shows mentions, volume, impressions, SOV and top sources",
+    "Content recommendations flag the biggest gaps to close next",
+  ],
+  modules: [
+    { name: "Dashboard", text: "Cards for each business profile with query count, avg opportunity score and pipeline status.", img: aiVisibilityHero },
+    { name: "Register profile", text: "Form for business name, domain, industry, description, and competitor domains.", img: aiVisibilityTablet },
+    { name: "Profile detail", text: "Metrics grid (mentions, volume, impressions, top sources/brands) and AI Visibility Score with week-over-week delta.", img: aiVisibilityMobile },
+    { name: "Recent mentions", text: "Filterable table of every tracked query with platform (ChatGPT/Claude/Google), mentioned status, SOV, location, and last-checked timestamp.", img: aiVisibilityLaptop },
+    { name: "Top opportunities", text: "Horizontal bar chart ranking queries by opportunity score — sorted by highest upside." },
+    { name: "Volume vs difficulty", text: "Scatter plot where points represent queries; top-left quadrant = high volume, low difficulty — the best targets." },
+  ],
+},
 ];
 
 export default caseStudies;
