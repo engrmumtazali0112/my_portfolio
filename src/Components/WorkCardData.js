@@ -13,12 +13,10 @@ import aiVisibilityCover from "../assets/projects/ai-visibility-1-hero.png";
 // ===== EXISTING PROJECT IMAGES =====
 import p4handgesture from "../assets/p4handgesture.gif";
 import p5objdetection from "../assets/p5objdetection.gif";
-import UniversityAddministrationManagmentSystem from "../assets/HostelManagementSystem.JPG";
+
 import QuizGame from "../assets/QuizGame.JPG";
 import FlaskCICDDemo from "../assets/FlaskCICDDemo.JPG";
-import FingerprintAttendance from "../assets/FingerprintAttendance.JPG";
-import financeAI from "../assets/financeAI-overview.png";
-import aiVisibility from "../assets/ai-visibility-dashboard.png";
+
 import p6PersonalityPredictionSystem from "../assets/p6PersonalityPredictionSystem.gif";
 import p7RubustMultipleChoisequiz from "../assets/p7RubustMultipleChoisequiz.gif";
 import p12DocumentPlagiarismDetector from "../assets/p12DocumentPlagiarismDetector.gif";
