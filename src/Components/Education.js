@@ -26,103 +26,103 @@ const Education = () => {
   ];
 
   /* ---------- EXPERIENCE ---------- */
-  const experiences = [
-    {
-      id: "wonder-crafts",
-      company: "Wonder Crafts",
-      role: "Full Stack AI/ML Developer",
-      type: "Full-time",
-      period: "May 2026 — Present",
-      location: "Lahore, Pakistan",
-      current: true,
-      summary:
-        "Building scalable web applications and production-ready RESTful APIs using Django, FastAPI, and React.js across the full development lifecycle.",
-      achievements: [
-        "Awarded Certificate of Appreciation by CTO Bilal Saeed for outstanding contribution.",
-        "Shipping production features on tight timelines across cross-functional teams.",
-        "Implemented robust authentication, authorization, and data validation for enterprise apps.",
-      ],
-      tech: ["Django", "FastAPI", "React.js", "PostgreSQL", "Docker", "AWS"],
-      color: "#4f46e5",
-      icon: <FaBriefcase />,
-    },
-    {
-      id: "virevo",
-      company: "Virevo S.r.l.",
-      role: "Full Stack Developer",
-      type: "Remote · Contract",
-      period: "Dec 2025 — Apr 2026",
-      location: "Dekali, Italy (Remote)",
-      current: false,
-      summary:
-        "Delivered international client projects using Django, FastAPI, React.js, and Next.js with AWS deployments and Docker containerization.",
-      achievements: [
-        "Received Certificate of Appreciation within 5 months — first international recognition.",
-        "Collaborated with Italian stakeholders across time zones to ship scalable solutions.",
-        "Built high-performance, production-grade APIs serving real client workloads.",
-      ],
-      tech: ["Django", "FastAPI", "Next.js", "AWS", "Docker", "PostgreSQL"],
-      color: "#06b6d4",
-      icon: <FaBriefcase />,
-    },
-    {
-      id: "axaura",
-      company: "Axaura Tech",
-      role: "Full Stack Developer Intern (MERN)",
-      type: "Internship",
-      period: "Aug 2025 — Dec 2025",
-      location: "Pakistan",
-      current: false,
-      summary:
-        "Built full-stack web applications using React.js, Node.js, Express.js, and MongoDB end-to-end.",
-      achievements: [
-        "Covered frontend, backend APIs, and database design independently.",
-        "Followed clean code practices and Git-based collaborative workflows.",
-        "Completed MERN Stack Development internship with a Certificate of Achievement.",
-      ],
-      tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Git"],
-      color: "#22c55e",
-      icon: <FaBriefcase />,
-    },
-    {
-      id: "den",
-      company: "Digital Empowerment Network",
-      role: "Full Stack Developer",
-      type: "Full-time",
-      period: "Dec 2024 — Mar 2025",
-      location: "Pakistan",
-      current: false,
-      summary:
-        "Built and deployed end-to-end web solutions applying industry-standard backend engineering and database design practices.",
-      achievements: [
-        "Drove 25% task-completion uplift across 1,000+ citizens via community cleanup platform.",
-        "Reduced fire-hazard incident response time by ~3 hours per cycle for 2,500+ residents.",
-        "Optimized API infrastructure to handle 500+ daily transactions at 99.9% uptime.",
-      ],
-      tech: ["Django", "PostgreSQL", "Python", "REST APIs"],
-      color: "#f59e0b",
-      icon: <FaBriefcase />,
-    },
-    {
-      id: "truebluebio",
-      company: "True Blue Bio",
-      role: "SQA Engineer / Full Stack",
-      type: "Present · Part-time",
-      period: "Present",
-      location: "Rawalpindi, Pakistan",
-      current: true,
-      summary:
-        "Software quality assurance across web and mobile applications for a B2B lab supply platform with 24 modules and 100+ features.",
-      achievements: [
-        "Executed 150+ end-to-end workflows across catalog, checkout, invoicing, and payments.",
-        "Filed and triaged prioritized bugs (P0–P2) with severity classification.",
-        "Contributed to QA process improvements and structured test documentation.",
-      ],
-      tech: ["QA Testing", "Postman", "Playwright", "Jira", "SQL"],
-      color: "#ec4899",
-      icon: <FaBriefcase />,
-    },
-  ];
+const experiences = [
+  {
+    id: "truebluebio",
+    company: "True Blue Bio",
+    role: "SQA Engineer / Full Stack",
+    type: "Part-time",
+    period: "Present",
+    location: "Rawalpindi, Pakistan",
+    current: true,                     // ← green CURRENT badge
+    summary:
+      "Software quality assurance across web and mobile applications for a B2B lab supply platform with 24 modules and 100+ features.",
+    achievements: [
+      "Executed 150+ end-to-end workflows across catalog, checkout, invoicing, and payments.",
+      "Filed and triaged prioritized bugs (P0–P2) with severity classification.",
+      "Contributed to QA process improvements and structured test documentation.",
+    ],
+    tech: ["QA Testing", "Postman", "Playwright", "Jira", "SQL"],
+    color: "#ec4899",
+    icon: <FaBriefcase />,
+  },
+  {
+    id: "wonder-crafts",
+    company: "Wonder Crafts",
+    role: "Full Stack AI/ML Developer",
+    type: "Full-time",
+    period: "May 2026 — Present",
+    location: "Lahore, Pakistan",
+    current: false,                    // ← removed green badge here
+    summary:
+      "Building scalable web applications and production-ready RESTful APIs using Django, FastAPI, and React.js across the full development lifecycle.",
+    achievements: [
+      "Awarded Certificate of Appreciation by CTO Bilal Saeed for outstanding contribution.",
+      "Shipping production features on tight timelines across cross-functional teams.",
+      "Implemented robust authentication, authorization, and data validation for enterprise apps.",
+    ],
+    tech: ["Django", "FastAPI", "React.js", "PostgreSQL", "Docker", "AWS"],
+    color: "#4f46e5",
+    icon: <FaBriefcase />,
+  },
+  {
+    id: "virevo",
+    company: "Virevo S.r.l.",
+    role: "Full Stack Developer",
+    type: "Remote · Contract",
+    period: "Dec 2025 — Apr 2026",
+    location: "Dekali, Italy (Remote)",
+    current: false,
+    summary:
+      "Delivered international client projects using Django, FastAPI, React.js, and Next.js with AWS deployments and Docker containerization.",
+    achievements: [
+      "Received Certificate of Appreciation within 5 months — first international recognition.",
+      "Collaborated with Italian stakeholders across time zones to ship scalable solutions.",
+      "Built high-performance, production-grade APIs serving real client workloads.",
+    ],
+    tech: ["Django", "FastAPI", "Next.js", "AWS", "Docker", "PostgreSQL"],
+    color: "#06b6d4",
+    icon: <FaBriefcase />,
+  },
+  {
+    id: "axaura",
+    company: "Axaura Tech",
+    role: "Full Stack Developer Intern (MERN)",
+    type: "Internship",
+    period: "Aug 2025 — Dec 2025",
+    location: "Pakistan",
+    current: false,
+    summary:
+      "Built full-stack web applications using React.js, Node.js, Express.js, and MongoDB end-to-end.",
+    achievements: [
+      "Covered frontend, backend APIs, and database design independently.",
+      "Followed clean code practices and Git-based collaborative workflows.",
+      "Completed MERN Stack Development internship with a Certificate of Achievement.",
+    ],
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Git"],
+    color: "#22c55e",
+    icon: <FaBriefcase />,
+  },
+  {
+    id: "den",
+    company: "Digital Empowerment Network",
+    role: "Full Stack Developer",
+    type: "Full-time",
+    period: "Dec 2024 — Mar 2025",
+    location: "Pakistan",
+    current: false,
+    summary:
+      "Built and deployed end-to-end web solutions applying industry-standard backend engineering and database design practices.",
+    achievements: [
+      "Drove 25% task-completion uplift across 1,000+ citizens via community cleanup platform.",
+      "Reduced fire-hazard incident response time by ~3 hours per cycle for 2,500+ residents.",
+      "Optimized API infrastructure to handle 500+ daily transactions at 99.9% uptime.",
+    ],
+    tech: ["Django", "PostgreSQL", "Python", "REST APIs"],
+    color: "#f59e0b",
+    icon: <FaBriefcase />,
+  },
+];
 
   /* ---------- EDUCATION ---------- */
   const education = [

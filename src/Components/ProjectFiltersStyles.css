@@ -1,15 +1,15 @@
 /* src/Components/ProjectFiltersStyles.css */
 
-/* ===== FILTER CHIP ROW ===== */
+/* ===== FILTER CHIP ROW (CENTERED) ===== */
 .project-filters {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   align-items: center;
-  justify-content: flex-start;   /* left-aligned, moves in from the left */
+  justify-content: center;        /* ← CENTERED */
   max-width: 1200px;
   margin: 32px auto 40px;
-  padding: 0 24px;               /* aligns with grid gutters */
+  padding: 0 24px;
 }
 
 /* ===== FILTER CHIP ===== */
@@ -31,14 +31,14 @@
     background 0.25s ease,
     color 0.25s ease,
     border-color 0.25s ease,
-    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.25s ease,
     box-shadow 0.25s ease;
 }
 
 .project-filter:hover {
   border-color: var(--accent);
   color: var(--accent);
-  transform: translateX(-3px) translateY(-1px);
+  transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(79, 70, 229, 0.12);
 }
 
@@ -51,7 +51,6 @@
 
 .project-filter.active:hover {
   color: #ffffff;
-  transform: translateX(-3px) translateY(-1px);
 }
 
 /* ===== ICON + COUNT BADGE ===== */
@@ -80,11 +79,12 @@
   color: #ffffff;
 }
 
-/* ===== MOBILE ===== */
+/* ===== MOBILE — horizontal scroll ===== */
 @media (max-width: 640px) {
   .project-filters {
     flex-wrap: nowrap;
     overflow-x: auto;
+    justify-content: flex-start;   /* left align on mobile so scroll starts at left */
     padding-bottom: 6px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
