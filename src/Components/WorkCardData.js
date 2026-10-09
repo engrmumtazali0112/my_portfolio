@@ -9,20 +9,13 @@ import complaintCover from "../assets/projects/student-complaint-1-hero.png";
 import fingerprintCover from "../assets/projects/fingerprint-attendance-1-hero.png";
 import financeaiCover from "../assets/projects/financeai-1-hero.png";
 import aiVisibilityCover from "../assets/projects/ai-visibility-1-hero.png";
-
-// ===== SUFRAH =====
-import sufrahHero from "../assets/projects/sufrah-1-hero.png";
-import sufrahLaptop from "../assets/projects/sufrah-2-laptop.png";
-import sufrahTablet from "../assets/projects/sufrah-3-ipad.png";
-import sufrahMobile from "../assets/projects/sufrah-4-iphone.png";
+import sufrahCover from "../assets/projects/sufrah-1-hero.png";   // ← single import
 
 // ===== EXISTING PROJECT IMAGES =====
 import p4handgesture from "../assets/p4handgesture.gif";
 import p5objdetection from "../assets/p5objdetection.gif";
-
 import QuizGame from "../assets/QuizGame.JPG";
 import FlaskCICDDemo from "../assets/FlaskCICDDemo.JPG";
-
 import p6PersonalityPredictionSystem from "../assets/p6PersonalityPredictionSystem.gif";
 import p7RubustMultipleChoisequiz from "../assets/p7RubustMultipleChoisequiz.gif";
 import p12DocumentPlagiarismDetector from "../assets/p12DocumentPlagiarismDetector.gif";

@@ -48,6 +48,12 @@ import complaintHero from "../../assets/projects/student-complaint-1-hero.png";
 import complaintLaptop from "../../assets/projects/student-complaint-2-laptop.png";
 import complaintTablet from "../../assets/projects/student-complaint-3-tablet.png";
 import complaintMobile from "../../assets/projects/student-complaint-4-mobile.png";
+
+// ===== SUFRAH =====
+import sufrahHero from "../../assets/projects/sufrah-1-hero.png";
+import sufrahLaptop from "../../assets/projects/sufrah-2-laptop.png";
+import sufrahTablet from "../../assets/projects/sufrah-3-ipad.png";
+import sufrahMobile from "../../assets/projects/sufrah-4-iphone.png";
 const caseStudies = [
   {
   slug: "true-blue-bio",
