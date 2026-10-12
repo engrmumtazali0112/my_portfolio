@@ -3,8 +3,10 @@ import React from "react";
 import Navbar from "../Components/Navbar";
 import Hero from "../Components/Hero";
 import Bio from "../Components/Bio";
-import Work from "../Components/Work";
+import ServicesOffer from "../Components/ServicesOffer";
 import ServicesSection from "../Components/ServicesSection";
+import ServicesMission from "../Components/ServicesMission";
+import Work from "../Components/Work";
 import ReviewsSection from "../Components/ReviewsSection";
 import Footer from "../Components/Footer";
 import "./HomeStyles.css";
@@ -15,8 +17,10 @@ const Home = () => {
       <Navbar />
       <Hero />
       <Bio />
+      <ServicesOffer />
+      <ServicesSection showAllLink />
+      <ServicesMission />
       <Work />
-      <ServicesSection />
       <ReviewsSection />
       <Footer />
     </div>
