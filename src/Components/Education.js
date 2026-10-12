@@ -217,7 +217,7 @@ const experiences = [
       {/* ============ WORK EXPERIENCE ============ */}
       <div className="exp-section">
         <div className="exp-section-head">
-          <span className="exp-section-eyebrow">// experience</span>
+          <span className="exp-section-eyebrow">{"// experience"}</span>
           <h2 className="exp-section-title">
             <FaBriefcase /> Work Experience
           </h2>
@@ -302,7 +302,7 @@ const experiences = [
       {/* ============ EDUCATION ============ */}
       <div className="exp-section">
         <div className="exp-section-head">
-          <span className="exp-section-eyebrow">// education</span>
+          <span className="exp-section-eyebrow">{"// education"}</span>
           <h2 className="exp-section-title">
             <FaGraduationCap /> Academic Background
           </h2>
@@ -335,7 +335,7 @@ const experiences = [
       {/* ============ CERTIFICATIONS ============ */}
       <div className="exp-section">
         <div className="exp-section-head">
-          <span className="exp-section-eyebrow">// certifications</span>
+          <span className="exp-section-eyebrow">{"// certifications"}</span>
           <h2 className="exp-section-title">
             <FaAward /> Certifications & Awards
           </h2>

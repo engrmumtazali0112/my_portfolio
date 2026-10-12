@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import {
   FaCode, FaBrain, FaCloud, FaGlobe, FaMobileAlt, FaPlug, FaShoppingCart,
   FaLayerGroup, FaComments, FaEye, FaChartBar, FaDatabase, FaDocker,
-  FaRocket, FaTachometerAlt, FaServer, FaBolt, FaChevronRight, FaChevronDown,
+  FaRocket, FaTachometerAlt, FaServer, FaChevronRight, FaChevronDown,
 } from "react-icons/fa";
 import "./ServicesOfferStyles.css";
 
