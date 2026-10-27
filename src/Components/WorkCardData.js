@@ -10,10 +10,9 @@ import fingerprintCover from "../assets/projects/fingerprint-attendance-1-hero.p
 import financeaiCover from "../assets/projects/financeai-1-hero.png";
 import aiVisibilityCover from "../assets/projects/ai-visibility-1-hero.png";
 import sufrahCover from "../assets/projects/sufrah-1-hero.png";   // ← single import
+import jobBoardImage from "../assets/jobboard-1-homepage.png";
 
 // ===== EXISTING PROJECT IMAGES =====
-import p4handgesture from "../assets/p4handgesture.gif";
-import p5objdetection from "../assets/p5objdetection.gif";
 import QuizGame from "../assets/QuizGame.JPG";
 import FlaskCICDDemo from "../assets/FlaskCICDDemo.JPG";
 import p6PersonalityPredictionSystem from "../assets/p6PersonalityPredictionSystem.gif";
@@ -88,6 +87,18 @@ const ProjectCardData = [
     year: "2024",
     duration: "6 Months",
     stack: ["Django", "PostgreSQL", "Bootstrap", "Stripe", "Django admin"],
+  },
+  {
+    imgsrc: jobBoardImage,
+    title: "JobBoard — Job Posting & Aggregation Platform",
+    text: "A production-style job portal for Pakistan with three user roles. Aggregates jobs on a schedule from Arbeitnow, We Work Remotely and Jooble. Includes Glassdoor-style company pages, resume-based AI skill matching, an ATS-style candidate pipeline, and an admin console.",
+    view: "/work/jobboard",
+    source: "#", // TODO: GitHub repo URL
+    category: "Full Stack Platform",
+    categories: ["web", "ai-ml"],
+    year: "2026",
+    duration: "6 Months",
+    stack: ["React", "FastAPI", "PostgreSQL", "APScheduler"],
   },
   {
     imgsrc: hostelCover,
@@ -175,30 +186,6 @@ const ProjectCardData = [
     stack: ["Flask", "Docker", "GitHub Actions", "pytest"],
   },
 
-  {
-    imgsrc: p4handgesture,
-    title: "Hand Gesture Recognition",
-    text: "A Python project using OpenCV and Mediapipe for real-time hand gesture tracking and drawing applications.",
-    view: "https://github.com/engrmumtazali0112/Code_Clause_Internship_Artificial_Intelligence",
-    source: "https://github.com/engrmumtazali0112/Code_Clause_Internship_Artificial_Intelligence",
-    category: "Computer Vision",
-    categories: ["ai-ml"],
-    year: "2024",
-    duration: "1 Month",
-    stack: ["Python", "OpenCV", "Mediapipe", "TensorFlow"],
-  },
-  {
-    imgsrc: p5objdetection,
-    title: "Real-Time Object Detection",
-    text: "A real-time object detection system utilizing Python and OpenCV with a pre-trained SSD MobileNet model for recognizing up to 80 object classes.",
-    view: "https://github.com/engrmumtazali0112/Code_Clause_Internship_Artificial_Intelligence",
-    source: "https://github.com/engrmumtazali0112/Code_Clause_Internship_Artificial_Intelligence",
-    category: "Deep Learning",
-    categories: ["ai-ml"],
-    year: "2024",
-    duration: "1 Month",
-    stack: ["Python", "OpenCV", "TensorFlow", "SSD"],
-  },
   {
     imgsrc: p6PersonalityPredictionSystem,
     title: "Personality Prediction via CV",

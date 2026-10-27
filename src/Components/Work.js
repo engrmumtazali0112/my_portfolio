@@ -1,15 +1,16 @@
 // src/Components/Work.js
 import "./WorkCardStyles.css";
-import React, { useState, useMemo, useRef } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import React, { useState, useMemo } from "react";
 import WorkCard from "./WorkCard";
 import FeaturedCard from "./FeaturedCard";
 import ProjectFilters from "./ProjectFilters";
 import WorkCardData from "./WorkCardData";
 
+const INITIAL_VISIBLE = 6; // 3 x 2 grid
+
 const Work = () => {
   const [filter, setFilter] = useState("all");
-  const scrollRef = useRef(null);
+  const [showAll, setShowAll] = useState(false);
 
   const featured = WorkCardData.find((p) => p.featured);
   const others = WorkCardData.filter((p) => !p.featured);
@@ -18,6 +19,8 @@ const Work = () => {
     if (filter === "all") return others;
     return others.filter((p) => p.categories && p.categories.includes(filter));
   }, [filter, others]);
+
+  const visible = showAll ? filtered : filtered.slice(0, INITIAL_VISIBLE);
 
   const counts = useMemo(() => {
     const base = { all: others.length };
@@ -28,16 +31,6 @@ const Work = () => {
     });
     return base;
   }, [others]);
-
-  const scrollBy = (direction) => {
-    if (!scrollRef.current) return;
-    const card = scrollRef.current.querySelector(".project-card");
-    const cardWidth = card ? card.offsetWidth + 28 : 400; // card width + gap
-    scrollRef.current.scrollBy({
-      left: direction === "next" ? cardWidth : -cardWidth,
-      behavior: "smooth",
-    });
-  };
 
   return (
     <div className="work-container">
@@ -53,49 +46,52 @@ const Work = () => {
 
       {featured && <FeaturedCard project={featured} />}
 
-      <ProjectFilters active={filter} onChange={setFilter} counts={counts} />
+      <ProjectFilters
+        active={filter}
+        onChange={(f) => {
+          setFilter(f);
+          setShowAll(false);
+        }}
+        counts={counts}
+      />
 
-      {/* Carousel wrapper with scroll buttons */}
-      <div className="project-carousel-wrap">
-        <button
-          className="project-scroll-btn project-scroll-prev"
-          onClick={() => scrollBy("prev")}
-          aria-label="Scroll left"
-        >
-          <FaChevronLeft />
-        </button>
-
-        <div className="project-container" ref={scrollRef}>
-          {filtered.length === 0 ? (
-            <div className="project-empty">
-              No projects in this category yet.
-            </div>
-          ) : (
-            filtered.map((val, ind) => (
-              <WorkCard
-                key={ind}
-                imgsrc={val.imgsrc}
-                title={val.title}
-                text={val.text}
-                view={val.view}
-                source={val.source}
-                category={val.category}
-                year={val.year}
-                duration={val.duration}
-                stack={val.stack}
-              />
-            ))
-          )}
-        </div>
-
-        <button
-          className="project-scroll-btn project-scroll-next"
-          onClick={() => scrollBy("next")}
-          aria-label="Scroll right"
-        >
-          <FaChevronRight />
-        </button>
+      {/* Static 3-column project grid */}
+      <div className="project-container">
+        {filtered.length === 0 ? (
+          <div className="project-empty">
+            No projects in this category yet.
+          </div>
+        ) : (
+          visible.map((val, ind) => (
+            <WorkCard
+              key={ind}
+              imgsrc={val.imgsrc}
+              title={val.title}
+              text={val.text}
+              view={val.view}
+              source={val.source}
+              category={val.category}
+              year={val.year}
+              duration={val.duration}
+              stack={val.stack}
+            />
+          ))
+        )}
       </div>
+
+      {filtered.length > INITIAL_VISIBLE && (
+        <div className="project-more">
+          <button
+            type="button"
+            className="project-more-btn"
+            onClick={() => setShowAll((s) => !s)}
+          >
+            {showAll
+              ? "Show fewer projects"
+              : `Show all ${filtered.length} projects`}
+          </button>
+        </div>
+      )}
     </div>
   );
 };

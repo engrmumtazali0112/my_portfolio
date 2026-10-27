@@ -47,92 +47,49 @@
   font-weight: 400;
 }
 
-/* ===== CAROUSEL WRAPPER ===== */
-.project-carousel-wrap {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* ===== HORIZONTAL SCROLL CAROUSEL =====
-   Uses flex (more reliable than grid-auto-flow for this use case).
-   Each card is 380px wide. Container fits 3 cards + gap = 1196px.
+/* ===== PROJECT GRID =====
+   Static 3-column grid (no horizontal scroll, no carousel).
+   Grid items stretch by default, so cards in a row share one height.
 */
 .project-container {
   max-width: 1200px;
   margin: 56px auto 0;
-  padding: 0 0 5rem 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  overflow: visible;
+}
+
+/* ===== SHOW ALL BUTTON ===== */
+.project-more {
+  max-width: 1200px;
+  margin: 40px auto 0;
   display: flex;
-  flex-wrap: nowrap;
-  gap: 28px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  scrollbar-width: thin;
-  scrollbar-color: var(--accent) var(--bg-muted);
-  -webkit-overflow-scrolling: touch;
-}
-
-/* Custom scrollbar */
-.project-container::-webkit-scrollbar {
-  height: 8px;
-}
-
-.project-container::-webkit-scrollbar-track {
-  background: var(--bg-muted);
-  border-radius: 4px;
-}
-
-.project-container::-webkit-scrollbar-thumb {
-  background: var(--accent);
-  border-radius: 4px;
-}
-
-.project-container::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-hover);
-}
-
-/* ===== SCROLL BUTTONS ===== */
-.project-scroll-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  color: var(--text);
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
   justify-content: center;
+}
+
+.project-more-btn {
+  padding: 12px 28px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
   transition: all 0.25s ease;
 }
 
-.project-scroll-btn:hover {
+.project-more-btn:hover {
   background: var(--accent);
-  color: #ffffff;
   border-color: var(--accent);
-  transform: translateY(-50%) scale(1.08);
-  box-shadow: 0 12px 32px rgba(79, 70, 229, 0.35);
-}
-
-.project-scroll-prev {
-  left: -24px;
-}
-
-.project-scroll-next {
-  right: -24px;
+  color: #ffffff;
 }
 
 /* ===== EMPTY STATE ===== */
 .project-empty {
-  min-width: 100%;
+  grid-column: 1 / -1;
   text-align: center;
   padding: 60px 20px;
   font-size: 1rem;
@@ -143,11 +100,12 @@
 }
 
 /* ===== CARD =====
-   Fixed flex-basis width = each card is exactly 380px.
+   Width comes from the grid column; height stretches to match the row.
 */
 .project-card {
-  flex: 0 0 380px;
-  width: 380px;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
   display: flex;
   flex-direction: column;
   background: var(--surface);
@@ -158,7 +116,6 @@
   color: inherit;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   cursor: pointer;
-  scroll-snap-align: start;
 }
 
 .project-card:hover {
@@ -241,8 +198,7 @@
   color: var(--text-muted) !important;
   font-size: 0.92rem;
   line-height: 1.6;
-  margin: 0 0 6px;
-  flex: 1;
+  margin: 0 0 0.5rem;
   word-wrap: break-word;
 }
 
@@ -251,7 +207,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 8px;
+  margin-top: 2px;
 }
 
 .project-card-pill {
@@ -278,14 +234,11 @@
 
 /* ===== RESPONSIVE ===== */
 
-/* Tablet — 2 cards visible */
+/* Tablet — 2 columns */
 @media screen and (max-width: 1024px) {
-  .project-card {
-    flex: 0 0 calc((100% - 28px) / 2);
-    width: auto;
-  }
   .project-container {
-    gap: 28px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 }
 
@@ -296,22 +249,12 @@
   }
 
   .project-container {
+    grid-template-columns: 1fr;
     gap: 16px;
     margin-top: 32px;
-    padding-left: 4px;
-    padding-right: 4px;
-  }
-
-  .project-card {
-    flex: 0 0 calc(100% - 20px);
-    width: auto;
   }
 
   .project-title {
     font-size: 1.15rem;
-  }
-
-  .project-scroll-btn {
-    display: none;
   }
 }
