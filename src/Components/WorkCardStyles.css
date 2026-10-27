@@ -52,39 +52,46 @@
    Grid items stretch by default, so cards in a row share one height.
 */
 .project-container {
-  max-width: 1200px;
-  margin: 56px auto 0;
-  padding: 0;
+  direction: ltr; /* undo the wrapper's rtl so card content reads normally */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  padding: 8px 4px 8px 20px; /* room for hover lift and the left scrollbar */
   overflow: visible;
 }
 
-/* ===== SHOW ALL BUTTON ===== */
-.project-more {
+/* ===== FIXED-HEIGHT SCROLLER (scrollbar on the LEFT) =====
+   direction: rtl on the wrapper moves the vertical scrollbar to the left;
+   the grid inside resets direction to ltr. Height shows about 2 rows;
+   tune max-height to taste.
+*/
+.projects-scroll-wrapper {
+  direction: rtl;
   max-width: 1200px;
-  margin: 40px auto 0;
-  display: flex;
-  justify-content: center;
+  max-height: 1000px;
+  margin: 56px auto 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) var(--bg-muted);
 }
 
-.project-more-btn {
-  padding: 12px 28px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text);
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.25s ease;
+.projects-scroll-wrapper::-webkit-scrollbar {
+  width: 10px;
 }
 
-.project-more-btn:hover {
+.projects-scroll-wrapper::-webkit-scrollbar-track {
+  background: var(--bg-muted);
+  border-radius: 6px;
+}
+
+.projects-scroll-wrapper::-webkit-scrollbar-thumb {
   background: var(--accent);
-  border-color: var(--accent);
-  color: #ffffff;
+  border-radius: 6px;
+}
+
+.projects-scroll-wrapper::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
 }
 
 /* ===== EMPTY STATE ===== */

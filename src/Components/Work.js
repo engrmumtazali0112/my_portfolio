@@ -6,11 +6,8 @@ import FeaturedCard from "./FeaturedCard";
 import ProjectFilters from "./ProjectFilters";
 import WorkCardData from "./WorkCardData";
 
-const INITIAL_VISIBLE = 6; // 3 x 2 grid
-
 const Work = () => {
   const [filter, setFilter] = useState("all");
-  const [showAll, setShowAll] = useState(false);
 
   const featured = WorkCardData.find((p) => p.featured);
   const others = WorkCardData.filter((p) => !p.featured);
@@ -19,8 +16,6 @@ const Work = () => {
     if (filter === "all") return others;
     return others.filter((p) => p.categories && p.categories.includes(filter));
   }, [filter, others]);
-
-  const visible = showAll ? filtered : filtered.slice(0, INITIAL_VISIBLE);
 
   const counts = useMemo(() => {
     const base = { all: others.length };
@@ -46,52 +41,33 @@ const Work = () => {
 
       {featured && <FeaturedCard project={featured} />}
 
-      <ProjectFilters
-        active={filter}
-        onChange={(f) => {
-          setFilter(f);
-          setShowAll(false);
-        }}
-        counts={counts}
-      />
+      <ProjectFilters active={filter} onChange={setFilter} counts={counts} />
 
-      {/* Static 3-column project grid */}
-      <div className="project-container">
-        {filtered.length === 0 ? (
-          <div className="project-empty">
-            No projects in this category yet.
-          </div>
-        ) : (
-          visible.map((val, ind) => (
-            <WorkCard
-              key={ind}
-              imgsrc={val.imgsrc}
-              title={val.title}
-              text={val.text}
-              view={val.view}
-              source={val.source}
-              category={val.category}
-              year={val.year}
-              duration={val.duration}
-              stack={val.stack}
-            />
-          ))
-        )}
-      </div>
-
-      {filtered.length > INITIAL_VISIBLE && (
-        <div className="project-more">
-          <button
-            type="button"
-            className="project-more-btn"
-            onClick={() => setShowAll((s) => !s)}
-          >
-            {showAll
-              ? "Show fewer projects"
-              : `Show all ${filtered.length} projects`}
-          </button>
+      {/* Fixed-height scroller (scrollbar on the left) around the 3-column grid */}
+      <div className="projects-scroll-wrapper">
+        <div className="project-container">
+          {filtered.length === 0 ? (
+            <div className="project-empty">
+              No projects in this category yet.
+            </div>
+          ) : (
+            filtered.map((val, ind) => (
+              <WorkCard
+                key={ind}
+                imgsrc={val.imgsrc}
+                title={val.title}
+                text={val.text}
+                view={val.view}
+                source={val.source}
+                category={val.category}
+                year={val.year}
+                duration={val.duration}
+                stack={val.stack}
+              />
+            ))
+          )}
         </div>
-      )}
+      </div>
     </div>
   );
 };
