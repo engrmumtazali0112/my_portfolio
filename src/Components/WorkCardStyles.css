@@ -55,7 +55,8 @@
   direction: ltr; /* undo the wrapper's rtl so card content reads normally */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-auto-rows: var(--project-row-h); /* every row is the same fixed height */
+  gap: var(--project-gap);
   padding: 8px 4px 8px 20px; /* room for hover lift and the left scrollbar */
   overflow: visible;
 }
@@ -66,9 +67,13 @@
    tune max-height to taste.
 */
 .projects-scroll-wrapper {
+  /* Tune --project-row-h if card content is clipped or there is empty space.
+     Visible height = exactly 2 rows + 1 gap + the container's 16px padding. */
+  --project-row-h: 620px;
+  --project-gap: 2rem;
   direction: rtl;
   max-width: 1200px;
-  max-height: 1000px;
+  max-height: calc(var(--project-row-h) * 2 + var(--project-gap) + 16px);
   margin: 56px auto 0;
   overflow-y: auto;
   overflow-x: hidden;
@@ -243,9 +248,11 @@
 
 /* Tablet — 2 columns */
 @media screen and (max-width: 1024px) {
+  .projects-scroll-wrapper {
+    --project-gap: 1.5rem;
+  }
   .project-container {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
   }
 }
 
@@ -255,10 +262,12 @@
     padding: 100px 18px 60px;
   }
 
+  .projects-scroll-wrapper {
+    --project-gap: 16px;
+    margin-top: 32px;
+  }
   .project-container {
     grid-template-columns: 1fr;
-    gap: 16px;
-    margin-top: 32px;
   }
 
   .project-title {
