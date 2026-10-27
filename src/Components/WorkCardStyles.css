@@ -47,92 +47,59 @@
   font-weight: 400;
 }
 
-/* ===== CAROUSEL WRAPPER ===== */
-.project-carousel-wrap {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* ===== HORIZONTAL SCROLL CAROUSEL =====
-   Uses flex (more reliable than grid-auto-flow for this use case).
-   Each card is 380px wide. Container fits 3 cards + gap = 1196px.
+/* ===== PROJECT GRID =====
+   Static 3-column grid (no horizontal scroll, no carousel).
+   Grid items stretch by default, so cards in a row share one height.
 */
 .project-container {
+  direction: ltr; /* undo the wrapper's rtl so card content reads normally */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative; /* lets Work.js measure card offsets from the grid */
+  gap: var(--project-gap);
+  padding: 8px 4px 8px 20px; /* room for hover lift and the left scrollbar */
+  overflow: visible;
+}
+
+/* ===== FIXED-HEIGHT SCROLLER (scrollbar on the LEFT) =====
+   direction: rtl on the wrapper moves the vertical scrollbar to the left;
+   the grid inside resets direction to ltr. Height shows about 2 rows;
+   tune max-height to taste.
+*/
+.projects-scroll-wrapper {
+  --project-gap: 2rem;
+  direction: rtl;
   max-width: 1200px;
+  /* Fallback only: Work.js sets the exact 2-row height inline once measured. */
+  max-height: 900px;
   margin: 56px auto 0;
-  padding: 0 0 5rem 0;
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 28px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
+  overflow-y: auto;
+  overflow-x: hidden;
   scrollbar-width: thin;
   scrollbar-color: var(--accent) var(--bg-muted);
-  -webkit-overflow-scrolling: touch;
 }
 
-/* Custom scrollbar */
-.project-container::-webkit-scrollbar {
-  height: 8px;
+.projects-scroll-wrapper::-webkit-scrollbar {
+  width: 10px;
 }
 
-.project-container::-webkit-scrollbar-track {
+.projects-scroll-wrapper::-webkit-scrollbar-track {
   background: var(--bg-muted);
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
-.project-container::-webkit-scrollbar-thumb {
+.projects-scroll-wrapper::-webkit-scrollbar-thumb {
   background: var(--accent);
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
-.project-container::-webkit-scrollbar-thumb:hover {
+.projects-scroll-wrapper::-webkit-scrollbar-thumb:hover {
   background: var(--accent-hover);
-}
-
-/* ===== SCROLL BUTTONS ===== */
-.project-scroll-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  color: var(--text);
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
-  transition: all 0.25s ease;
-}
-
-.project-scroll-btn:hover {
-  background: var(--accent);
-  color: #ffffff;
-  border-color: var(--accent);
-  transform: translateY(-50%) scale(1.08);
-  box-shadow: 0 12px 32px rgba(79, 70, 229, 0.35);
-}
-
-.project-scroll-prev {
-  left: -24px;
-}
-
-.project-scroll-next {
-  right: -24px;
 }
 
 /* ===== EMPTY STATE ===== */
 .project-empty {
-  min-width: 100%;
+  grid-column: 1 / -1;
   text-align: center;
   padding: 60px 20px;
   font-size: 1rem;
@@ -143,11 +110,12 @@
 }
 
 /* ===== CARD =====
-   Fixed flex-basis width = each card is exactly 380px.
+   Width comes from the grid column; height stretches to match the row.
 */
 .project-card {
-  flex: 0 0 380px;
-  width: 380px;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
   display: flex;
   flex-direction: column;
   background: var(--surface);
@@ -158,7 +126,6 @@
   color: inherit;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   cursor: pointer;
-  scroll-snap-align: start;
 }
 
 .project-card:hover {
@@ -195,7 +162,7 @@
 
 /* Body */
 .project-card-body {
-  padding: 22px 22px 26px;
+  padding: 22px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -241,8 +208,7 @@
   color: var(--text-muted) !important;
   font-size: 0.92rem;
   line-height: 1.6;
-  margin: 0 0 6px;
-  flex: 1;
+  margin: 0 0 0.5rem;
   word-wrap: break-word;
 }
 
@@ -251,7 +217,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 8px;
+  margin-top: 2px;
 }
 
 .project-card-pill {
@@ -278,14 +244,13 @@
 
 /* ===== RESPONSIVE ===== */
 
-/* Tablet — 2 cards visible */
+/* Tablet — 2 columns */
 @media screen and (max-width: 1024px) {
-  .project-card {
-    flex: 0 0 calc((100% - 28px) / 2);
-    width: auto;
+  .projects-scroll-wrapper {
+    --project-gap: 1.5rem;
   }
   .project-container {
-    gap: 28px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -295,23 +260,15 @@
     padding: 100px 18px 60px;
   }
 
-  .project-container {
-    gap: 16px;
+  .projects-scroll-wrapper {
+    --project-gap: 16px;
     margin-top: 32px;
-    padding-left: 4px;
-    padding-right: 4px;
   }
-
-  .project-card {
-    flex: 0 0 calc(100% - 20px);
-    width: auto;
+  .project-container {
+    grid-template-columns: 1fr;
   }
 
   .project-title {
     font-size: 1.15rem;
-  }
-
-  .project-scroll-btn {
-    display: none;
   }
 }

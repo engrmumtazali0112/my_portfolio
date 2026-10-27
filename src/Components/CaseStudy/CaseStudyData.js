@@ -54,6 +54,12 @@ import sufrahHero from "../../assets/projects/sufrah-1-hero.png";
 import sufrahLaptop from "../../assets/projects/sufrah-2-laptop.png";
 import sufrahTablet from "../../assets/projects/sufrah-3-ipad.png";
 import sufrahMobile from "../../assets/projects/sufrah-4-iphone.png";
+
+// ===== JOBBOARD =====
+import jobBoardHome from "../../assets/jobboard-1-homepage.png";
+import jobBoardApply from "../../assets/jobboard-2-whatsapp-apply.png";
+import jobBoardPipeline from "../../assets/jobboard-3-employer-pipeline.png";
+import jobBoardAts from "../../assets/jobboard-4-ats-score.png";
 const caseStudies = [
   {
   slug: "true-blue-bio",
@@ -332,6 +338,41 @@ const caseStudies = [
     { name: "Recent mentions", text: "Filterable table of every tracked query with platform (ChatGPT/Claude/Google), mentioned status, SOV, location, and last-checked timestamp.", img: aiVisibilityLaptop },
     { name: "Top opportunities", text: "Horizontal bar chart ranking queries by opportunity score — sorted by highest upside." },
     { name: "Volume vs difficulty", text: "Scatter plot where points represent queries; top-left quadrant = high volume, low difficulty — the best targets." },
+  ],
+},
+{
+  slug: "jobboard",
+  accent: "#2563eb",
+  title: "JobBoard — Job Posting & Aggregation Platform",
+  tagline: "A production-style job portal for Pakistan with job seeker, employer and admin roles.",
+  liveUrl: "", // TODO: live demo URL
+  sourceUrl: "", // TODO: GitHub repo URL
+  category: "Full Stack Platform",
+  year: "2026",
+  duration: "6 Months",
+  cover: jobBoardHome,
+  hero: jobBoardHome,
+  role: "Full-stack developer",
+  stack: ["React 18", "Vite", "FastAPI", "SQLAlchemy 2", "APScheduler", "PostgreSQL"],
+  overviewImg: jobBoardPipeline,
+  overviewText:
+    "JobBoard is a job portal for Pakistan with three user roles: job seeker, employer and admin. It pulls jobs on a schedule from Arbeitnow, We Work Remotely and Jooble, and also lets employers post, screen and hire directly. Companies get Glassdoor-style pages, applicants are scored by resume-based skill matching, and hiring runs through an ATS-style candidate pipeline.",
+  flow: [
+    "Jobs are aggregated on a schedule from Arbeitnow, We Work Remotely and Jooble",
+    "Employers post their own jobs, with up to 10 screening questions each",
+    "Job seekers sign in (JWT or Google), upload a resume and apply",
+    "Resume-based skill matching scores each applicant against the job",
+    "Employers move candidates through new, reviewing, shortlisted, interviewing and hired",
+    "Messaging and notifications keep both sides in the loop while admins moderate",
+  ],
+  modules: [
+    { name: "Homepage and job listings", text: "Public homepage listing jobs aggregated from Arbeitnow, We Work Remotely and Jooble alongside jobs posted directly by employers.", img: jobBoardHome },
+    { name: "Applying", text: "Application flow for job seekers, including WhatsApp apply, with the employer's screening questions (up to 10 per job).", img: jobBoardApply },
+    { name: "Employer pipeline", text: "ATS-style candidate pipeline: new, reviewing, shortlisted, interviewing and hired.", img: jobBoardPipeline },
+    { name: "Resume-based skill matching", text: "Each applicant is scored against the job from their resume. The matching is rule-based and uses no external AI API.", img: jobBoardAts },
+    { name: "Company pages", text: "Glassdoor-style company pages with employee reviews and salary reports." },
+    { name: "Messaging and notifications", text: "In-app messaging between employers and job seekers, plus notifications for application activity." },
+    { name: "Admin console", text: "Admin tools to manage users, companies and jobs across the platform." },
   ],
 },
 ];

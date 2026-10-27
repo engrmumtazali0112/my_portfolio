@@ -1,15 +1,17 @@
 // src/Components/Work.js
 import "./WorkCardStyles.css";
-import React, { useState, useMemo, useRef } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import React, { useState, useMemo, useRef, useLayoutEffect } from "react";
 import WorkCard from "./WorkCard";
 import FeaturedCard from "./FeaturedCard";
 import ProjectFilters from "./ProjectFilters";
 import WorkCardData from "./WorkCardData";
 
+const VISIBLE_ROWS = 2;
+
 const Work = () => {
   const [filter, setFilter] = useState("all");
-  const scrollRef = useRef(null);
+  const gridRef = useRef(null);
+  const [scrollMaxHeight, setScrollMaxHeight] = useState(null);
 
   const featured = WorkCardData.find((p) => p.featured);
   const others = WorkCardData.filter((p) => !p.featured);
@@ -18,6 +20,34 @@ const Work = () => {
     if (filter === "all") return others;
     return others.filter((p) => p.categories && p.categories.includes(filter));
   }, [filter, others]);
+
+  // Clip the scroller exactly at the bottom of the 2nd row of cards,
+  // whatever the card heights or column count (3 / 2 / 1) happen to be.
+  useLayoutEffect(() => {
+    const grid = gridRef.current;
+    if (!grid) return undefined;
+
+    const measure = () => {
+      const cards = grid.querySelectorAll(".project-card");
+      if (!cards.length) {
+        setScrollMaxHeight(null);
+        return;
+      }
+      const cols = Math.max(
+        1,
+        getComputedStyle(grid).gridTemplateColumns.split(" ").length
+      );
+      const last = cards[Math.min(cols * VISIBLE_ROWS, cards.length) - 1];
+      // offsetTop is measured from the grid's padding edge; +8 = bottom padding
+      setScrollMaxHeight(last.offsetTop + last.offsetHeight + 8);
+    };
+
+    measure();
+    if (typeof ResizeObserver === "undefined") return undefined;
+    const ro = new ResizeObserver(measure);
+    ro.observe(grid);
+    return () => ro.disconnect();
+  }, [filtered]);
 
   const counts = useMemo(() => {
     const base = { all: others.length };
@@ -28,16 +58,6 @@ const Work = () => {
     });
     return base;
   }, [others]);
-
-  const scrollBy = (direction) => {
-    if (!scrollRef.current) return;
-    const card = scrollRef.current.querySelector(".project-card");
-    const cardWidth = card ? card.offsetWidth + 28 : 400; // card width + gap
-    scrollRef.current.scrollBy({
-      left: direction === "next" ? cardWidth : -cardWidth,
-      behavior: "smooth",
-    });
-  };
 
   return (
     <div className="work-container">
@@ -55,17 +75,12 @@ const Work = () => {
 
       <ProjectFilters active={filter} onChange={setFilter} counts={counts} />
 
-      {/* Carousel wrapper with scroll buttons */}
-      <div className="project-carousel-wrap">
-        <button
-          className="project-scroll-btn project-scroll-prev"
-          onClick={() => scrollBy("prev")}
-          aria-label="Scroll left"
-        >
-          <FaChevronLeft />
-        </button>
-
-        <div className="project-container" ref={scrollRef}>
+      {/* Fixed-height scroller (scrollbar on the left) around the 3-column grid */}
+      <div
+        className="projects-scroll-wrapper"
+        style={scrollMaxHeight ? { maxHeight: scrollMaxHeight } : undefined}
+      >
+        <div className="project-container" ref={gridRef}>
           {filtered.length === 0 ? (
             <div className="project-empty">
               No projects in this category yet.
@@ -87,14 +102,6 @@ const Work = () => {
             ))
           )}
         </div>
-
-        <button
-          className="project-scroll-btn project-scroll-next"
-          onClick={() => scrollBy("next")}
-          aria-label="Scroll right"
-        >
-          <FaChevronRight />
-        </button>
       </div>
     </div>
   );
