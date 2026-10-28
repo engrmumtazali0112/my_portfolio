@@ -345,7 +345,7 @@ const caseStudies = [
   accent: "#2563eb",
   title: "JobBoard — Job Posting & Aggregation Platform",
   tagline: "A production-style job portal for Pakistan with job seeker, employer and admin roles.",
-  liveUrl: "", // TODO: live demo URL
+  liveUrl: "https://job-board-frontend-opal.vercel.app/",
   sourceUrl: "", // TODO: GitHub repo URL
   category: "Full Stack Platform",
   year: "2026",
