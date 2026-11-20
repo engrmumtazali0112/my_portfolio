@@ -60,6 +60,10 @@ import jobBoardHome from "../../assets/jobboard-1-homepage.png";
 import jobBoardApply from "../../assets/jobboard-2-whatsapp-apply.png";
 import jobBoardPipeline from "../../assets/jobboard-3-employer-pipeline.png";
 import jobBoardAts from "../../assets/jobboard-4-ats-score.png";
+import yycPage1 from "../../assets/projects/yesyoucount-page-1.png";
+import yycPage2 from "../../assets/projects/yesyoucount-page-2.png";
+import yycPage3 from "../../assets/projects/yesyoucount-page-3.png";
+import yycPage4 from "../../assets/projects/yesyoucount-page-4.png";
 const caseStudies = [
   {
   slug: "true-blue-bio",
@@ -375,6 +379,34 @@ const caseStudies = [
     { name: "Admin console", text: "Admin tools to manage users, companies and jobs across the platform." },
   ],
 },
+  {
+    slug: "yes-you-count",
+    accent: "#e6177a",
+    title: "Yes You Count — Healthcare Staffing Platform",
+    tagline: "A multi-portal platform connecting facilities with verified care professionals.",
+    cover: yycPage1,
+    hero: yycPage1,
+    role: "Full-stack developer",
+    stack: ["React", "Django", "PostgreSQL", "Stripe API", "Railway"],
+    overviewImg: yycPage2,
+    overviewText: "Yes You Count is a production-grade staffing platform that connects healthcare facilities with verified care professionals. It features three distinct portals: Platform Management, Facility Portal, and Care Professional Portal. The platform handles the entire lifecycle: facility onboarding, shift creation, applicant tracking, and automated ACH billing via Stripe.",
+    flow: [
+      "Facility signs up, submits its EIN, and signs digital agreements",
+      "Admin reviews and approves the facility, unlocking shift posting",
+      "Facility posts shifts with specific roles (RN, CNA) and requirements",
+      "Care Professional applies, gets matched, and receives an offer",
+      "Professional checks in and out, and the facility approves hours",
+      "System auto-generates an invoice and charges via ACH (Stripe)",
+    ],
+    modules: [
+      { name: "Platform overview", text: "One platform, three surfaces: the public website, the admin workspace, and the mobile Care Professional portal.", img: yycPage1 },
+      { name: "Site operations", text: "Facility onboarding, financial review and orientation in one admin view, with an onboarding checklist and urgent shift details.", img: yycPage2 },
+      { name: "Shift management", text: "Post, publish, promote and staff coverage in minutes, with a desktop dashboard for facilities and a mobile apply view for professionals.", img: yycPage3 },
+      { name: "Billing and onboarding", text: "Per-facility ACH authorization, invoicing and registration approvals, with Stripe-powered bank account setup.", img: yycPage4 },
+      { name: "Credentialing and compliance", text: "Document management with expiry tracking and OCR-assisted verification. Readiness is revoked automatically if credentials lapse." },
+      { name: "Shift lifecycle", text: "End-to-end state management from Draft to Published, Offered, Booked and Completed, with handling for cancellations and late arrivals." },
+    ],
+  },
 ];
 
 export default caseStudies;

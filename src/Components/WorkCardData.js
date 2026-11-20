@@ -25,6 +25,10 @@ import p3studyhub from "../assets/p3studyhub.PNG";
 import p14python_scripting_amazon_scraping from "../assets/p14python_scripting_amazon_scraping.gif";
 import p10TitanicDatasetAnalysisReportimages from "../assets/p10TitanicDatasetAnalysisReportimages.jpg";
 import p13VoiceAssistan from "../assets/p13VoiceAssistan.PNG";
+import yycPage1 from "../assets/projects/yesyoucount-page-1.png";
+import yycPage2 from "../assets/projects/yesyoucount-page-2.png";
+import yycPage3 from "../assets/projects/yesyoucount-page-3.png";
+import yycPage4 from "../assets/projects/yesyoucount-page-4.png";
 
 const ProjectCardData = [
   {
@@ -76,6 +80,20 @@ const ProjectCardData = [
     duration: "6 Months",
     stack: ["Flutter", "Django", "PostgreSQL", "DRF"],
   },
+  {
+    imgsrc: yycPage1,
+    gallery: [yycPage1, yycPage2, yycPage3, yycPage4],
+    title: "Yes You Count - Healthcare Staffing Platform",
+    text: "A comprehensive multi-portal platform connecting facilities with verified care professionals. Features role-based access, shift lifecycle management, compliance workflows, and automated ACH billing via Stripe.",
+    stack: ["React", "TypeScript", "Django", "PostgreSQL", "Stripe API", "Railway"],
+    view: "/work/yes-you-count",
+    source: "https://github.com/engrmumtazali0112",
+    category: "Healthcare SaaS",
+    categories: ["web"],
+    year: "2026",
+    duration: "4 Months",
+},
+  
   {
     imgsrc: luxeCover,
     title: "Luxe Jewelry — E-Commerce Store",
@@ -294,6 +312,7 @@ const ProjectCardData = [
     duration: "3 Weeks",
     stack: ["Python", "SpeechRecognition", "gTTS", "pyttsx3"],
   },
+  
 ];
 
 export default ProjectCardData;
