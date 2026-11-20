@@ -381,6 +381,7 @@ const caseStudies = [
 },
   {
     slug: "yes-you-count",
+    liveUrl: "https://frontend-production-a2d2d.up.railway.app/",
     accent: "#e6177a",
     title: "Yes You Count — Healthcare Staffing Platform",
     tagline: "A multi-portal platform connecting facilities with verified care professionals.",
