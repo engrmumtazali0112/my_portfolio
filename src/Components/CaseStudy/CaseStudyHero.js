@@ -73,7 +73,7 @@ const CaseStudy = () => {
                   rel="noreferrer"
                   className="cs-visit-btn"
                 >
-                  Visit Site <FaExternalLinkAlt />
+                  View Live Site <FaExternalLinkAlt />
                 </a>
               ) : (
                 <a
