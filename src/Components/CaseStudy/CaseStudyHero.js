@@ -77,12 +77,12 @@ const CaseStudy = () => {
                 </a>
               ) : (
                 <a
-                  href={p.sourceUrl || "#"}
+                  href={p.liveUrl || p.sourceUrl || "#"}
                   target="_blank"
                   rel="noreferrer"
                   className="cs-visit-btn"
                 >
-                  View on GitHub <FaExternalLinkAlt />
+                  {p.liveUrl ? "View Live Site" : "View on GitHub"} <FaExternalLinkAlt />
                 </a>
               )}
             </div>
