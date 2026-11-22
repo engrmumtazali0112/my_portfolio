@@ -194,3 +194,215 @@ a  { text-decoration: none; color: inherit; }
   .logo-img { width: 38px; height: 38px; }
   .header .logo-subtitle { display: none; }
 }
+
+/* =====================================================================
+   Mega menu (Services / Projects)
+   The panel anchors to .header (position: fixed), so it is never clipped.
+   All colours come from the existing theme variables (light + dark).
+   ===================================================================== */
+.mega-item { position: static; }
+
+.header .nav-link.mega-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mega-caret {
+  font-size: 10px;
+  transition: transform 0.25s ease;
+}
+.mega-item.is-open .mega-caret { transform: rotate(180deg); }
+.mega-item.is-open > .mega-trigger {
+  color: var(--text);
+  background: var(--bg-muted);
+}
+.mega-item.is-open > .mega-trigger.active { color: var(--accent-blue); }
+
+/* ----- Panel ----- */
+.mega-panel {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: min(920px, calc(100vw - 2rem));
+  transform: translate(-50%, 10px);
+  background: var(--bg);
+  color: var(--text-body);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.16);
+  z-index: 9999;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+}
+
+/* invisible bridge: keeps hover alive while the cursor crosses the gap */
+.mega-panel::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: 0;
+  right: 0;
+  height: 18px;
+}
+
+.mega-item.is-open .mega-panel {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+.mega-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr));
+}
+
+.mega-col {
+  min-width: 0;
+  padding: 22px 22px 18px;
+  border-right: 1px solid var(--border);
+}
+.mega-col:last-child { border-right: 0; }
+
+.mega-col-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.mega-col-head h4 {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.mega-icon {
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: var(--accent-soft);
+  color: var(--accent-blue);
+}
+
+.mega-list { display: flex; flex-direction: column; gap: 1px; }
+
+.mega-link {
+  display: block;
+  padding: 7px 10px 7px 50px;   /* 50px = icon width + gap, aligns with the heading */
+  font-size: 0.92rem;
+  line-height: 1.35;
+  color: var(--text-body);
+  border-radius: 8px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.mega-link span {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.mega-link:hover,
+.mega-link:focus-visible {
+  background: var(--bg-muted);
+  color: var(--accent-blue);
+  outline: none;
+}
+.mega-more { font-weight: 600; color: var(--accent-blue); }
+
+.mega-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 24px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  background: var(--bg-muted);
+  border-top: 1px solid var(--border);
+  border-radius: 0 0 15px 15px;
+}
+.mega-footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: var(--accent-blue);
+  white-space: nowrap;
+}
+.mega-footer-link:hover { text-decoration: underline; }
+
+/* ----- Mobile accordion: hidden on desktop ----- */
+.mega-mobile { display: none; }
+
+@keyframes megaFade {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media screen and (max-width: 900px) {
+  .mega-item > .mega-trigger,
+  .mega-panel { display: none; }
+
+  .mega-mobile { display: block; }
+
+  .mega-mobile-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-align: left;
+    color: var(--text-body);
+    background: none;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .mega-mobile-toggle.active { color: var(--accent-blue); }
+  .mega-mobile-toggle[aria-expanded="true"] { background: var(--bg-muted); }
+  .mega-mobile-toggle svg { font-size: 0.8rem; transition: transform 0.25s ease; }
+  .mega-mobile-toggle svg.rot { transform: rotate(180deg); }
+
+  .mega-mobile-body {
+    padding: 6px 0 10px 8px;
+    animation: megaFade 0.2s ease;
+  }
+  .mega-mobile-group { padding: 8px 0; }
+  .mega-mobile-group .mega-col-head { margin-bottom: 4px; padding: 0 8px; }
+  .mega-mobile-group .mega-icon { flex-basis: 32px; width: 32px; height: 32px; }
+  .mega-mobile-group h4 { font-size: 0.98rem; }
+
+  .mega-mobile-link {
+    display: block;
+    padding: 8px 8px 8px 52px;
+    font-size: 0.95rem;
+    color: var(--text-body);
+    border-radius: 8px;
+  }
+  .mega-mobile-link:hover { background: var(--bg-muted); color: var(--accent-blue); }
+
+  .mega-mobile-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin: 6px 8px 0;
+    font-weight: 600;
+    color: var(--accent-blue);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mega-panel, .mega-caret, .mega-mobile-body { transition: none; animation: none; }
+}

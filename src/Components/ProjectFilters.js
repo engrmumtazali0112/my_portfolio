@@ -3,7 +3,7 @@ import React from "react";
 import { FaThLarge, FaLaptopCode, FaMobileAlt, FaBrain, FaChartBar } from "react-icons/fa";
 import "./ProjectFiltersStyles.css";
 
-const FILTERS = [
+export const FILTERS = [
   { id: "all",    label: "All Projects",     icon: <FaThLarge /> },
   { id: "web",    label: "Web Applications", icon: <FaLaptopCode /> },
   { id: "mobile", label: "Mobile Apps",      icon: <FaMobileAlt /> },
