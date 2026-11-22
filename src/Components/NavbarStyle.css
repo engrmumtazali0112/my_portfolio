@@ -406,3 +406,171 @@ a  { text-decoration: none; color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   .mega-panel, .mega-caret, .mega-mobile-body { transition: none; animation: none; }
 }
+
+/* =====================================================================
+   Projects mega menu — "Featured work" (sidebar list + 2x2 image grid)
+   Prefixed .mega-proj-* so it can't clash with .project-* used elsewhere.
+   Display is NOT set on .mega-projects-panel itself, so the existing
+   `.mega-panel { display: none }` rule at <= 900px keeps working.
+   ===================================================================== */
+.mega-projects-panel { width: min(900px, calc(100vw - 2rem)); }
+
+.mega-proj-body { display: flex; align-items: stretch; }
+
+/* ----- Left sidebar (25%) ----- */
+.mega-proj-sidebar {
+  flex: 0 0 25%;
+  min-width: 210px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 14px 18px;
+  border-radius: 15px 0 0 15px;
+}
+
+.mega-proj-label {
+  padding: 0 12px 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-blue);
+}
+
+.mega-proj-list { display: flex; flex-direction: column; gap: 4px; }
+
+.mega-proj-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  border-left: 3px solid transparent;
+  border-radius: 10px;
+  transition: background 0.18s ease, border-color 0.18s ease;
+}
+
+.mega-proj-text { min-width: 0; display: block; }
+.mega-proj-text strong,
+.mega-proj-text small { display: block; }
+.mega-proj-text strong {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.18s ease;
+}
+.mega-proj-text small {
+  margin-top: 2px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.mega-proj-arrow {
+  flex: 0 0 auto;
+  font-size: 1rem;
+  color: var(--text-muted);
+  transition: color 0.18s ease, transform 0.18s ease;
+}
+
+.mega-proj-link:hover,
+.mega-proj-link:focus-visible,
+.mega-proj-link.is-active {
+  background: var(--accent-soft);
+  border-left-color: var(--accent-blue);
+  outline: none;
+}
+.mega-proj-link.is-active .mega-proj-text strong,
+.mega-proj-link:hover .mega-proj-text strong { color: var(--accent-blue); }
+.mega-proj-link.is-active .mega-proj-arrow,
+.mega-proj-link:hover .mega-proj-arrow {
+  color: var(--accent-blue);
+  transform: translate(2px, -2px);
+}
+
+.mega-proj-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  padding: 16px 12px 0;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--accent-blue);
+}
+.mega-proj-all:hover { text-decoration: underline; }
+
+/* ----- Right grid (75%) ----- */
+.mega-proj-grid-wrap {
+  flex: 1;
+  min-width: 0;
+  padding: 16px;
+  background: var(--bg-muted);
+  border-left: 1px solid var(--border);
+  border-radius: 0 15px 15px 0;
+}
+
+.mega-proj-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.mega-proj-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+.mega-proj-card.is-active {
+  border-color: var(--accent-blue);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.1);
+}
+.mega-proj-card:hover {
+  transform: translateY(-3px) scale(1.015);
+  border-color: var(--accent-blue);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.16);
+}
+
+.mega-proj-thumb {
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--bg-muted);
+}
+.mega-proj-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.35s ease;
+}
+.mega-proj-card:hover .mega-proj-thumb img { transform: scale(1.05); }
+
+.mega-proj-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px 12px;
+}
+.mega-proj-card:hover .mega-proj-arrow,
+.mega-proj-card.is-active .mega-proj-arrow { color: var(--accent-blue); }
+.mega-proj-card:hover .mega-proj-arrow { transform: translate(2px, -2px); }
+
+/* mobile accordion rows for projects */
+.mega-mobile-sub {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mega-proj-link, .mega-proj-card, .mega-proj-thumb img, .mega-proj-arrow { transition: none; }
+  .mega-proj-card:hover, .mega-proj-card:hover .mega-proj-thumb img { transform: none; }
+}
