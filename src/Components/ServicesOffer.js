@@ -10,7 +10,7 @@ import "./ServicesOfferStyles.css";
 
 const VISIBLE = 3;
 
-const GROUPS = [
+export const GROUPS = [
   {
     title: "Development",
     icon: FaCode,
