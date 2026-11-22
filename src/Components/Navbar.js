@@ -6,7 +6,8 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import ThemeToggle from "./ThemeToggle";
 import useTheme from "../hooks/useTheme";
 import MegaMenu from "./MegaMenu";
-import { getServiceGroups, getProjectGroups } from "./megaMenuData";
+import ProjectsMegaMenu from "./ProjectsMegaMenu";
+import { getServiceGroups, getFeaturedProjects } from "./megaMenuData";
 
 const navItems = [
   { path: "/",          label: "Home" },
@@ -38,9 +39,8 @@ const Navbar = () => {
         footerTo: "/services",
       },
       projects: {
-        groups: getProjectGroups(),
-        hint: "Selected work across web, mobile, AI and data.",
-        footerText: "See all projects",
+        projects: getFeaturedProjects(4),
+        footerText: "See full portfolio",
         footerTo: "/project",
       },
     }),
@@ -101,6 +101,23 @@ const Navbar = () => {
           {navItems.map((item) => {
             if (item.mega) {
               const cfg = megaConfig[item.mega];
+              if (item.mega === "projects") {
+                return (
+                  <ProjectsMegaMenu
+                    key={item.path}
+                    label={item.label}
+                    to={item.path}
+                    isActive={isActive(item.path)}
+                    projects={cfg.projects}
+                    footerText={cfg.footerText}
+                    footerTo={cfg.footerTo}
+                    isOpen={openMenu === item.mega}
+                    onOpen={openMega(item.mega)}
+                    onClose={closeMega}
+                    onNavigate={handleNavigate}
+                  />
+                );
+              }
               return (
                 <MegaMenu
                   key={item.path}
